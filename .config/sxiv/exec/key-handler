@@ -1,0 +1,16 @@
+#!/usr/bin/sh
+
+while read file
+do
+    case "$1" in
+    "C-d")
+        mv "$file" ~/.local/share/Trash/files/ ;;
+    "C-r")
+        #convert -rotate 90 "$file" "$file" ;;
+        convert -rotate 270 "$file" "$file" ;;
+    "C-c")
+        echo -n "$file" | xclip -selection clipboard ;;
+    "C-g")
+        gimp "$file" ;;
+    esac
+done

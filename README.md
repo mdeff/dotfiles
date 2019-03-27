@@ -77,6 +77,13 @@ Kept around because Sway [cannot duplicate monitors yet](https://github.com/sway
 Great to visualize the PDF while editing the [LaTeX] source with [Neovim].
 Supports [SyncTeX] in both directions.
 
+## [sxiv], image viewer
+
+[sxiv]: https://github.com/muennich/sxiv
+
+* [`.config/sxiv/exec/key-handler`](.config/sxiv/exec/key-handler)
+* [`.config/sxiv/exec/image-info`](.config/sxiv/exec/image-info)
+
 ## [Git]
 
 [git]: https://git-scm.com
