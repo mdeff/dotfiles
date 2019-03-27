@@ -51,17 +51,18 @@ In general, I try to unify the look ([Solarized] color theme, [Inconsolata] font
 [sway]: https://swaywm.org
 [wayland]: https://wayland.freedesktop.org
 
-[`.config/sway/config`](.config/sway/config)
-[`.config/swaylock/config`](.config/swaylock/config)
-[`.config/i3status/config`](.config/i3status/config)
+* [`.config/sway/config`](.config/sway/config)
+* [`.config/swaylock/config`](.config/swaylock/config)
+* [`.config/i3status/config`](.config/i3status/config)
 
 ## [i3], [X11] tiling windows manager
 
 [i3]: https://i3wm.org
 [X11]: https://www.x.org
 
-[`.config/i3/config`](.config/i3/config)
-[`.config/i3status/config`](.config/i3status/config)
+* [`.config/i3/config`](.config/i3/config)
+* [`.config/i3status/config`](.config/i3status/config)
+* [`.xinitrc`](.xinitrc)
 
 Replaced by Sway.
 Kept around because Sway [cannot duplicate monitors yet](https://github.com/swaywm/sway/issues/1666).
