@@ -1,0 +1,142 @@
+! Load with xrdb ~/.Xresources
+
+! ----------------------------------------------------------------
+! Fix Xwayland bug, see https://github.com/swaywm/sway/issues/3499
+! ----------------------------------------------------------------
+
+Xft.dpi: 96
+
+! ---------------------
+! Solarized color theme
+! ---------------------
+
+! Common
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+! Dark
+#define D_base03        #002b36
+#define D_base02        #073642
+#define D_base01        #586e75
+#define D_base00        #657b83
+#define D_base0         #839496
+#define D_base1         #93a1a1
+#define D_base2         #eee8d5
+#define D_base3         #fdf6e3
+
+! Light
+#define L_base03        #fdf6e3
+#define L_base02        #eee8d5
+#define L_base01        #93a1a1
+#define L_base00        #839496
+#define L_base0         #657b83
+#define L_base1         #586e75
+#define L_base2         #073642
+#define L_base3         #002b36
+
+*background:            D_base03
+*foreground:            D_base00
+*cursorColor:           D_base1
+*pointerColorBackground:D_base01
+*pointerColorForeground:D_base1
+
+! black dark/light
+*color0:                D_base02
+*color8:                D_base03
+! red dark/light
+*color1:                S_red
+*color9:                S_orange
+! green dark/light
+*color2:                S_green
+*color10:               D_base01
+! yellow dark/light
+*color3:                S_yellow
+*color11:               D_base00
+! blue dark/light
+*color4:                S_blue
+*color12:               D_base0
+! magenta dark/light
+*color5:                S_magenta
+*color13:               S_violet
+! cyan dark/light
+*color6:                S_cyan
+*color14:               D_base1
+! white dark/light
+*color7:                D_base2
+*color15:               D_base3
+
+! Dynamic color change: light (ctrl+alt+l).
+URxvt.keysym.M-C-l: command:\033]11;L_base03\007\033]10;L_base00\007\033]4;0;L_base02\007\033]4;7;L_base2\007\033]4;8;L_base03\007\033]4;10;L_base01\007\033]4;11;L_base00\007\033]4;12;L_base0\007\033]4;14;L_base1\007\033]4;15;L_base3\007
+
+! Dynamic color change: dark (ctrl+alt+d).
+URxvt.keysym.M-C-d: command:\033]11;D_base03\007\033]10;D_base00\007\033]4;0;D_base02\007\033]4;7;D_base2\007\033]4;8;D_base03\007\033]4;10;D_base01\007\033]4;11;D_base00\007\033]4;12;D_base0\007\033]4;14;D_base1\007\033]4;15;D_base3\007
+
+! ------------------
+! urxvt configuation
+! ------------------
+
+URxvt.saveLines: 5000
+
+!URxvt.font: xft: DejaVu Sans Mono: size=12
+!URxvt.font: xft: Inconsolata: size=16
+! Bug: does not show powerline symbols in bold.
+!URxvt.font: xft: Inconsolata for Powerline: size=16
+!URxvt.font: xft:Inconsolata:size=17, xft:Source Code Pro for Powerline:size=16
+! Size 16 does not show the triple lines in vim. Size 17 shows artifacts in airline separators.
+URxvt.font: xft:Inconsolata Nerd Font:size=16.9
+! Does unfortunately not work.
+!URxvt.font: xft:Inconsolata:pixelsize=16, xft:PowerlineSymbols:pixelsize=16
+!TODO: use fontconfig fallback (installed by powerline-fonts) with a terminal emulator that uses fontconfig (konsole, xfce term).
+
+!URxvt.perl-ext-common: default,matcher,keyboard-select,font-size,selection_to_clipboard
+URxvt.perl-ext-common: default,matcher,keyboard-select,selection-to-clipboard,resize-font
+
+! Allows to click on URLs.
+!URxvt.perl-ext-common: matcher
+URxvt.url-launcher: firefox
+URxvt.matcher.button: 1
+URxvt.keysym.M-u: matcher:select
+
+! Select text with keyboard.
+!URxvt.perl-ext-common: keyboard-select
+URxvt.keysym.M-Escape: keyboard-select:activate
+URxvt.keysym.M-s: keyboard-select:search
+
+! Change font size.
+!URxvt.perl-ext-common: font-size
+!URxvt.keysym.C-Up:     font-size:increase
+!URxvt.keysym.C-Down:   font-size:decrease
+!URxvt.keysym.M-plus:     font-size:incglobal
+!URxvt.keysym.M-minus:    font-size:decglobal
+!URxvt.keysym.M-equal:    font-size:reset
+!URxvt.keysym.M-question: font-size:show
+!URxvt.font-size.step: 4
+
+! Change font size.
+!URxvt.perl-ext-common: resize-font
+URxvt.keysym.M-plus:     resize-font:bigger
+URxvt.keysym.M-minus:    resize-font:smaller
+URxvt.keysym.M-equal:    resize-font:reset
+URxvt.keysym.M-question: resize-font:show
+
+! Scrollbar.
+URxvt.scrollBar: false
+!URxvt.scrollBar_right: true
+!URxvt.troughColor: S_base03
+!URxvt.scrollColor: S_base03
+
+! Set WM urgent hint on bell, e.g. echo -e "\a"
+URxvt.urgentOnBell: true
+
+! ------------------
+! sxiv configuation
+! ------------------
+
+!sxiv*background:            D_base00
+!sxiv*foreground:            D_base03

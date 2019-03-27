@@ -144,3 +144,14 @@ Supports [SyncTeX] in both directions.
 * [`.config/systemd/user/ssh-agent.service`](.config/systemd/user/ssh-agent.service)
 * [`.config/systemd/user/default.target.wants/`](.config/systemd/user/default.target.wants/)
 * [`.config/systemd/user/sockets.target.wants/`](.config/systemd/user/sockets.target.wants/)
+
+## Miscellaneous
+
+[urxvt]: http://software.schmorp.de/pkg/rxvt-unicode.html
+
+* [`.Xresources`](.Xresources), picked up by [urxvt] and [sxiv]
+* [`.profile`](.profile)
+* [`.config/user-dirs.dirs`](`.config/user-dirs.dirs`), XDG default directories
+* [`.latexmkrc`](.latexmkrc)
+* [`.mozilla/firefox/profiles.ini`](.mozilla/firefox/profiles.ini)
+* [`.thunderbird/profiles.ini`](.mozilla/firefox/profiles.ini)
