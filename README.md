@@ -95,3 +95,10 @@ Supports [SyncTeX] in both directions.
 [conda]: https://conda.io
 
 [`.condarc`](.condarc)
+
+## [Jupyter], interactive computing
+
+[jupyter]: https://jupyter.org
+
+* [`.jupyter/jupyter_notebook_config.py`](.jupyter/jupyter_notebook_config.py)
+* [`.ipython/profile_default/ipython_config.py`](.ipython/profile_default/ipython_config.py)
