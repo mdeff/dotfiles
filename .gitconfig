@@ -1,2 +1,6 @@
 [filter "remove-mpc-password"]
 	clean = "sed -e 's/mpc -h .*/mpc -h SECRET/'"
+[filter "remove-mpd-password"]
+	clean = "sed -e 's/password .*/password SECRET/'"
+[filter "remove-ncmpcpp-password"]
+	clean = "sed -e 's/mpd_host = .*/mpd_host = SECRET/'"

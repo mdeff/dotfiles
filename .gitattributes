@@ -1,2 +1,4 @@
 .config/sway/config filter=remove-mpc-password
 .config/i3/config filter=remove-mpc-password
+.config/mpd/mpd.conf filter=remove-mpd-password
+.config/ncmpcpp/config filter=remove-ncmpcpp-password

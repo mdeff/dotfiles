@@ -110,6 +110,18 @@ Supports [SyncTeX] in both directions.
 * [`.jupyter/jupyter_notebook_config.py`](.jupyter/jupyter_notebook_config.py)
 * [`.ipython/profile_default/ipython_config.py`](.ipython/profile_default/ipython_config.py)
 
+## Multimedia: [mpd], [ncmpcpp], [mpv]
+
+[mpd]: https://www.musicpd.org
+[ncmpcpp]: https://rybczak.net/ncmpcpp
+[mpv]: https://mpv.io
+
+* [`.config/mpd/mpd.conf`](.config/mpd/mpd.conf)
+* [`.config/ncmpcpp/bindings`](.config/ncmpcpp/bindings)
+* [`.config/ncmpcpp/config`](.config/ncmpcpp/config)
+* [`.config/mpv/input.conf`](.config/mpv/input.conf)
+* [`.config/mpv/mpv.conf`](.config/mpv/mpv.conf)
+
 ## [Syncthing], decentralized file synchronization
 
 [syncthing]: https://syncthing.net
