@@ -180,6 +180,12 @@ Plug 'tpope/vim-surround'
 Plug 'justinmk/vim-sneak'
 let g:sneak#label = 1
 
+" Exchange so forward is "," and backward is ";" = "Shift+,".
+noremap , ;
+noremap ; ,
+map , <Plug>Sneak_;
+map ; <Plug>Sneak_,
+
 " Close buffers without closing window.
 "Plug 'qpkorr/vim-bufkill'
 
