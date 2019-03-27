@@ -177,3 +177,12 @@ Moving to Wayland:
 [imv]: https://github.com/eXeC64/imv
 [termite]: https://github.com/thestinger/termite
 [alacritty]: https://github.com/jwilm/alacritty
+
+## Setup
+
+```
+git clone git@github.com:mdeff/dotfiles.git
+git config --local include.path ../.gitconfig
+```
+
+Set `mpd` passwords in mpd, ncmpcpp, sway, and i3.
