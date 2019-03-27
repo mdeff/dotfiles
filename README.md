@@ -128,6 +128,14 @@ Supports [SyncTeX] in both directions.
 
 [`.config/syncthing/config.xml`](.config/syncthing/config.xml)
 
+## [ssh], secure remote access
+
+[ssh]: https://www.openssh.com
+
+* [`.ssh/config`](.ssh/config)
+* [`.ssh/id_*.pub`](.ssh/)
+* [`.ssh/known_hosts`](.ssh/known_hosts)
+
 ## [systemd], system and service manager
 
 [systemd]: https://freedesktop.org/wiki/Software/systemd
