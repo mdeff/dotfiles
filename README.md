@@ -1,8 +1,9 @@
 # mdeff's dotfiles
 
-In general, I try to unify the look ([solarized] color theme) and feel ([vim] key bindings) of my applications.
+In general, I try to unify the look ([Solarized] color theme, [Inconsolata] font) and feel ([Vim] key bindings) of my applications.
 
 [solarized]: https://ethanschoonover.com/solarized
+[inconsolata]: https://www.levien.com/type/myfonts/inconsolata.html
 [vim]: https://www.vim.org
 
 ## [Neovim](https://neovim.io)
@@ -26,7 +27,7 @@ In general, I try to unify the look ([solarized] color theme) and feel ([vim] ke
 * [vim-isort](https://github.com/fisadev/vim-isort), sort python imports using [isort](https://github.com/timothycrosley/isort)
 * [vim-pandoc](https://github.com/vim-pandoc/vim-pandoc), integration with [pandoc](http://johnmacfarlane.net/pandoc) document converter
 * [vim-pandoc-syntax](https://github.com/vim-pandoc/vim-pandoc-syntax), syntax highlighting for vim-pandoc
-* [vimtex](https://github.com/lervag/vimtex), support for writing [LaTeX](https://www.latex-project.org) documents
+* [vimtex](https://github.com/lervag/vimtex), support for writing [LaTeX] documents
 * [surround.vim](https://github.com/tpope/vim-surround), delete / change / add surroundings (parentheses, brackets, quotes, XML tag)
 * [sneak.vim](https://github.com/justinmk/vim-sneak), jump to any location specified by two characters
 * [startify](https://github.com/mhinz/vim-startify), start screen
@@ -61,3 +62,14 @@ In general, I try to unify the look ([solarized] color theme) and feel ([vim] ke
 
 Replaced by Sway.
 Kept around because Sway [cannot duplicate monitors yet](https://github.com/swaywm/sway/issues/1666).
+
+## [Zathura], document viewer
+
+[zathura]: https://pwmt.org/projects/zathura
+[latex]: https://www.latex-project.org
+[synctex]: https://github.com/jlaurens/synctex
+
+[`.config/zathura/zathurarc`](.config/zathura/zathurarc)
+
+Great to visualize the PDF while editing the [LaTeX] source with [Neovim].
+Supports [SyncTeX] in both directions.
