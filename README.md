@@ -6,7 +6,9 @@ In general, I try to unify the look ([Solarized] color theme, [Inconsolata] font
 [inconsolata]: https://www.levien.com/type/myfonts/inconsolata.html
 [vim]: https://www.vim.org
 
-## [Neovim](https://neovim.io)
+## [Neovim], text editor
+
+[neovim]: https://neovim.io
 
 [`.config/nvim/init.vim`](.config/nvim/init.vim)
 
@@ -32,7 +34,7 @@ In general, I try to unify the look ([Solarized] color theme, [Inconsolata] font
 * [sneak.vim](https://github.com/justinmk/vim-sneak), jump to any location specified by two characters
 * [startify](https://github.com/mhinz/vim-startify), start screen
 
-## [Ranger]
+## [Ranger], console file manager
 
 [ranger]: https://ranger.github.io
 
@@ -40,7 +42,7 @@ In general, I try to unify the look ([Solarized] color theme, [Inconsolata] font
 * [`.config/ranger/commands.py`](.config/ranger/commands.py), custom commands
 * [`.config/ranger/rifle.conf`](.config/ranger/rifle.conf), file opener configuration
 
-## [Fish]
+## [Fish], interactive shell
 
 [fish]: https://fishshell.com
 
@@ -85,7 +87,7 @@ Supports [SyncTeX] in both directions.
 * [`.config/sxiv/exec/key-handler`](.config/sxiv/exec/key-handler)
 * [`.config/sxiv/exec/image-info`](.config/sxiv/exec/image-info)
 
-## [Git]
+## [Git], distributed version control
 
 [git]: https://git-scm.com
 
@@ -120,8 +122,8 @@ Supports [SyncTeX] in both directions.
 * [`.config/mpd/mpd.conf`](.config/mpd/mpd.conf)
 * [`.config/ncmpcpp/bindings`](.config/ncmpcpp/bindings)
 * [`.config/ncmpcpp/config`](.config/ncmpcpp/config)
-* [`.config/mpv/input.conf`](.config/mpv/input.conf)
 * [`.config/mpv/mpv.conf`](.config/mpv/mpv.conf)
+* [`.config/mpv/input.conf`](.config/mpv/input.conf)
 
 ## [Syncthing], decentralized file synchronization
 
@@ -172,7 +174,7 @@ Supports [SyncTeX] in both directions.
 
 Moving to Wayland:
 * change sxiv to [imv]?
-* change urxvt to [termite] or [allacritty]?
+* change urxvt to [termite] or [alacritty]?
 
 [imv]: https://github.com/eXeC64/imv
 [termite]: https://github.com/thestinger/termite
@@ -185,4 +187,4 @@ git clone git@github.com:mdeff/dotfiles.git
 git config --local include.path ../.gitconfig
 ```
 
-Set `mpd` passwords in mpd, ncmpcpp, sway, and i3.
+Set `mpd` password in mpd, ncmpcpp, sway, and i3.
