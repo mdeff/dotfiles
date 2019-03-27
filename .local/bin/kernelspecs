@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+
+import json
+import os
+import pathlib
+import shutil
+import subprocess
+import sys
+
+path = pathlib.Path('/usr/share/jupyter/kernels/python3/kernel.json')
+with open(path, 'rt') as f:
+    kernelspec = json.load(f)
+
+def get_kernelspec(path, venv):
+    kernelspec['argv'][0] = str(path / venv / 'bin' / 'python')
+    kernelspec['display_name'] = venv
+    return json.dumps(kernelspec, indent=1)
+
+KERNEL_DIR = pathlib.Path('/home/michael/.local/share/jupyter/kernels/')
+shutil.rmtree(KERNEL_DIR, ignore_errors=True)
+KERNEL_DIR.mkdir()
+
+VENV_DIRS = [
+    pathlib.Path('/home/michael/venv/'),
+    pathlib.Path('/home/michael/.conda/envs/'),
+]
+
+if __name__ == '__main__':
+    for venv_dir in VENV_DIRS:
+        for venv in os.listdir(venv_dir):
+            print(f'Adding environment {venv_dir / venv}')
+
+            try:
+                config = dict()
+                with open(venv_dir / venv / 'pyvenv.cfg', 'rt') as f:
+                    for line in f:
+                        name, _, value = line.partition("=")
+                        config[name.strip()] = value.strip()
+                if config['version'][:3] != sys.version[:3]:
+                    print(f"\tWarning: env created with python {config['version']}")
+                if config['include-system-site-packages'] == 'true':
+                    print('\tWarning: env has access to system packages')
+            except FileNotFoundError:
+                pass
+
+            exe = venv_dir / venv / 'bin' / 'python'
+            cmd = 'import ipykernel'
+            result = subprocess.run([exe, '-c', cmd], stderr=subprocess.PIPE)
+            if result.returncode != 0:
+                print('\tError: ipykernel not installed')
+                continue
+
+            kernel_path = KERNEL_DIR / venv
+            kernel_path.mkdir(exist_ok=True)
+            with open(kernel_path / 'kernel.json', 'wt') as f:
+                f.write(get_kernelspec(venv_dir, venv))

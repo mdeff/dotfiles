@@ -1,0 +1,17 @@
+#!/usr/bin/sh
+
+if [ ! $# -eq 1 ]
+  then
+    echo "Supply key name"
+	exit 1
+fi
+
+KEY=$1
+PASS=$(pass keys/ssh_$KEY)
+
+echo "\
+	spawn /usr/bin/ssh-add $HOME/.ssh/id_$KEY
+	expect {Enter passphrase}
+	send {$PASS}; send \r
+	expect eof
+	" | expect

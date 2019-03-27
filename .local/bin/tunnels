@@ -1,0 +1,45 @@
+#!/usr/bin/sh
+
+case "$1" in
+
+	stop)
+		pkill -f "ssh -N -f -L"
+		;;
+
+	start)
+		# Jupyter (GPU)
+		ssh -N -f -L localhost:8891:localhost:8888 cdk1
+		ssh -N -f -L localhost:8892:localhost:8888 cdk2
+		ssh -N -f -L localhost:8893:localhost:8888 cdk3
+		ssh -N -f -L localhost:8894:localhost:8888 cdk4
+		ssh -N -f -L localhost:8895:localhost:8888 gdk0
+		ssh -N -f -L localhost:8896:localhost:8889 gdk0
+		ssh -N -f -L localhost:8897:localhost:8890 gdk0
+		ssh -N -f -L localhost:8898:localhost:8891 gdk0
+
+		# Jupyter (CPU)
+		#ssh -N -f -L localhost:8881:localhost:8889 cdk1
+		#ssh -N -f -L localhost:8882:localhost:8889 cdk2
+		#ssh -N -f -L localhost:8883:localhost:8889 cdk3
+
+		# TensorBoard
+		ssh -N -f -L localhost:6001:localhost:6006 cdk1
+		ssh -N -f -L localhost:6002:localhost:6006 cdk2
+		ssh -N -f -L localhost:6003:localhost:6006 cdk3
+		ssh -N -f -L localhost:6004:localhost:6006 cdk4
+		ssh -N -f -L localhost:6005:localhost:6006 gdk0
+
+		# Syncthing
+		ssh -N -f -L localhost:8385:localhost:8384 cdk1
+		ssh -N -f -L localhost:8386:localhost:8384 cdk2
+		ssh -N -f -L localhost:8387:localhost:8384 cdk3
+		ssh -N -f -L localhost:8388:localhost:8384 cdk4
+		ssh -N -f -L localhost:8389:localhost:8384 gdk0
+
+		;;
+
+	restart)
+		"$0" stop
+		"$0" start
+		;;
+esac

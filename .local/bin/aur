@@ -1,0 +1,35 @@
+#!/usr/bin/sh
+
+case "$1" in
+    search)
+		cower -s "$2"
+		# auracle search "$2"
+        ;;
+
+    clone)
+		# git clone https://aur.archlinux.org/"$2".git
+		git clone aur:"$2"
+		# auracle clone "$2"
+		# cower -d "$2"
+		# yay -G "$2"
+        ;;
+
+    make)
+		makepkg -csi
+        ;;
+
+    vote)
+		ssh aur vote "$2"
+        ;;
+
+    updates)
+		cower -u
+		# yay -Qu
+		# auracle sync
+        ;;
+
+    *)
+        echo $"Usage: $0 {search|clone|make|vote|updates} package-name"
+        exit 1
+
+esac

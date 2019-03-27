@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+/usr/bin/libreoffice --display $DISPLAY "$@"

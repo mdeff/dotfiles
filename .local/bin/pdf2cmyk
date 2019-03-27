@@ -1,0 +1,89 @@
+#!/usr/bin/sh
+
+# https://bugs.launchpad.net/inkscape/+bug/574717
+# http://zeroset.mnim.org/2014/07/14/save-a-pdf-to-cmyk-with-inkscape/
+# https://stackoverflow.com/questions/6241282/converting-pdf-to-cmyk-with-identify-recognizing-cmyk
+
+# Warning: -dSAFER causes errors on my system.
+
+ICC=${2:-/usr/share/color/icc/ISOcoated_v2_eci.icc}
+
+# Low resolution images:
+#    -dPDFSETTINGS=/prepress \
+
+# Much larger file sizes:
+#    -dEncodeColorImages=false \
+#    -dEncodeGrayImages=false \
+#    -dEncodeMonoImages=false \
+
+# Slow or blocked:
+#    -dHaveTransparency=false \
+
+gs -o ${1%%.pdf}_cmyk.pdf \
+    -dBATCH -dNOPAUSE -dNOCACHE \
+    -sDEVICE=pdfwrite \
+    -sColorConversionStrategy=CMYK \
+    -dProcessColorModel=/DeviceCMYK \
+    -sDefaultCMYKProfile=$ICC \
+    -sOutputICCProfile=$ICC \
+    $1
+
+#gs -o ${1%%.pdf}_cmyk.pdf \
+#    -dPDFX \
+#    -dBATCH \
+#    -dNOPAUSE \
+#    -dNOOUTERSAVE \
+#    -dPDFSETTINGS=/prepress \
+#    -dEncodeColorImages=false \
+#    -dEncodeGrayImages=false \
+#    -dEncodeMonoImages=false \
+#    -dCompatibilityLevel=1.4 \
+#    -dRenderIntent=3 \
+#    -sDEVICE=pdfwrite \
+#    -sColorConversionStrategy=CMYK \
+#    -sProcessColorModel=DeviceCMYK \
+#    -sDefaultCMYKProfile=$ICC \
+#    -sOutputICCProfile=$ICC \
+#    -sColorConversionStrategy=CMYK \
+#    -sColorConversionStrategyForImages=CMYK \
+#    $1
+
+#gs -o ${1%%.pdf}_cmyk.pdf \
+#    -dNOPAUSE -dBATCH -dSAFER \
+#    -sDEVICE=pdfwrite \
+#    -dPDFSETTINGS=/prepress \
+#    -dEncodeColorImages=false \
+#    -dEncodeGrayImages=false \
+#    -dEncodeMonoImages=false \
+#    -dOverrideICC=true \
+#    -dHaveTransparency=false \
+#    -dCompatibilityLevel=1.4 \
+#    -dRenderIntent=3 \
+#    -dDeviceGrayToK=true \
+#    -sDefaultCMYKProfile=/usr/share/color/icc/ISOcoated_v2_eci.icc \
+#    -sOutputICCProfile=/usr/share/color/icc/ISOcoated_v2_eci.icc \
+#    -sProcessColorModel=DeviceCMYK \
+#    -sColorConversionStrategy=CMYK \
+#    -sColorConversionStrategyForImages=CMYK \
+#    $1
+
+#gs -o ${1%%.pdf}_cmyk.pdf \
+#    -dSAFER -dBATCH \
+#    -dNOPAUSE -dNOCACHE -sDEVICE=pdfwrite \
+#    -sColorConversionStrategy=CMYK \
+#    -dProcessColorModel=/DeviceCMYK \
+#    $1
+
+#gs -o ${1%%.pdf}_cmyk.pdf \
+#    -dPDFX \
+#    -dBATCH \
+#    -dNOPAUSE \
+#    -dNOOUTERSAVE \
+#    -dPDFSETTINGS=/prepress \
+#    -dCompatibilityLevel=1.5 \
+#    -sDEVICE=pdfwrite \
+#    -sColorConversionStrategy=CMYK \
+#    -sProcessColorModel=DeviceCMYK \
+#    -dHaveTransparency=false \
+#    PDFX_def.ps \
+#    $1

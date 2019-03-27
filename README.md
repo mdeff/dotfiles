@@ -145,6 +145,18 @@ Supports [SyncTeX] in both directions.
 * [`.config/systemd/user/default.target.wants/`](.config/systemd/user/default.target.wants/)
 * [`.config/systemd/user/sockets.target.wants/`](.config/systemd/user/sockets.target.wants/)
 
+## User binaries
+
+* [`.local/bin/aur`](.local/bin/aur)
+* [`.local/bin/gvim`](.local/bin/gvim)
+* [`.local/bin/kernelspecs`](.local/bin/kernelspecs)
+* [`.local/bin/libreoffice`](.local/bin/libreoffice)
+* [`.local/bin/pdf2cmyk`](.local/bin/pdf2cmyk)
+* [`.local/bin/ssh-add`](.local/bin/ssh-add)
+* [`.local/bin/tunnels`](.local/bin/tunnels)
+* [`.local/bin/vi`](.local/bin/vi)
+* [`.local/bin/vim`](.local/bin/vim)
+
 ## Miscellaneous
 
 [urxvt]: http://software.schmorp.de/pkg/rxvt-unicode.html
