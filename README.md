@@ -51,3 +51,13 @@ In general, I try to unify the look ([solarized] color theme) and feel ([vim] ke
 [wayland]: https://wayland.freedesktop.org
 
 [`.config/sway/config`](.config/sway/config)
+
+## [i3], [X11] tiling windows manager
+
+[i3]: https://i3wm.org
+[X11]: https://www.x.org
+
+[`.config/i3/config`](.config/i3/config)
+
+Replaced by Sway.
+Kept around because Sway [cannot duplicate monitors yet](https://github.com/swaywm/sway/issues/1666).
