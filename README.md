@@ -53,6 +53,7 @@ In general, I try to unify the look ([Solarized] color theme, [Inconsolata] font
 
 [`.config/sway/config`](.config/sway/config)
 [`.config/swaylock/config`](.config/swaylock/config)
+[`.config/i3status/config`](.config/i3status/config)
 
 ## [i3], [X11] tiling windows manager
 
@@ -60,6 +61,7 @@ In general, I try to unify the look ([Solarized] color theme, [Inconsolata] font
 [X11]: https://www.x.org
 
 [`.config/i3/config`](.config/i3/config)
+[`.config/i3status/config`](.config/i3status/config)
 
 Replaced by Sway.
 Kept around because Sway [cannot duplicate monitors yet](https://github.com/swaywm/sway/issues/1666).
