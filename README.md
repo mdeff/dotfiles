@@ -30,3 +30,11 @@ In general, I try to unify the look ([solarized] color theme) and feel ([vim] ke
 * [surround.vim](https://github.com/tpope/vim-surround), delete / change / add surroundings (parentheses, brackets, quotes, XML tag)
 * [sneak.vim](https://github.com/justinmk/vim-sneak), jump to any location specified by two characters
 * [startify](https://github.com/mhinz/vim-startify), start screen
+
+## [Ranger]
+
+[ranger]: https://ranger.github.io
+
+* [`.config/ranger/rc.conf`](.config/ranger/rc.conf), general configuration
+* [`.config/ranger/commands.py`](.config/ranger/commands.py), custom commands
+* [`.config/ranger/rifle.conf`](.config/ranger/rifle.conf), file opener configuration
