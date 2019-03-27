@@ -167,3 +167,13 @@ Supports [SyncTeX] in both directions.
 * [`.latexmkrc`](.latexmkrc)
 * [`.mozilla/firefox/profiles.ini`](.mozilla/firefox/profiles.ini)
 * [`.thunderbird/profiles.ini`](.mozilla/firefox/profiles.ini)
+
+## Todo
+
+Moving to Wayland:
+* change sxiv to [imv]?
+* change urxvt to [termite] or [allacritty]?
+
+[imv]: https://github.com/eXeC64/imv
+[termite]: https://github.com/thestinger/termite
+[alacritty]: https://github.com/jwilm/alacritty
