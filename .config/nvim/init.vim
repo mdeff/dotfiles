@@ -58,8 +58,15 @@ Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme = 'solarized'
 let g:airline_solarized_bg = 'dark'
 
+" Add filetype glyphs (icons) to plugins (NerdTree, vim-airline).
+" Should be loaded after those plugins.
+Plug 'ryanoasis/vim-devicons'
+
 " Git support. Report branch in status bar.
 Plug 'tpope/vim-fugitive'
+
+" Shows a git diff in the 'gutter' (sign column).
+Plug 'airblade/vim-gitgutter'
 
 " File system navigation.
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -216,15 +223,8 @@ noremap <S-l> :bnext<Return>
 "noremap gwk :call Focus('up', 'k')<CR>
 "noremap gwj :call Focus('down', 'j')<CR>
 
-" Shows a git diff in the 'gutter' (sign column).
-Plug 'airblade/vim-gitgutter'
-
 " Start screen.
 Plug 'mhinz/vim-startify'
-
-" Add filetype glyphs (icons) to plugins (NerdTree, vim-airline).
-" Should be loaded after those plugins.
-Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
