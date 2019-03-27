@@ -110,6 +110,12 @@ Supports [SyncTeX] in both directions.
 * [`.jupyter/jupyter_notebook_config.py`](.jupyter/jupyter_notebook_config.py)
 * [`.ipython/profile_default/ipython_config.py`](.ipython/profile_default/ipython_config.py)
 
+## [Syncthing], decentralized file synchronization
+
+[syncthing]: https://syncthing.net
+
+[`.config/syncthing/config.xml`](.config/syncthing/config.xml)
+
 ## [systemd], system and service manager
 
 [systemd]: https://freedesktop.org/wiki/Software/systemd
