@@ -1,0 +1,21 @@
+[user]
+	name = Michaël Defferrard
+	email = michael.defferrard@epfl.ch
+[push]
+	default = simple
+[difftool "nbdime"]
+	cmd = git-nbdifftool diff \"$LOCAL\" \"$REMOTE\" \"$BASE\"
+[difftool]
+	prompt = false
+[mergetool "nbdime"]
+	cmd = git-nbmergetool merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[mergetool]
+	prompt = false
+#[pull]
+#	rebase = true
+[url "ssh://git@github.com/"]
+	insteadOf = "github:"
+[url "https://aur.archlinux.org/"]
+	insteadOf = "aur:"
+[url "ssh://aur@aur.archlinux.org/"]
+	pushInsteadOf = "aur:"

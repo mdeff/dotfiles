@@ -16,7 +16,7 @@ In general, I try to unify the look ([Solarized] color theme, [Inconsolata] font
 * [vim-airline](https://github.com/vim-airline/vim-airline), status bar
 * [vim-airline-themes](https://github.com/vim-airline/vim-airline-themes), status bar
 * [VimDevIcons](https://github.com/ryanoasis/vim-devicons), file type glyphs / icons
-* [fugitive.vim](https://github.com/tpope/vim-fugitive), [git](https://git-scm.com) wrapper
+* [fugitive.vim](https://github.com/tpope/vim-fugitive), [git] wrapper
 * [vim-gitgutter](https://github.com/airblade/vim-gitgutter), git diff in sign column
 * [ranger.vim](https://github.com/rafaqz/ranger.vim), browse files with [ranger]
 * [grepper](https://github.com/mhinz/vim-grepper), asynchronous search (using [ripgrep](https://github.com/BurntSushi/ripgrep))
@@ -76,3 +76,10 @@ Kept around because Sway [cannot duplicate monitors yet](https://github.com/sway
 
 Great to visualize the PDF while editing the [LaTeX] source with [Neovim].
 Supports [SyncTeX] in both directions.
+
+## [Git]
+
+[git]: https://git-scm.com
+
+* [`.config/git/config`](.config/git/config)
+* [`.config/git/attributes`](.config/git/attributes)
