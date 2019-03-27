@@ -83,3 +83,9 @@ Supports [SyncTeX] in both directions.
 
 * [`.config/git/config`](.config/git/config)
 * [`.config/git/attributes`](.config/git/attributes)
+
+## [Tmux], terminal multiplexer
+
+[tmux]: https://github.com/tmux/tmux
+
+[`.tmux.conf`](.tmux.conf)
