@@ -52,6 +52,7 @@ In general, I try to unify the look ([Solarized] color theme, [Inconsolata] font
 [wayland]: https://wayland.freedesktop.org
 
 [`.config/sway/config`](.config/sway/config)
+[`.config/swaylock/config`](.config/swaylock/config)
 
 ## [i3], [X11] tiling windows manager
 
