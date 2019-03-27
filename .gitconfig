@@ -1,0 +1,2 @@
+[filter "remove-mpc-password"]
+	clean = "sed -e 's/mpc -h .*/mpc -h SECRET/'"
