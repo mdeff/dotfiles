@@ -38,3 +38,9 @@ In general, I try to unify the look ([solarized] color theme) and feel ([vim] ke
 * [`.config/ranger/rc.conf`](.config/ranger/rc.conf), general configuration
 * [`.config/ranger/commands.py`](.config/ranger/commands.py), custom commands
 * [`.config/ranger/rifle.conf`](.config/ranger/rifle.conf), file opener configuration
+
+## [Fish]
+
+[fish]: https://fishshell.com
+
+[`.config/fish/config.fish`](.config/fish/config.fish)
