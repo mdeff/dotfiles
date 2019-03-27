@@ -68,12 +68,34 @@ Plug 'tpope/vim-fugitive'
 " Shows a git diff in the 'gutter' (sign column).
 Plug 'airblade/vim-gitgutter'
 
-" File system navigation.
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-noremap <C-n> :NERDTreeToggle <CR>
+" File explorer.
+"Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+"noremap <C-n> :NERDTreeToggle <CR>
 " Automatically start NERDTree.
 "autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Use ranger as file explorer. More features than the other, e.g., cd.
+Plug 'rafaqz/ranger.vim'
+noremap <leader>rr :RangerEdit<cr>
+noremap <leader>rv :RangerVSplit<cr>
+noremap <leader>rs :RangerSplit<cr>
+"noremap <leader>rt :RangerTab<cr>
+"noremap <leader>ri :RangerInsert<cr>
+"noremap <leader>ra :RangerAppend<cr>
+"noremap <leader>rc :set operatorfunc=RangerChangeOperator<cr>g@
+noremap <leader>rd :RangerCD<cr>
+"noremap <leader>rld :RangerLCD<cr>
+
+" Use ranger as file explorer.
+"Plug 'francoiscabrol/ranger.vim'
+"let g:ranger_map_keys = 0
+"noremap <leader>r :Ranger<CR>
+"let g:ranger_replace_netrw = 1
+"Plug 'rbgrouleff/bclose.vim'  " dependency of francoiscabrol/ranger.vim
+
+" Close buffers without closing window (as bclose).
+"Plug 'qpkorr/vim-bufkill'
 
 " Interface to grep tools: ag, ack, git grep, ripgrep, pt, sift, findstr, grep.
 " Alternative: fzf.
@@ -193,9 +215,6 @@ noremap ; ,
 map , <Plug>Sneak_;
 map ; <Plug>Sneak_,
 
-" Close buffers without closing window.
-"Plug 'qpkorr/vim-bufkill'
-
 " Do not save swaps of encrypted files.
 " TODO: find a better solution.
 Plug 'https://gist.github.com/5890634.git', { 'frozen': 1 }
@@ -310,44 +329,3 @@ function! ExecuteMacroOverVisualRange()
     echo "@".getcmdline()
     execute ":'<,'>normal @".nr2char(getchar())
 endfunction
-
-
-" Add ranger as a file chooser in vim
-" https://github.com/ranger/ranger/blob/master/examples/vim_file_chooser.vim
-"
-" If you add this code to the .vimrc, ranger can be started using the command
-" ":RangerChooser" or the keybinding "<leader>r".  Once you select one or more
-" files, press enter and ranger will quit again and vim will open the selected
-" files.
-
-function! RangeChooser()
-    let temp = tempname()
-    " The option "--choosefiles" was added in ranger 1.5.1. Use the next line
-    " with ranger 1.4.2 through 1.5.0 instead.
-    "exec 'silent !ranger --choosefile=' . shellescape(temp)
-    if has("gui_running")
-        exec 'silent !xterm -e ranger --choosefiles=' . shellescape(temp)
-    else
-        exec 'silent !ranger --choosefiles=' . shellescape(temp)
-    endif
-    if !filereadable(temp)
-        redraw!
-        " Nothing to read.
-        return
-    endif
-    let names = readfile(temp)
-    if empty(names)
-        redraw!
-        " Nothing to open.
-        return
-    endif
-    " Edit the first item.
-    exec 'edit ' . fnameescape(names[0])
-    " Add any remaning items to the arg list/buffer list.
-    for name in names[1:]
-        exec 'argadd ' . fnameescape(name)
-    endfor
-    redraw!
-endfunction
-command! -bar RangerChooser call RangeChooser()
-nnoremap <leader>r :<C-U>RangerChooser<CR>

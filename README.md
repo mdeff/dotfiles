@@ -5,7 +5,7 @@ In general, I try to unify the look ([solarized] color theme) and feel ([vim] ke
 [solarized]: https://ethanschoonover.com/solarized
 [vim]: https://www.vim.org
 
-## [neovim](https://neovim.io/)
+## [Neovim](https://neovim.io)
 
 [`.config/nvim/init.vim`](.config/nvim/init.vim)
 
@@ -17,7 +17,7 @@ In general, I try to unify the look ([solarized] color theme) and feel ([vim] ke
 * [VimDevIcons](https://github.com/ryanoasis/vim-devicons), file type glyphs / icons
 * [fugitive.vim](https://github.com/tpope/vim-fugitive), [git](https://git-scm.com) wrapper
 * [vim-gitgutter](https://github.com/airblade/vim-gitgutter), git diff in sign column
-* [The NERDTree](https://github.com/scrooloose/nerdtree), file explorer
+* [ranger.vim](https://github.com/rafaqz/ranger.vim), browse files with [ranger]
 * [grepper](https://github.com/mhinz/vim-grepper), asynchronous search (using [ripgrep](https://github.com/BurntSushi/ripgrep))
 * [supertab](https://github.com/ervandew/supertab), tab for completion
 * [YouCompleteMe](https://github.com/Valloric/YouCompleteMe), code completion
