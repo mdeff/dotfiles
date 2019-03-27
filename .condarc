@@ -1,0 +1,7 @@
+channels:
+  - conda-forge
+#  - defaults
+pkgs_dirs:
+  - ~/.conda/pkgs
+envs_dirs:
+  - ~/.conda/envs

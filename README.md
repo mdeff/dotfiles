@@ -89,3 +89,9 @@ Supports [SyncTeX] in both directions.
 [tmux]: https://github.com/tmux/tmux
 
 [`.tmux.conf`](.tmux.conf)
+
+## [Conda], package and environment manager
+
+[conda]: https://conda.io
+
+[`.condarc`](.condarc)
