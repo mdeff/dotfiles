@@ -44,3 +44,10 @@ In general, I try to unify the look ([solarized] color theme) and feel ([vim] ke
 [fish]: https://fishshell.com
 
 [`.config/fish/config.fish`](.config/fish/config.fish)
+
+## [Sway], [Wayland] tiling windows manager
+
+[sway]: https://swaywm.org
+[wayland]: https://wayland.freedesktop.org
+
+[`.config/sway/config`](.config/sway/config)

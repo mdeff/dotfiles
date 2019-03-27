@@ -1,0 +1,542 @@
+#------#
+# TODO #
+#------#
+
+# switch to using termite + base16-manager
+# idle inhibition: https://github.com/swaywm/sway/pull/3962
+# mirror display (e.g., for live programming session in beamer mode, to have the laptop screen in EPFL mode)
+	# wait on https://github.com/swaywm/sway/issues/1666
+# pdfpc starts on beamer
+	# cannot be matched
+# tor is not rescaled
+# security
+# screenshot active window
+
+#----------------------#
+# X11 only, to replace #
+#----------------------#
+
+# Color theme for urxvt.
+# Urxvt can read ~/.Xdefaults, but without a pre-processor.
+exec xrdb -load ~/.Xresources
+
+#--------#
+# Inputs #
+#--------#
+
+# Custom keyboard layout defined in XXX
+	# FR-CH keyboard with [,],{,} defined as US keyboard
+# ESC becomes CAPS LOCK
+# CAPS LOCK is ESC when pressed alone
+# CAPS LOCK is CTRL when key-chording
+	# https://github.com/swaywm/sway/issues/719
+	# https://github.com/alols/xcape/issues/67
+	# https://aur.archlinux.org/packages/interception-caps2esc/
+# In sway (limitation: CAPS LOCK doesn't do ESC).
+	# xkb_options caps:ctrl_modifier,shift:both_capslock
+# Previously for X11 applications:
+	# the same xkb_options in 00-keyboard.conf
+	# exec xcape -e 'Caps_Lock=Escape'
+
+# X11: /etc/X11/xorg.conf.d/00-keyboard.conf
+input * {
+	xkb_layout custom
+	xkb_model pc104
+	xkb_variant basic
+	xkb_numlock enabled
+}
+
+# X11: /etc/X11/xorg.conf.d/30-touchpad.conf
+input "1739:0:Synaptics_TM3075-002" {
+	scroll_method edge
+	tap enabled
+	pointer_accel 0.6
+}
+
+input "1386:236:Wacom_ISDv4_EC_Pen" map_to_output eDP-1
+input "1739:29252:SYNAPTICS_Synaptics_Touch_Digitizer_V04" map_to_output eDP-1
+
+#---------------------#
+# Basic configuration #
+#---------------------#
+
+set $mod Mod4
+
+# Window borders and titles
+new_window pixel 2
+hide_edge_borders none
+
+# Never move the mouse to the center of the screen.
+mouse_warping none
+
+# Font for window titles (and the bar).
+#font pango:DejaVu Sans Mono 12
+font pango:Inconsolata 14
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# start a terminal
+#set $shell exec termite -e fish
+set $shell exec urxvt -e fish
+bindsym $mod+Return $shell
+
+# kill focused window
+bindsym $mod+q kill
+
+# start dmenu (a program launcher)
+# bindsym $mod+d exec dmenu_run
+# There also is the (new) i3-dmenu-desktop which only displays applications
+# shipping a .desktop file. It is a wrapper around dmenu, so you need that
+# installed.
+# bindsym $mod+d exec i3-dmenu-desktop
+
+# reload the configuration file
+bindsym $mod+Shift+r reload
+
+#------------#
+# Navigation #
+#------------#
+
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+h focus left
+
+#set $i3-vim-nav /home/michael/.config/vim/plugged/i3-vim-nav/i3-vim-nav
+#bindsym --release $mod+j exec $i3-vim-nav j
+#bindsym --release $mod+k exec $i3-vim-nav k
+#bindsym --release $mod+l exec $i3-vim-nav l
+#bindsym --release $mod+h exec $i3-vim-nav h
+
+#set $i3-vim-focus /home/michael/.config/vim/plugged/i3-vim-focus/i3-vim-focus/target/release/i3-vim-focus
+#bindsym $mod+j exec $i3-vim-focus down
+#bindsym $mod+k exec $i3-vim-focus up
+#bindsym $mod+l exec $i3-vim-focus right
+#bindsym $mod+h exec $i3-vim-focus left
+
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h move left
+
+# focus the parent / child container
+bindsym $mod+p focus parent
+bindsym $mod+c focus child
+
+# jump to urgent window
+bindsym $mod+x [urgent=latest] focus
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# toggle tiling / floating mode
+bindsym $mod+Shift+space floating toggle
+
+#--------#
+# Layout #
+#--------#
+
+# split in horizontal / vertical orientation
+bindsym $mod+b split v
+bindsym $mod+v split h
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+t layout tabbed
+bindsym $mod+e layout toggle split
+
+#------------#
+# Workspaces #
+#------------#
+
+# TERM, CODE, READ, WEB, COM, FILES, MEDIA (audio, video, images), MON, MISC (gimp, inkscpae)
+set $WS1  workspace  1: TERM
+set $WS2  workspace  2: WEB
+set $WS3  workspace  3: COM
+set $WS4  workspace  4: MISC
+set $WS5  workspace  5: MISC
+set $WS6  workspace  6: BEAM
+set $WS7  workspace  7: MON
+set $WS8  workspace  8: MISC
+set $WS9  workspace  9: MISC
+set $WS10 workspace 10: MISC
+
+bindsym $mod+1 $WS1
+bindsym $mod+2 $WS2
+bindsym $mod+3 $WS3
+bindsym $mod+4 $WS4
+bindsym $mod+5 $WS5
+bindsym $mod+6 $WS6
+bindsym $mod+7 $WS7
+bindsym $mod+8 $WS8
+bindsym $mod+9 $WS9
+bindsym $mod+0 $WS10
+
+bindsym $mod+Shift+1 move container to $WS1
+bindsym $mod+Shift+2 move container to $WS2
+bindsym $mod+Shift+3 move container to $WS3
+bindsym $mod+Shift+4 move container to $WS4
+bindsym $mod+Shift+5 move container to $WS5
+bindsym $mod+Shift+6 move container to $WS6
+bindsym $mod+Shift+7 move container to $WS7
+bindsym $mod+Shift+8 move container to $WS8
+bindsym $mod+Shift+9 move container to $WS9
+bindsym $mod+Shift+0 move container to $WS10
+
+# move current workspace to next output
+bindsym $mod+Shift+m move workspace to output right
+
+#------------------------------#
+# Actions for specific windows #
+#------------------------------#
+
+# No border (title bar) for browser.
+#for_window [class="Firefox"] border none
+
+# Slides on projector.
+assign [class="Pdfpc" window_role="presentation"] workspace $WS6
+#assign [class="Pdfpc" window_role="presenter"] workspace $WS9
+
+# Tor browser window shouldn't be resized.
+# Default resolution of 1000 x 1000 should be kept for anonymity.
+for_window [class="Tor Browser"] floating enable
+#for_window [class="Tor Browser"] floating enable resize set width 1004 px height 1102 px
+
+# When opening windows initially.
+for_window [class="Thunderbird"] layout tabbed
+for_window [title="htop"] layout splitv
+
+#-------------#
+# Color theme #
+#-------------#
+
+# Solarized common
+set $yellow        #b58900
+set $orange        #cb4b16
+set $red           #dc322f
+set $magenta       #d33682
+set $violet        #6c71c4
+set $blue          #268bd2
+set $cyan          #2aa198
+set $green         #859900
+
+# Solarized dark
+set $basez3        #002b36
+set $basez2        #073642
+set $basez1        #586e75
+set $basez0        #657b83
+set $base0         #839496
+set $base1         #93a1a1
+set $base2         #eee8d5
+set $base3         #fdf6e3
+
+# Screen color when no application are open.
+#output * background $basez3 solid_color
+
+# class                 border  backgr. text    indicator child_border
+client.focused          $basez1 $basez1 $base1  $basez1   $basez1
+client.focused_inactive $basez2 $basez2 $basez1 $basez2   $basez2
+client.unfocused        $basez2 $basez2 $basez1 $basez2   $basez2
+client.urgent           $red    $red    $base3  $red	  $red
+#client.placeholder      #000000 #0c0c0c #ffffff #000000
+#client.background       #ffffff
+
+#------------#
+# Status bar #
+#------------#
+
+bar {
+#    position top
+
+	status_command	i3status
+
+	colors {
+		background $basez3
+		statusline $basez0
+		separator  $basez0
+		focused_workspace  $basez1 $basez1 $base1
+		active_workspace   $basez1 $basez1 $base1
+		inactive_workspace $basez2 $basez2 $basez1
+		urgent_workspace   $red    $red    $base3
+	}
+}
+
+#--------------#
+# Mode: resize #
+#--------------#
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+	bindsym h resize shrink width 10 px or 10 ppt
+	bindsym j resize grow height 10 px or 10 ppt
+	bindsym k resize shrink height 10 px or 10 ppt
+	bindsym l resize grow width 10 px or 10 ppt
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+#-----------------#
+# Mode: workplace #
+#-----------------#
+
+# Pen sometimes clicks when lid is closed. Wacom ISDv4 EC Pen.
+set $pen_on input "1386:236:Wacom_ISDv4_EC_Pen" events enabled
+set $pen_off input "1386:236:Wacom_ISDv4_EC_Pen" events disabled
+
+# Call true to exit with 0 and run swayidle even when no process were killed.
+set $dpms_on exec pkill swayidle || true && swayidle -w \
+    timeout 600 'swaymsg "output * dpms off"' \
+         resume 'swaymsg "output * dpms on"'
+# Auto-lock is painful. I prefer to lock explicitly. Same as auto-sleep.
+#    timeout 300 'swaylock' \
+# Suspend happens before lock. The screen is seen on wakeup while it's being locked.
+#    before-sleep 'swaylock'
+
+# On by default.
+$dpms_on
+
+# It's a pain when screen turns off during presentation or TV.
+set $dpms_off exec pkill swayidle
+
+set $laptop move workspace to output eDP-1
+set $beamer move workspace to output HDMI-A-2
+set $epfl1  move workspace to output HDMI-A-2
+set $epfl2  move workspace to output DP-1
+
+set $mode_workplace Workplace: (l) laptop, (b,B) beamer, (h) home, (e) EPFL
+bindsym $mod+w mode "$mode_workplace"
+
+mode "$mode_workplace" {
+
+	bindsym l \
+		output eDP-1 enable res 1920x1080, \
+		output DP-1 disable, \
+		output HDMI-A-2 disable, \
+		$pen_on, \
+		$dpms_on, \
+		mode "default"
+
+	# TODO: DP-1 or HDMI-A-2 should mirror eDP-1
+	# We otherwise don't have any screen left when disconnecting dock.
+	bindsym e \
+		output eDP-1 enable res 1920x1080 pos 3840 0, \
+		output DP-1 enable res 1920x1080 pos 0 0, \
+		output HDMI-A-2 enable res 1920x1080 pos 1920 0, \
+		$pen_off, \
+		$dpms_on, \
+		$WS10,$epfl1, $WS9,$epfl1, $WS8,$epfl1, $WS7,$epfl2, $WS6,$epfl1, \
+		$WS5,$epfl1, $WS4,$epfl1, $WS3,$epfl2, $WS2,$epfl2, $WS1,$epfl1, \
+		mode "default"
+
+	bindsym b \
+		output eDP-1 enable res 1920x1080 pos 0 0, \
+		output DP-1 disable, \
+		output HDMI-A-2 enable pos 1920 0, \
+		$pen_on, \
+		$dpms_off, \
+		$WS6, $beamer, \
+		mode "default"
+
+#	bindsym Shift+b \
+#		output eDP-1 enable res 1920x1080, \
+#		output DP-1 disable, \
+#		output HDMI-A-2 enable mirror eDP-1, \
+#		$pen_on, \
+#		$dpms_off, \
+#		mode "default"
+
+	bindsym Escape mode "default"
+}
+
+#-------------------------#
+# Mode: network selection #
+#-------------------------#
+
+set $net_stop exec sudo netctl stop-all, \
+	exec sudo resolvconf -d wlp4s0.dhcp, \
+	exec sudo resolvconf -d bnep0.dhcp, \
+	exec sudo killall -SIGINT openconnect, \
+	exec dbus-send --system --type=method_call \
+	     --dest=org.bluez /org/bluez/hci0/dev_58_2A_F7_9E_54_EE \
+		 org.bluez.Network1.Disconnect
+#    exec sudo hciconfig hci0 down
+#   rfkill
+set $net_start exec sudo netctl start
+
+# sudo hciconfig hci0 up &&
+set $bluetooth exec dbus-send --system --type=method_call \
+	--dest=org.bluez /org/bluez/hci0/dev_58_2A_F7_9E_54_EE \
+	org.bluez.Network1.Connect string:'nap' && \
+	sleep 2 && sudo netctl start bphone
+
+set $vpn_start exec sudo systemctl start vpn_epfl
+set $vpn_stop  exec sudo systemctl stop  vpn_epfl
+
+set $tunnels exec tunnels restart
+
+set $mode_network Network: (e,E,r) epfl, (h,H) home, (p,P) phone, (d) DHCP, (n) none, (t) tunnels, (v,V) VPN
+bindsym $mod+n mode "$mode_network"
+
+mode "$mode_network" {
+	bindsym e       $net_start wepfl_ttls,    mode "default"
+	bindsym r       $net_start weduroam_ttls, mode "default"
+	bindsym Shift+e $net_start eepfl,         mode "default"
+	bindsym h       $net_start whome,         mode "default"
+	bindsym Shift+h $net_start ehome,         mode "default"
+	bindsym p       $bluetooth,               mode "default"
+	bindsym Shift+p $net_start wphone,        mode "default"
+	bindsym d       $net_start edhcp,         mode "default"
+	bindsym n       $net_stop,                mode "default"
+	bindsym t       $tunnels,                 mode "default"
+	bindsym v       $vpn_start,               mode "default"
+	bindsym Shift+v $vpn_stop,                mode "default"
+	bindsym Escape                            mode "default"
+}
+
+#------------------#
+# Power management #
+#------------------#
+
+set $mode_system System: (l) lock, (e) exit, (s) suspend, (h) hibernate, (r) reboot, (o) power-off
+bindsym $mod+Escape mode "$mode_system"
+
+mode "$mode_system" {
+	bindsym l exec swaylock, mode "default"
+	bindsym e exit
+	bindsym s $net_stop, exec swaylock && systemctl suspend, mode "default"
+	bindsym h $net_stop, exec swaylock && systemctl hibernate, mode "default"
+	bindsym r exec systemctl reboot
+	bindsym o exec systemctl poweroff
+	bindsym Escape mode "default"
+}
+
+#-------------------------#
+# Mode: mount filesystems #
+#-------------------------#
+
+set $mount exec mount
+set $umount exec umount
+# Will be able to use umount with next version of util-linux.
+# https://github.com/libfuse/libfuse/issues/246
+set $fumount exec fusermount -u
+
+set $mode_fs_mount  FS mount: u (USB key), s (SD card), p (phone), v (VPS at OVH), l (LTS2 NAS), c (CDK NAS)
+set $mode_fs_umount  FS umount: u (USB key), s (SD card), p (phone), v (VPS at OVH), l (LTS2 NAS), c (CDK NAS)
+bindsym $mod+d       mode "$mode_fs_mount"
+bindsym $mod+Shift+d mode "$mode_fs_umount"
+
+mode "$mode_fs_mount" {
+	bindsym u       $mount /mnt/usb,       mode "default"
+	bindsym s       $mount /mnt/sdcard,    mode "default"
+	bindsym p       $mount /mnt/phone,     mode "default"
+	bindsym v       $mount /mnt/vps,       mode "default"
+	bindsym l       $mount /mnt/lts2,      mode "default"
+	bindsym c       $mount /mnt/cdk,       mode "default"
+	bindsym Escape                         mode "default"
+}
+
+mode "$mode_fs_umount" {
+	bindsym p       $fumount /mnt/phone,   mode "default"
+	bindsym u       $umount  /mnt/usb,     mode "default"
+	bindsym v       $fumount /mnt/vps,     mode "default"
+	bindsym s       $umount  /mnt/sdcard,  mode "default"
+	bindsym l       $umount  /mnt/lts2,    mode "default"
+	bindsym c       $umount  /mnt/cdk,     mode "default"
+	bindsym Escape                         mode "default"
+}
+
+#-------------------------#
+# Mode: open applications #
+#-------------------------#
+
+set $mode_open Programs: (I) init, (C) close all, (a,b,f,g,i,l,m,M,o,p,P,r,R,s,t,v,V,z)
+bindsym $mod+o mode "$mode_open"
+
+mode "$mode_open" {
+	bindsym a       exec audacity,									 mode "default"
+	bindsym b       exec blender,                  					 mode "default"
+	bindsym f       exec firefox -P browsing,      					 mode "default"
+	bindsym g       exec gephi,                    					 mode "default"
+	bindsym h       exec urxvt -e htop,            					 mode "default"
+	bindsym i       exec inkscape,                 					 mode "default"
+	bindsym j       exec jupyter-lab,              					 mode "default"
+	bindsym l       exec libreoffice,              					 mode "default"
+	bindsym m       exec urxvt -e ncmpcpp,         					 mode "default"
+	bindsym Shift+m exec meshlab,                  					 mode "default"
+	bindsym o       exec tor-browser-en,           					 mode "default"
+	bindsym p       exec urxvt -e python -i -c "import numpy as np", mode "default"
+#	bindsym p       exec urxvt -e jupyter console,			         mode "default"
+	bindsym Shift+p exec pavucontrol --display=$DISPLAY,			 mode "default"
+	bindsym r       exec urxvt -e ranger /data,						 mode "default"
+	bindsym Shift+r exec rambox,                   					 mode "default"
+	bindsym s       exec scribus,                  					 mode "default"
+	bindsym t       exec thunderbird,              					 mode "default"
+	bindsym v       exec urxvt -e $EDITOR,         					 mode "default"
+	bindsym Shift+v exec virtualbox,               					 mode "default"
+	bindsym z       exec zotero,                   					 mode "default"
+	bindsym Escape		                           					 mode "default"
+
+	bindsym Shift+c [class="^(?!i3bar).*$"] kill, mode "default"
+
+	bindsym Shift+i \
+		$WS7, exec urxvt -e htop, exec urxvt -e journalctl -f, \
+		$WS3, exec rambox, exec thunderbird, \
+		$WS2, exec firefox -P browsing, \
+		$WS1, $shell, $shell, \
+		mode "default"
+}
+
+#-------------#
+# Mode: music #
+#-------------#
+
+#set $mpc exec mpc -h SECRET
+set $mpc exec mpc -h SECRET
+
+set $mode_music Music: (p) previous, (n) next, (space) play / pause
+bindsym $mod+m mode "$mode_music"
+
+mode "$mode_music" {
+	bindsym space   $mpc toggle,   mode "default"
+	bindsym n       $mpc next,     mode "default"
+	bindsym p       $mpc prev,     mode "default"
+	bindsym Escape                 mode "default"
+}
+
+#------------------------#
+# Miscellaneous bindings #
+#------------------------#
+
+# Switched from xbacklight to light when changing DDX from xf86-video-intel to xf86-video-modesetting
+# https://www.reddit.com/r/archlinux/comments/4cojj9/it_is_probably_time_to_ditch_xf86videointel/
+bindsym XF86MonBrightnessUp   exec light -A 1
+bindsym XF86MonBrightnessDown exec light -U 1
+
+# Sound control
+#bindsym XF86AudioRaiseVolume  exec amixer set -D default:PCH Master 5%+
+#bindsym XF86AudioLowerVolume  exec amixer set -D default:PCH Master 5%-
+#bindsym XF86AudioMute         exec amixer set -D default:PCH Master toggle
+set $source alsa_input.pci-0000_00_1b.0.analog-stereo
+#set $sink  alsa_output.pci-0000_00_1b.0.analog-stereo
+set $sink $(pactl list short sinks | grep RUNNING | awk '{print $1}')
+set $pactl exec pactl
+bindsym XF86AudioRaiseVolume $pactl set-sink-volume $sink +5%
+bindsym XF86AudioLowerVolume $pactl set-sink-volume $sink -5%
+bindsym XF86AudioMute        $pactl set-sink-mute   $sink toggle
+bindsym XF86AudioMicMute     $pactl set-source-mute $source toggle
+
+bindsym XF86AudioNext $mpc next
+bindsym XF86AudioPrev $mpc prev
+bindsym XF86AudioPlay $mpc toggle
+bindsym XF86AudioStop $mpc toggle
+
+# Screenshots
+set $filename /data/inputs/screenshots/$(date +'%Y%m%d_%H%M%S.png')
+bindsym Print exec grim $filename
+#bindsym Shift+Print exec scrot -u $filename
+bindsym Control+Print exec grim -g "$(slurp)" $filename
