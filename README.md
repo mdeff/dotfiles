@@ -109,3 +109,11 @@ Supports [SyncTeX] in both directions.
 
 * [`.jupyter/jupyter_notebook_config.py`](.jupyter/jupyter_notebook_config.py)
 * [`.ipython/profile_default/ipython_config.py`](.ipython/profile_default/ipython_config.py)
+
+## [systemd], system and service manager
+
+[systemd]: https://freedesktop.org/wiki/Software/systemd
+
+* [`.config/systemd/user/ssh-agent.service`](.config/systemd/user/ssh-agent.service)
+* [`.config/systemd/user/default.target.wants/`](.config/systemd/user/default.target.wants/)
+* [`.config/systemd/user/sockets.target.wants/`](.config/systemd/user/sockets.target.wants/)
