@@ -164,8 +164,9 @@ Supports [SyncTeX] in both directions.
 [urxvt]: http://software.schmorp.de/pkg/rxvt-unicode.html
 
 * [`.Xresources`](.Xresources), picked up by [urxvt] and [sxiv]
-* [`.profile`](.profile)
+* [`.profile`](.profile), environment variables
 * [`.config/user-dirs.dirs`](`.config/user-dirs.dirs`), XDG default directories
+* [`.xkb/symbols/custom`](.xkb/symbols/custom), custom keyboard layout
 * [`.latexmkrc`](.latexmkrc)
 * [`.mozilla/firefox/profiles.ini`](.mozilla/firefox/profiles.ini)
 * [`.thunderbird/profiles.ini`](.mozilla/firefox/profiles.ini)

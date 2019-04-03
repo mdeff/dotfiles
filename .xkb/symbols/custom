@@ -1,0 +1,9 @@
+default partial alphanumeric_keys
+xkb_symbols "basic" {
+    include "ch(basic)"
+    override key <AD11> { [ bracketleft, braceleft ] };
+    override key <AD12> { [ bracketright, braceright ] };
+    override key <AC10> { [ eacute, egrave ] };
+    override key <AC11> { [ agrave, dead_diaeresis ] };
+    override key <BKSL> { [ dollar, exclam, sterling ] };
+};
