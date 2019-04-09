@@ -454,14 +454,15 @@ mode "$mode_fs_umount" {
 # Mode: open applications #
 #-------------------------#
 
-set $mode_open Programs: (I) init, (C) close all, (a,b,f,g,i,l,m,M,o,p,P,r,R,s,t,v,V,z)
+set $mode_open Programs: (I) init, (C) close all, (a,b,f,g,G,i,l,m,M,o,p,P,r,R,s,t,v,V,z)
 bindsym $mod+o mode "$mode_open"
 
 mode "$mode_open" {
 	bindsym a       exec audacity,									 mode "default"
 	bindsym b       exec blender,                  					 mode "default"
 	bindsym f       exec firefox -P browsing,      					 mode "default"
-	bindsym g       exec gephi,                    					 mode "default"
+	bindsym g       exec gimp,                    					 mode "default"
+	bindsym Shift+g exec gephi,                    					 mode "default"
 	bindsym h       exec urxvt -e htop,            					 mode "default"
 	bindsym i       exec inkscape,                 					 mode "default"
 	bindsym j       exec jupyter-lab,              					 mode "default"
