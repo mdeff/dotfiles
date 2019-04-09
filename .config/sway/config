@@ -454,7 +454,7 @@ mode "$mode_fs_umount" {
 # Mode: open applications #
 #-------------------------#
 
-set $mode_open Programs: (I) init, (C) close all, (a,b,f,g,G,i,l,m,M,o,p,P,r,R,s,t,v,V,z)
+set $mode_open Programs: (I) init, (C) close all, (a,b,f,g,G,i,l,m,M,o,p,P,r,R,s,t,v,V,x,z)
 bindsym $mod+o mode "$mode_open"
 
 mode "$mode_open" {
@@ -479,6 +479,7 @@ mode "$mode_open" {
 	bindsym t       exec thunderbird,              					 mode "default"
 	bindsym v       exec urxvt -e $EDITOR,         					 mode "default"
 	bindsym Shift+v exec virtualbox,               					 mode "default"
+	bindsym x       exec xournalpp,                                  mode "default"
 	bindsym z       exec zotero,                   					 mode "default"
 	bindsym Escape		                           					 mode "default"
 
