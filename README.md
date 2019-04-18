@@ -167,6 +167,7 @@ Supports [SyncTeX] in both directions.
 * [`.profile`](.profile), environment variables
 * [`.config/user-dirs.dirs`](`.config/user-dirs.dirs`), XDG default directories
 * [`.xkb/symbols/custom`](.xkb/symbols/custom), custom keyboard layout
+  (copy left in `/usr/share/X11/xkb/symbols/custom` for xorg)
 * [`.latexmkrc`](.latexmkrc)
 * [`.mozilla/firefox/profiles.ini`](.mozilla/firefox/profiles.ini)
 * [`.thunderbird/profiles.ini`](.mozilla/firefox/profiles.ini)
