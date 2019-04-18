@@ -153,6 +153,7 @@ Supports [SyncTeX] in both directions.
 * [`.local/bin/gvim`](.local/bin/gvim)
 * [`.local/bin/kernelspecs`](.local/bin/kernelspecs)
 * [`.local/bin/libreoffice`](.local/bin/libreoffice)
+* [`.local/bin/pactl-move-sink`](.local/bin/pactl-move-sink)
 * [`.local/bin/pdf2cmyk`](.local/bin/pdf2cmyk)
 * [`.local/bin/ssh-add`](.local/bin/ssh-add)
 * [`.local/bin/tunnels`](.local/bin/tunnels)

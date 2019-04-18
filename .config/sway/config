@@ -500,13 +500,18 @@ mode "$mode_open" {
 #set $mpc exec mpc -h SECRET
 set $mpc exec mpc -h SECRET
 
-set $mode_music Music: (p) previous, (n) next, (space) play / pause
+set $mode_music Music: (p) previous, (n) next, (space) play / pause, (a) analog, (h) HDMI, (b) Bluetooth
 bindsym $mod+m mode "$mode_music"
+
+set $pactl_move_sink exec pactl-move-sink
 
 mode "$mode_music" {
 	bindsym space   $mpc toggle,   mode "default"
 	bindsym n       $mpc next,     mode "default"
 	bindsym p       $mpc prev,     mode "default"
+	bindsym a       $pactl_move_sink alsa_output.pci-0000_00_1b.0.analog-stereo, mode "default"
+	bindsym h       $pactl_move_sink alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1, mode "default"
+	bindsym b       $pactl_move_sink bluez_sink.00_18_96_00_FF_A9.a2dp_sink, mode "default"
 	bindsym Escape                 mode "default"
 }
 
