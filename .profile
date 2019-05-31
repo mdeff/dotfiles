@@ -112,18 +112,26 @@ export JUPYTERLAB_DIR="$XDG_DATA_HOME"/jupyter/lab
 # Scroll by touching the screen.
 export MOZ_USE_XINPUT2=1
 
+# Use wayland by default (without forcing all GTK apps to switch).
+export MOZ_ENABLE_WAYLAND=1
+
 ###############################################################################
 # Sway
 ###############################################################################
 
-# For Firefox to use Wayland, not XWayland.
-# Firefox 64 doesn't find screen as of 2019-01-16.
+# https://github.com/swaywm/sway/wiki/Running-programs-natively-under-wayland
+
+# Force GTK3 applications to use Wayland, not XWayland.
+# Enable per app, not globally:
+# * Firefox 64 doesn't find screen as of 2019-01-16. Resolved in Firefox 67 as of 2019-05-31.
+# * Thunderbird and LibreOffice doesn't find screen as of 2019-05-31.
 #export GDK_BACKEND=wayland
 #export CLUTTER_BACKEND=wayland
 
-# For Qt apps.
+# Force Qt applications to use Wayland, not XWayland.
 #export QT_QPA_PLATFORM=wayland-egl  # wayland, wayland-egl, wayland-???
-#export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
+#export QT_WAYLAND_FORCE_DPI=physical
+#export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
 
 # Some Java AWT applications don't display properly under Xwayland without the following.
 # That is the case of Gephi.
