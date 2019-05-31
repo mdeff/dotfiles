@@ -473,7 +473,7 @@ mode "$mode_open" {
 	bindsym o       exec tor-browser-en,           					 mode "default"
 	bindsym p       exec urxvt -e python -i -c "import numpy as np", mode "default"
 #	bindsym p       exec urxvt -e jupyter console,			         mode "default"
-	bindsym Shift+p exec pavucontrol --display=$DISPLAY,			 mode "default"
+	bindsym Shift+p exec pavucontrol,								 mode "default"
 	bindsym r       exec urxvt -e ranger /data,						 mode "default"
 	bindsym Shift+r exec rambox,                   					 mode "default"
 	bindsym s       exec scribus,                  					 mode "default"
