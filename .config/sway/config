@@ -236,6 +236,7 @@ set $base3         #fdf6e3
 
 # Screen color when no application are open.
 #output * background $basez3 solid_color
+#output * background black_hole.png fill
 
 # class                 border  backgr. text    indicator child_border
 client.focused          $basez1 $basez1 $base1  $basez1   $basez1
