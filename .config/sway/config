@@ -63,7 +63,7 @@ input "1739:29252:SYNAPTICS_Synaptics_Touch_Digitizer_V04" map_to_output eDP-1
 set $mod Mod4
 
 # Window borders and titles
-new_window pixel 2
+default_border pixel 2
 hide_edge_borders none
 
 # Never move the mouse to the center of the screen.
