@@ -30,6 +30,7 @@ In general, I try to unify the look ([Solarized] color theme, [Inconsolata] font
 * [vim-pandoc](https://github.com/vim-pandoc/vim-pandoc), integration with [pandoc](http://johnmacfarlane.net/pandoc) document converter
 * [vim-pandoc-syntax](https://github.com/vim-pandoc/vim-pandoc-syntax), syntax highlighting for vim-pandoc
 * [vimtex](https://github.com/lervag/vimtex), support for writing [LaTeX] documents
+* [commentary.vim](https://github.com/tpope/vim-commentary), comment and uncomment
 * [surround.vim](https://github.com/tpope/vim-surround), delete / change / add surroundings (parentheses, brackets, quotes, XML tag)
 * [sneak.vim](https://github.com/justinmk/vim-sneak), jump to any location specified by two characters
 * [startify](https://github.com/mhinz/vim-startify), start screen

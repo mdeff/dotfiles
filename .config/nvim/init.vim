@@ -196,6 +196,9 @@ let g:vimtex_view_method = 'zathura'
 let g:vimtex_compiler_progname = 'nvr'  " forward and backward search, install neovim-remote from AUR
 "let g:tex_flavor = 'latex'
 
+" Comment with gc(c).
+Plug 'tpope/vim-commentary'
+
 " Easy surrounding of text with quotes, tags, etc.
 Plug 'tpope/vim-surround'
 
