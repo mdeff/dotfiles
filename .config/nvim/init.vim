@@ -213,10 +213,11 @@ Plug 'justinmk/vim-sneak'
 let g:sneak#label = 1
 
 " Exchange so forward is "," and backward is ";" = "Shift+,".
-noremap , ;
-noremap ; ,
-map , <Plug>Sneak_;
-map ; <Plug>Sneak_,
+" Better be consistent with other vi movement implementations (like in jupyter).
+" noremap , ;
+" noremap ; ,
+" map , <Plug>Sneak_;
+" map ; <Plug>Sneak_,
 
 " Do not save swaps of encrypted files.
 " TODO: find a better solution.
