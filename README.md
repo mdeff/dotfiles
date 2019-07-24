@@ -145,6 +145,7 @@ Supports [SyncTeX] in both directions.
 [systemd]: https://freedesktop.org/wiki/Software/systemd
 
 * [`.config/systemd/user/ssh-agent.service`](.config/systemd/user/ssh-agent.service)
+* [`.config/systemd/user/dropbox.service.d/override.conf`](.config/systemd/user/dropbox.service.d/override.conf)
 * [`.config/systemd/user/default.target.wants/`](.config/systemd/user/default.target.wants/)
 * [`.config/systemd/user/sockets.target.wants/`](.config/systemd/user/sockets.target.wants/)
 
