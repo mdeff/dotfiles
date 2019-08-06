@@ -362,8 +362,7 @@ set $net_start exec sudo netctl start
 set $net_stop exec sudo netctl stop
 
 set $net_stop_all exec sudo netctl stop-all, \
-	exec sudo resolvconf -d wlp4s0.dhcp, \
-	exec sudo resolvconf -d bnep0.dhcp, \
+	exec sudo resolvconf -d '*.*', \
 	exec dbus-send --system --type=method_call \
 	     --dest=org.bluez /org/bluez/hci0/dev_58_2A_F7_9E_54_EE \
 		 org.bluez.Network1.Disconnect
