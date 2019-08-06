@@ -358,16 +358,17 @@ mode "$mode_workplace" {
 # Mode: network selection #
 #-------------------------#
 
-set $net_stop exec sudo netctl stop-all, \
+set $net_start exec sudo netctl start
+set $net_stop exec sudo netctl stop
+
+set $net_stop_all exec sudo netctl stop-all, \
 	exec sudo resolvconf -d wlp4s0.dhcp, \
 	exec sudo resolvconf -d bnep0.dhcp, \
-	exec sudo killall -SIGINT openconnect, \
 	exec dbus-send --system --type=method_call \
 	     --dest=org.bluez /org/bluez/hci0/dev_58_2A_F7_9E_54_EE \
 		 org.bluez.Network1.Disconnect
 #    exec sudo hciconfig hci0 down
 #   rfkill
-set $net_start exec sudo netctl start
 
 # sudo hciconfig hci0 up &&
 set $bluetooth exec dbus-send --system --type=method_call \
@@ -375,8 +376,8 @@ set $bluetooth exec dbus-send --system --type=method_call \
 	org.bluez.Network1.Connect string:'nap' && \
 	sleep 2 && sudo netctl start bphone
 
-set $vpn_start exec sudo systemctl start vpn_epfl
-set $vpn_stop  exec sudo systemctl stop  vpn_epfl
+# set $vpn_start exec sudo systemctl start vpn_epfl
+# set $vpn_stop  exec sudo systemctl stop  vpn_epfl
 
 set $tunnels exec tunnels restart
 
@@ -392,10 +393,10 @@ mode "$mode_network" {
 	bindsym p       $bluetooth,               mode "default"
 	bindsym Shift+p $net_start wphone,        mode "default"
 	bindsym d       $net_start edhcp,         mode "default"
-	bindsym n       $net_stop,                mode "default"
+	bindsym n       $net_stop_all,            mode "default"
 	bindsym t       $tunnels,                 mode "default"
-	bindsym v       $vpn_start,               mode "default"
-	bindsym Shift+v $vpn_stop,                mode "default"
+	bindsym v       $net_start vepfl,         mode "default"
+	bindsym Shift+v $net_stop vepfl,          mode "default"
 	bindsym Escape                            mode "default"
 }
 
@@ -409,8 +410,8 @@ bindsym $mod+Escape mode "$mode_system"
 mode "$mode_system" {
 	bindsym l exec swaylock, mode "default"
 	bindsym e exit
-	bindsym s $net_stop, exec swaylock && systemctl suspend, mode "default"
-	bindsym h $net_stop, exec swaylock && systemctl hibernate, mode "default"
+	bindsym s $net_stop_all, exec swaylock && systemctl suspend, mode "default"
+	bindsym h $net_stop_all, exec swaylock && systemctl hibernate, mode "default"
 	bindsym r exec systemctl reboot
 	bindsym o exec systemctl poweroff
 	bindsym Escape mode "default"
