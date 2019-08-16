@@ -8,7 +8,6 @@
 	# wait on https://github.com/swaywm/sway/issues/1666
 # pdfpc starts on beamer
 	# cannot be matched
-# tor is not rescaled
 # security
 # screenshot active window
 
@@ -470,7 +469,7 @@ mode "$mode_open" {
 	bindsym l       exec libreoffice,              					 mode "default"
 	bindsym m       exec urxvt -e ncmpcpp,         					 mode "default"
 	bindsym Shift+m exec meshlab,                  					 mode "default"
-	bindsym o       exec tor-browser-en,           					 mode "default"
+	bindsym o       exec tor-browser,           					 mode "default"
 	bindsym p       exec urxvt -e python -i -c "import numpy as np", mode "default"
 #	bindsym p       exec urxvt -e jupyter console,			         mode "default"
 	bindsym Shift+p exec pavucontrol,								 mode "default"
