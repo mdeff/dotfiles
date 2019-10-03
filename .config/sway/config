@@ -483,7 +483,7 @@ mode "$mode_open" {
 	bindsym z       exec zotero,                   					 mode "default"
 	bindsym Escape		                           					 mode "default"
 
-	bindsym Shift+c [class="^(?!i3bar).*$"] kill, mode "default"
+	bindsym Shift+c [title=".*"] kill, mode "default"
 
 	bindsym Shift+i \
 		$WS7, exec urxvt -e htop, exec urxvt -e journalctl -f, \
