@@ -521,8 +521,10 @@ mode "$mode_music" {
 
 # Switched from xbacklight to light when changing DDX from xf86-video-intel to xf86-video-modesetting
 # https://www.reddit.com/r/archlinux/comments/4cojj9/it_is_probably_time_to_ditch_xf86videointel/
-bindsym XF86MonBrightnessUp   exec light -A 1
-bindsym XF86MonBrightnessDown exec light -U 1
+# bindsym XF86MonBrightnessUp   exec light -A 1
+# bindsym XF86MonBrightnessDown exec light -U 1
+bindsym XF86MonBrightnessUp   exec brightnessctl --exponent=4 s 1%+
+bindsym XF86MonBrightnessDown exec brightnessctl --exponent=4 s 1%-
 
 # Sound control
 #bindsym XF86AudioRaiseVolume  exec amixer set -D default:PCH Master 5%+
