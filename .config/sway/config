@@ -339,7 +339,8 @@ mode "$mode_workplace" {
 		output HDMI-A-2 enable pos 1920 0, \
 		$pen_on, \
 		$dpms_off, \
-		$WS6, $beamer, \
+		$WS10,$laptop, $WS9,$laptop, $WS8,$laptop, $WS7,$laptop, $WS6,$beamer, \
+		$WS5,$laptop, $WS4,$laptop, $WS3,$laptop, $WS2,$laptop, $WS1,$laptop, \
 		mode "default"
 
 #	bindsym Shift+b \
