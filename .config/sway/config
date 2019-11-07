@@ -6,8 +6,6 @@
 # idle inhibition: https://github.com/swaywm/sway/pull/3962
 # mirror display (e.g., for live programming session in beamer mode, to have the laptop screen in EPFL mode)
 	# wait on https://github.com/swaywm/sway/issues/1666
-# pdfpc starts on beamer
-	# cannot be matched
 # security
 # screenshot active window
 
@@ -196,9 +194,10 @@ bindsym $mod+Shift+m move workspace to output right
 # No border (title bar) for browser.
 #for_window [class="Firefox"] border none
 
-# Slides on projector.
-assign [class="Pdfpc" window_role="presentation"] workspace $WS6
-#assign [class="Pdfpc" window_role="presenter"] workspace $WS9
+# Slides on beamer.
+for_window [title="pdfpc - presentation .*"] move container to $WS6
+#for_window [app_id="pdfpc"] move container to $WS6
+#assign [class="Pdfpc" window_role="presentation"] workspace $WS6
 
 # Tor browser window shouldn't be resized.
 # Default resolution of 1000 x 1000 should be kept for anonymity.
