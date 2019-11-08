@@ -207,7 +207,7 @@ for_window [class="Tor Browser"] floating enable
 # When opening windows initially.
 for_window [app_id="firefox"] layout tabbed
 for_window [app_id="thunderbird"] layout tabbed
-for_window [title="htop"] layout splitv
+#for_window [title="htop"] layout splitv
 
 #-------------#
 # Color theme #
@@ -487,7 +487,7 @@ mode "$mode_open" {
 	bindsym Shift+c [title=".*"] kill, mode "default"
 
 	bindsym Shift+i \
-		$WS7, exec urxvt -e htop, exec urxvt -e journalctl -f, \
+		$WS7, exec urxvt -e journalctl -f, \
 		$WS3, exec rambox, exec thunderbird, \
 		$WS2, exec firefox -P browsing, \
 		$WS1, $shell, $shell, \
