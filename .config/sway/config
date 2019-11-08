@@ -205,7 +205,8 @@ for_window [class="Tor Browser"] floating enable
 #for_window [class="Tor Browser"] floating enable resize set width 1004 px height 1102 px
 
 # When opening windows initially.
-for_window [class="Thunderbird"] layout tabbed
+for_window [app_id="firefox"] layout tabbed
+for_window [app_id="thunderbird"] layout tabbed
 for_window [title="htop"] layout splitv
 
 #-------------#
