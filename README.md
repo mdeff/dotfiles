@@ -153,6 +153,7 @@ Supports [SyncTeX] in both directions.
 
 * [`.local/bin/aur`](.local/bin/aur)
 * [`.local/bin/aur-clean`](.local/bin/aur-clean)
+* [`.local/bin/aur-regenerate`](.local/bin/aur-regenerate)
 * [`.local/bin/gvim`](.local/bin/gvim)
 * [`.local/bin/kernelspecs`](.local/bin/kernelspecs)
 * [`.local/bin/libreoffice`](.local/bin/libreoffice)

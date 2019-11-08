@@ -1,0 +1,11 @@
+#!/usr/bin/sh
+
+# `pacman -Sc` will prune old packages from the `aur` repository.
+# Run this from time to time to prune the database.
+
+REPO=~/aurpkgs
+DB=${REPO}/aur.db.tar
+
+rm ${REPO}/aur.*
+repo-add ${DB}
+repo-add ${DB} ${REPO}/*.pkg.tar.*
