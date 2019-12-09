@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+
+import os
+import subprocess
+import sys
+
+parameters = sys.argv[1:]
+
+for _, _, files in os.walk("."):
+    for name in files:
+        name, ext = os.path.splitext(name)
+        if ext == '.pdf':
+            command = ["convert"]
+            command.extend(parameters)
+            command.extend([f'{name}.pdf', f'{name}.png'])
+            print(' '.join(command))
+            subprocess.run(command)
