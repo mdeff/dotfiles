@@ -137,3 +137,12 @@ export MOZ_ENABLE_WAYLAND=1
 # That is the case of Gephi.
 # https://github.com/swaywm/sway/wiki/Running-programs-natively-under-wayland
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+###############################################################################
+# Hardware video acceleration
+###############################################################################
+
+# Bypass GStreamer's whitelist of VA-API drivers, for GST to use intel-media-driver.
+# https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Application_support
+# https://wiki.archlinux.org/index.php/GStreamer#Hardware_video_acceleration
+export GST_VAAPI_ALL_DRIVERS=1
