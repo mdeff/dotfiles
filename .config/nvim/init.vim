@@ -219,6 +219,10 @@ let g:sneak#label = 1
 " map , <Plug>Sneak_;
 " map ; <Plug>Sneak_,
 
+" Edit text with vim from Firefox. Open nvim and run :GhostStart to start server.
+" CTRL+SHIFT+V in Firefox to edit in vim. Close with ":bd!".
+Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
+
 " Do not save swaps of encrypted files.
 " TODO: find a better solution.
 Plug 'https://gist.github.com/5890634.git', { 'frozen': 1 }

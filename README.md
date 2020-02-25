@@ -34,6 +34,7 @@ In general, I try to unify the look ([Solarized] color theme, [Inconsolata] font
 * [surround.vim](https://github.com/tpope/vim-surround), delete / change / add surroundings (parentheses, brackets, quotes, XML tag)
 * [sneak.vim](https://github.com/justinmk/vim-sneak), jump to any location specified by two characters
 * [startify](https://github.com/mhinz/vim-startify), start screen
+* [vim-ghost](https://github.com/raghur/vim-ghost), edit text areas from Firefox
 
 ## [Ranger], console file manager
 
