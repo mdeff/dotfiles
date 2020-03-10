@@ -12,6 +12,6 @@ for _, _, files in os.walk("."):
         if ext == '.pdf':
             command = ["convert"]
             command.extend(parameters)
-            command.extend([f'{name}.pdf', f'{name}.png'])
+            command.extend([f'{name}.pdf[0]', f'{name}.png'])
             print(' '.join(command))
             subprocess.run(command)
