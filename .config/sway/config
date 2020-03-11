@@ -304,9 +304,8 @@ $dpms_on
 set $dpms_off exec pkill swayidle
 
 set $laptop move workspace to output eDP-1
-set $beamer move workspace to output HDMI-A-2
-set $epfl1  move workspace to output HDMI-A-2
-set $epfl2  move workspace to output DP-1
+set $ext1  move workspace to output HDMI-A-2
+set $ext2  move workspace to output DP-1
 
 set $mode_workplace Workplace: (l) laptop, (b,B) beamer, (h) home, (e) EPFL
 bindsym $mod+w mode "$mode_workplace"
@@ -321,6 +320,15 @@ mode "$mode_workplace" {
 		$dpms_on, \
 		mode "default"
 
+	bindsym h \
+		output eDP-1 enable res 1920x1080 pos 1920 0, \
+		output HDMI-A-2 enable res 1920x1080 pos 0 0, \
+		$pen_on, \
+		$dpms_on, \
+		$WS10,$ext1, $WS9,$ext1, $WS8,$ext1, $WS7,$laptop, $WS6,$ext1, \
+		$WS5,$ext1, $WS4,$ext1, $WS3,$laptop, $WS2,$ext1, $WS1,$ext1, \
+		mode "default"
+
 	# TODO: DP-1 or HDMI-A-2 should mirror eDP-1
 	# We otherwise don't have any screen left when disconnecting dock.
 	bindsym e \
@@ -329,8 +337,8 @@ mode "$mode_workplace" {
 		output HDMI-A-2 enable res 1920x1080 pos 1920 0, \
 		$pen_off, \
 		$dpms_on, \
-		$WS10,$epfl1, $WS9,$epfl1, $WS8,$epfl1, $WS7,$epfl2, $WS6,$epfl1, \
-		$WS5,$epfl1, $WS4,$epfl1, $WS3,$epfl2, $WS2,$epfl2, $WS1,$epfl1, \
+		$WS10,$ext1, $WS9,$ext1, $WS8,$ext1, $WS7,$ext2, $WS6,$ext1, \
+		$WS5,$ext1, $WS4,$ext1, $WS3,$ext2, $WS2,$ext2, $WS1,$ext1, \
 		mode "default"
 
 	bindsym b \
@@ -339,7 +347,7 @@ mode "$mode_workplace" {
 		output HDMI-A-2 enable pos 1920 0, \
 		$pen_on, \
 		$dpms_off, \
-		$WS10,$laptop, $WS9,$laptop, $WS8,$laptop, $WS7,$laptop, $WS6,$beamer, \
+		$WS10,$laptop, $WS9,$laptop, $WS8,$laptop, $WS7,$laptop, $WS6,$ext1, \
 		$WS5,$laptop, $WS4,$laptop, $WS3,$laptop, $WS2,$laptop, $WS1,$laptop, \
 		mode "default"
 
