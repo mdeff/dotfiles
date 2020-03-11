@@ -14,7 +14,7 @@ function venv
 end
 
 function ll
-	ls -latr
+	ls -latrh
 end
 
 function su
