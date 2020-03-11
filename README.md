@@ -172,7 +172,7 @@ Supports [SyncTeX] in both directions.
 
 * [`.Xresources`](.Xresources), picked up by [urxvt] and [sxiv]
 * [`.profile`](.profile), environment variables
-* [`.config/user-dirs.dirs`](`.config/user-dirs.dirs`), XDG default directories
+* [`.config/user-dirs.dirs`](.config/user-dirs.dirs), XDG default directories
 * [`.xkb/symbols/custom`](.xkb/symbols/custom), custom keyboard layout
   (copy left in `/usr/share/X11/xkb/symbols/custom` for xorg)
 * [`.latexmkrc`](.latexmkrc)
