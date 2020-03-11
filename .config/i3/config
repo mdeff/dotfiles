@@ -447,7 +447,7 @@ mode "$mode_open" {
 	#bindsym t,       exec telegram-desktop,               mode "default"
 	bindsym v,       exec urxvt -e $EDITOR,               mode "default"
 	bindsym Shift+v, exec virtualbox,                     mode "default"
-	bindsym z,       exec zotero,                         mode "default"
+	bindsym z,       exec zoom,                           mode "default"
 	bindsym Escape			                              mode "default"
 
 	bindsym Shift+c  [class="^(?!i3bar).*$"] kill,        mode "default"
