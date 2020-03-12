@@ -288,6 +288,11 @@ bindsym $mod+r mode "resize"
 set $pen_on input "1386:236:Wacom_ISDv4_EC_Pen" events enabled
 set $pen_off input "1386:236:Wacom_ISDv4_EC_Pen" events disabled
 
+# To set brightness on external monitors through /sys/class/backlight/.
+# Let some time for the monitor to turn on.
+set $ddc_on exec sleep 20 && sudo modprobe ddcci
+set $ddc_off exec sudo modprobe -r ddcci_backlight ddcci
+
 # Call true to exit with 0 and run swayidle even when no process were killed.
 set $dpms_on exec pkill swayidle || true && swayidle -w \
     timeout 600 'swaymsg "output * dpms off"' \
@@ -304,8 +309,8 @@ $dpms_on
 set $dpms_off exec pkill swayidle
 
 set $laptop move workspace to output eDP-1
-set $ext1  move workspace to output HDMI-A-2
-set $ext2  move workspace to output DP-1
+set $ext1  move workspace to output HDMI-A-2  # mini-HDMI on the side
+set $ext2  move workspace to output DP-1  # HDMI on docking station
 
 set $mode_workplace Workplace: (l) laptop, (b,B) beamer, (h) home, (e) EPFL
 bindsym $mod+w mode "$mode_workplace"
@@ -318,6 +323,7 @@ mode "$mode_workplace" {
 		output HDMI-A-2 disable, \
 		$pen_on, \
 		$dpms_on, \
+		$ddc_off, \
 		mode "default"
 
 	bindsym h \
@@ -325,6 +331,7 @@ mode "$mode_workplace" {
 		output HDMI-A-2 enable res 1920x1080 pos 0 0, \
 		$pen_on, \
 		$dpms_on, \
+		$ddc_on, \
 		$WS10,$ext1, $WS9,$ext1, $WS8,$ext1, $WS7,$laptop, $WS6,$ext1, \
 		$WS5,$ext1, $WS4,$ext1, $WS3,$laptop, $WS2,$ext1, $WS1,$ext1, \
 		mode "default"
@@ -337,6 +344,7 @@ mode "$mode_workplace" {
 		output HDMI-A-2 enable res 1920x1080 pos 1920 0, \
 		$pen_off, \
 		$dpms_on, \
+		$ddc_on, \
 		$WS10,$ext1, $WS9,$ext1, $WS8,$ext1, $WS7,$ext2, $WS6,$ext1, \
 		$WS5,$ext1, $WS4,$ext1, $WS3,$ext2, $WS2,$ext2, $WS1,$ext1, \
 		mode "default"
@@ -347,6 +355,7 @@ mode "$mode_workplace" {
 		output HDMI-A-2 enable pos 1920 0, \
 		$pen_on, \
 		$dpms_off, \
+		$ddc_off, \
 		$WS10,$laptop, $WS9,$laptop, $WS8,$laptop, $WS7,$laptop, $WS6,$ext1, \
 		$WS5,$laptop, $WS4,$laptop, $WS3,$laptop, $WS2,$laptop, $WS1,$laptop, \
 		mode "default"
@@ -357,6 +366,7 @@ mode "$mode_workplace" {
 #		output HDMI-A-2 enable mirror eDP-1, \
 #		$pen_on, \
 #		$dpms_off, \
+#		$ddc_off, \
 #		mode "default"
 
 	bindsym Escape mode "default"
@@ -532,8 +542,8 @@ mode "$mode_music" {
 # https://www.reddit.com/r/archlinux/comments/4cojj9/it_is_probably_time_to_ditch_xf86videointel/
 # bindsym XF86MonBrightnessUp   exec light -A 1
 # bindsym XF86MonBrightnessDown exec light -U 1
-bindsym XF86MonBrightnessUp   exec brightnessctl --exponent=4 s 1%+
-bindsym XF86MonBrightnessDown exec brightnessctl --exponent=4 s 1%-
+bindsym XF86MonBrightnessUp   exec brightness 1%+
+bindsym XF86MonBrightnessDown exec brightness 1%-
 
 # Sound control
 #bindsym XF86AudioRaiseVolume  exec amixer set -D default:PCH Master 5%+

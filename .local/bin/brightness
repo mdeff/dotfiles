@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+
+import os
+import subprocess
+import sys
+
+value = sys.argv[1]
+
+command = ["brightnessctl", "--exponent=4", "set", value]
+for device in os.listdir("/sys/class/backlight/"):
+    cmd = command + [f"--device={device}"]
+    print(' '.join(cmd))
+    subprocess.run(cmd)
+
+# * ddcutil: too complicated to compute percent values and increases with exponent
+# * ddcci-driver-linux-dkms: no hotplug detection, module must be reloaded
+
+#command = ["ddcutil", "setvcp", "10"]
+#command.extend(value)
+# faster (measured with --stats) but might fail
+#command += ["--sleep-multiplier", ".2"]
+# much faster to select by bus than display
+#command += ["--bus"]
+#for display in range(1, 4):
+#    cmd = command + [str(display)]
+#    print(' '.join(cmd))
+#    #subprocess.run(cmd)
