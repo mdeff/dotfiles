@@ -23,8 +23,8 @@ In general, I try to unify the look ([Solarized] color theme, [Inconsolata] font
 * [ranger.vim](https://github.com/rafaqz/ranger.vim), browse files with [ranger]
 * [grepper](https://github.com/mhinz/vim-grepper), asynchronous search (using [ripgrep](https://github.com/BurntSushi/ripgrep))
 * [supertab](https://github.com/ervandew/supertab), tab for completion
-* [YouCompleteMe](https://github.com/Valloric/YouCompleteMe), code completion
-* [Asynchronous Lint Engine](https://github.com/w0rp/ale), linting (checking syntax and semantics)
+* [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe), code completion
+* [Asynchronous Lint Engine](https://github.com/dense-analysis/ale), linting (checking syntax and semantics)
 * [vim-autoformat](https://github.com/Chiel92/vim-autoformat), code formating
 * [vim-isort](https://github.com/fisadev/vim-isort), sort python imports using [isort](https://github.com/timothycrosley/isort)
 * [vim-pandoc](https://github.com/vim-pandoc/vim-pandoc), integration with [pandoc](http://johnmacfarlane.net/pandoc) document converter

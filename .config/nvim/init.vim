@@ -114,7 +114,7 @@ Plug 'ervandew/supertab'
 autocmd FileType python setlocal completeopt-=preview
 
 " Most used autocompletion. Supports many languages.
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 let g:ycm_filetype_blacklist = { }  " Enable completion for text, markdown, etc.
 nnoremap <Leader>d :YcmCompleter GoTo<CR>
 nnoremap <Leader>u :YcmCompleter GoToReferences<CR>
@@ -142,7 +142,7 @@ nnoremap <Leader>h :YcmCompleter GetDoc<CR>
 "let g:syntastic_check_on_wq = 0
 
 " Asynchronous lint engine (via external tools).
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 let g:ale_echo_msg_format = '[%linter%] %s'
 " let g:ale_open_list = 1  " Open error window (can be opened with lopen).
 " Save battery life.
