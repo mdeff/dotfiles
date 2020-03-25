@@ -28,6 +28,10 @@ VENV_DIRS = [
 if __name__ == '__main__':
     for venv_dir in VENV_DIRS:
         for venv in os.listdir(venv_dir):
+
+            if venv == '.conda_envs_dir_test':
+                continue
+
             print(f'Adding environment {venv_dir / venv}')
 
             try:
