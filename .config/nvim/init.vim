@@ -212,6 +212,18 @@ Plug 'tpope/vim-surround'
 Plug 'justinmk/vim-sneak'
 let g:sneak#label = 1
 
+" Identification and insertion of any unicode character.
+" Search and insert with ":UnicodeSearch! mychar".
+" Show table with ":UnicodeTable", then search.
+" Insert unicode char with "i C+V u2209".
+" Complete with <C-X><C-G> (digraphs) and <C-X><C-Z> (unicode).
+" Identify character with ":UnicodeName".
+Plug 'chrisbra/unicode.vim'
+" Alternative: built-in digraphs.
+" Search by name in ":help digraphs" or ":UnicodeTable".
+" Insert with "i C+K a*"
+" Identify character with "ga".
+
 " Exchange so forward is "," and backward is ";" = "Shift+,".
 " Better be consistent with other vi movement implementations (like in jupyter).
 " noremap , ;

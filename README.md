@@ -33,8 +33,9 @@ In general, I try to unify the look ([Solarized] color theme, [Inconsolata] font
 * [commentary.vim](https://github.com/tpope/vim-commentary), comment and uncomment
 * [surround.vim](https://github.com/tpope/vim-surround), delete / change / add surroundings (parentheses, brackets, quotes, XML tag)
 * [sneak.vim](https://github.com/justinmk/vim-sneak), jump to any location specified by two characters
-* [startify](https://github.com/mhinz/vim-startify), start screen
+* [unicode.vim](https://github.com/chrisbra/unicode.vim), a Vim plugin for handling unicode and digraphs characters
 * [vim-ghost](https://github.com/raghur/vim-ghost), edit text areas from Firefox
+* [startify](https://github.com/mhinz/vim-startify), start screen
 
 ## [Ranger], console file manager
 
