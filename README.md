@@ -153,6 +153,7 @@ Supports [SyncTeX] in both directions.
 
 ## User binaries
 
+* [`.local/bin/android-control`](.local/bin/android-control)
 * [`.local/bin/aur`](.local/bin/aur)
 * [`.local/bin/aur-clean`](.local/bin/aur-clean)
 * [`.local/bin/aur-regenerate`](.local/bin/aur-regenerate)

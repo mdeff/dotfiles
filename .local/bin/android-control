@@ -1,0 +1,33 @@
+#!/usr/bin/sh
+
+# restart server: adb kill-server
+
+if [[ $# -eq 0 ]] ; then
+	adb devices -l  # show connected devices
+fi
+
+case "$1" in
+
+	phone-usb)
+		scrcpy --serial "S7M0215425009907"
+		;;
+
+	phone)
+		DEVICE="192.168.0.12:5555"
+		adb connect "$DEVICE"
+		scrcpy --bit-rate 2M --max-size 800 --serial "$DEVICE"
+		adb disconnect "$DEVICE"  # let somebody else connect
+		;;
+
+	tv)
+		DEVICE="192.168.0.14:5555"
+		adb connect "$DEVICE"
+		scrcpy --serial "$DEVICE"
+		adb disconnect "$DEVICE"  # let somebody else connect
+		;;
+
+	*)
+		echo "Unknown device: $1"
+		exit 1
+
+esac
