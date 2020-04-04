@@ -1,4 +1,4 @@
-<configuration version="29">
+<configuration version="30">
     <folder id="camera" label="camera" path="/data/inputs/camera" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="DWS5Q7L-AYFWSUY-6FRJEN5-65UZTWB-6LSL6PD-BKNH4C5-YHRUMPV-UWU6UQC" introducedBy=""></device>
@@ -388,12 +388,13 @@
         <trafficClass>0</trafficClass>
         <defaultFolderPath>~</defaultFolderPath>
         <setLowPriority>true</setLowPriority>
-        <maxConcurrentScans>0</maxConcurrentScans>
+        <maxFolderConcurrency>0</maxFolderConcurrency>
         <crashReportingURL>https://crash.syncthing.net/newcrash</crashReportingURL>
         <crashReportingEnabled>true</crashReportingEnabled>
         <stunKeepaliveStartS>180</stunKeepaliveStartS>
         <stunKeepaliveMinS>20</stunKeepaliveMinS>
         <stunServer>default</stunServer>
         <databaseTuning>auto</databaseTuning>
+        <maxConcurrentIncomingRequestKiB>0</maxConcurrentIncomingRequestKiB>
     </options>
 </configuration>
