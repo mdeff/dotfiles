@@ -116,6 +116,12 @@ Supports [SyncTeX] in both directions.
 * [`.jupyter/jupyter_notebook_config.py`](.jupyter/jupyter_notebook_config.py)
 * [`.ipython/profile_default/ipython_config.py`](.ipython/profile_default/ipython_config.py)
 
+## [R], statistical computing
+
+[R]: https://www.r-project.org
+
+* [`.Rprofile`](.Rprofile)
+
 ## Multimedia: [mpd], [ncmpcpp], [mpv]
 
 [mpd]: https://www.musicpd.org
