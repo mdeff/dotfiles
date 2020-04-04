@@ -7,54 +7,139 @@ import shutil
 import subprocess
 import sys
 
-path = pathlib.Path('/usr/share/jupyter/kernels/python3/kernel.json')
-with open(path, 'rt') as f:
-    kernelspec = json.load(f)
 
-def get_kernelspec(path, venv):
-    kernelspec['argv'][0] = str(path / venv / 'bin' / 'python')
-    kernelspec['display_name'] = venv
-    return json.dumps(kernelspec, indent=1)
+def add_python(bindir, name=None):
+    """
+    Add Python from the bindir folder as a jupyter kernel.
+    Environments can be managed with conda or venv (install python and ipykernel).
+    """
+    name = name + '-python3' if name is not None else 'python3'
+    cmd = ['ipykernel', 'install', '--user', '--name', name, '--display-name', name]
+    cmd = [bindir / 'python', '-m'] + cmd
+    try:
+        subprocess.run(cmd, capture_output=True, text=True, check=True)
+        print(f'  Python: kernel added as {name}')
+    except FileNotFoundError as e:
+        print(e)
+        print('  Python: Python not installed')
+    except subprocess.CalledProcessError as e:
+        if 'No module named ipykernel' in e.stderr:
+            print('  Python: ipykernel not installed')
+            # run pip install ipykernel
+            # run conda install ipykernel
+        else:
+            raise e
 
-KERNEL_DIR = pathlib.Path('/home/michael/.local/share/jupyter/kernels/')
-shutil.rmtree(KERNEL_DIR, ignore_errors=True)
-KERNEL_DIR.mkdir()
+def add_octave(bindir, name=None):
+    """
+    Add Octave from the bindir folder as a jupyter kernel.
+    Environments can be managed with conda (install octave, python, octave_kernel).
+    """
+    name = name + '-octave' if name is not None else 'octave'
+    cmd = ['octave_kernel', 'install', '--user', '--name', name]
+    cmd = [bindir / 'python', '-m'] + cmd
+    try:
+        subprocess.run(cmd, capture_output=True, text=True, check=True)
+        print(f'  Octave: kernel added as {name}')
+        # TODO: can't set display-name, https://github.com/Calysto/metakernel/issues/200
+        with open(KERNEL_DIR / name / 'kernel.json', 'r') as f:
+            kernelspec = json.load(f)
+        kernelspec['display_name'] = name
+        with open(KERNEL_DIR / name / 'kernel.json', 'w') as f:
+            f.write(json.dumps(kernelspec, indent=1))
+    except FileNotFoundError:
+        print('  Octave: Python not installed')
+    except subprocess.CalledProcessError as e:
+        if 'No module named octave_kernel' in e.stderr:
+            print('  Octave: octave_kernel not installed')
+            # run pip install octave_kernel
+            # conda install octave_kernel
+        else:
+            raise e
 
-VENV_DIRS = [
-    pathlib.Path('/home/michael/venv/'),
-    pathlib.Path('/home/michael/.conda/envs/'),
-]
+def add_r(bindir, name=None):
+    """
+    Add R from the bindir folder as a jupyter kernel.
+    Environments can be managed with conda (install R and IRkernel).
+    """
+    name = name + '-r' if name is not None else 'r'
+    cmd = f'IRkernel::installspec(name = "{name}", displayname = "{name}")'
+    cmd = [bindir / 'R', '--slave', '-e', cmd]
+    try:
+        subprocess.run(cmd, capture_output=True, text=True, check=True)
+        print(f'  R: kernel added as {name}')
+    except FileNotFoundError:
+        print('  R: R not installed')
+    except subprocess.CalledProcessError as e:
+        if "there is no package called ‘IRkernel’" in e.stderr:
+            print('  R: IRkernel not installed')
+            # run R -q -e "install.packages('IRkernel')"
+            # run conda install r-irkernel
+        else:
+            raise e
+
+def add_julia(bindir, name=None):
+    """
+    Add Julia from the bindir folder as a jupyter kernel.
+    Environments are managed by starting jupyter in the project folder, where the environment spec resides.
+    https://stackoverflow.com/questions/60406075/how-to-set-julia-environment-for-ijulia-jupyter-notebook
+    """
+    name = name + '-julia' if name is not None else 'julia'
+    cmd = f'import IJulia; IJulia.installkernel("{name}")'
+    cmd = [bindir / 'julia', '-e', cmd]
+    try:
+        subprocess.run(cmd, capture_output=True, text=True, check=True)
+        print(f'  Julia: kernel added as {name}')
+    except FileNotFoundError:
+        print('  Julia: Julia not installed')
+    except subprocess.CalledProcessError as e:
+        if 'Package IJulia not found' in e.stderr:
+            print('  Julia: IJulia not installed')
+            # run julia -e 'import Pkg; Pkg.add("IJulia")'
+        else:
+            raise e
+
+def add_all_languages(bindir, name=None):
+    print(f'Adding {bindir}')
+    add_python(bindir, name)
+    add_octave(bindir, name)
+    add_r(bindir, name)
+    add_julia(bindir, name)
+
+def add_conda_envs(venvdir):
+    for venv in os.listdir(venvdir):
+        if venv == '.conda_envs_dir_test':
+            continue
+        add_all_languages(venvdir / venv / 'bin', venv)
+
+def add_python_envs(venvdir):
+    for venv in os.listdir(venvdir):
+        bindir = venvdir / venv / 'bin'
+        print(f'Adding {bindir}')
+        config = dict()
+        with open(venvdir / venv / 'pyvenv.cfg', 'rt') as f:
+            for line in f:
+                name, _, value = line.partition("=")
+                config[name.strip()] = value.strip()
+        if config['version'][:3] != sys.version[:3]:
+            print(f"  Error: env created with python {config['version']}")
+            continue
+        if config['include-system-site-packages'] == 'true':
+            print('  Warning: env has access to system packages')
+        add_python(bindir, venv)
+
 
 if __name__ == '__main__':
-    for venv_dir in VENV_DIRS:
-        for venv in os.listdir(venv_dir):
 
-            if venv == '.conda_envs_dir_test':
-                continue
+    KERNEL_DIR = pathlib.Path('/home/michael/.local/share/jupyter/kernels/')
+    shutil.rmtree(KERNEL_DIR, ignore_errors=True)
+    KERNEL_DIR.mkdir()
 
-            print(f'Adding environment {venv_dir / venv}')
+    add_all_languages(pathlib.Path('/usr/bin'))
+    # shadows /usr/share/jupyter/kernels/python3/ from python-ipykernel
+    # shadows /usr/share/jupyter/kernels/octave/ from jupyter-octave_kernel
 
-            try:
-                config = dict()
-                with open(venv_dir / venv / 'pyvenv.cfg', 'rt') as f:
-                    for line in f:
-                        name, _, value = line.partition("=")
-                        config[name.strip()] = value.strip()
-                if config['version'][:3] != sys.version[:3]:
-                    print(f"\tWarning: env created with python {config['version']}")
-                if config['include-system-site-packages'] == 'true':
-                    print('\tWarning: env has access to system packages')
-            except FileNotFoundError:
-                pass
+    add_conda_envs(pathlib.Path('/home/michael/.conda/envs/'))
+    add_python_envs(pathlib.Path('/home/michael/venv/'))
 
-            exe = venv_dir / venv / 'bin' / 'python'
-            cmd = 'import ipykernel'
-            result = subprocess.run([exe, '-c', cmd], stderr=subprocess.PIPE)
-            if result.returncode != 0:
-                print('\tError: ipykernel not installed')
-                continue
-
-            kernel_path = KERNEL_DIR / venv
-            kernel_path.mkdir(exist_ok=True)
-            with open(kernel_path / 'kernel.json', 'wt') as f:
-                f.write(get_kernelspec(venv_dir, venv))
+    subprocess.run(['jupyter', 'kernelspec', 'list'], check=True)
