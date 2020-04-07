@@ -120,6 +120,7 @@ Supports [SyncTeX] in both directions.
 
 [R]: https://www.r-project.org
 
+* [`.Renviron`](.Renviron)
 * [`.Rprofile`](.Rprofile)
 
 ## Multimedia: [mpd], [ncmpcpp], [mpv]
