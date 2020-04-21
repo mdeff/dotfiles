@@ -336,8 +336,8 @@ mode "$mode_workplace" {
 		$pen_on, \
 		$dpms_on, \
 		$ddc_on, \
-		$WS10,$ext1, $WS9,$ext1, $WS8,$ext1, $WS7,$laptop, $WS6,$ext1, \
-		$WS5,$ext1, $WS4,$ext1, $WS3,$laptop, $WS2,$ext1, $WS1,$ext1, \
+		$WS10,$ext1, $WS9,$ext1, $WS8,$ext1, $WS7,$laptop, $WS6,$laptop, \
+		$WS5,$ext1, $WS4,$ext1, $WS3,$ext1, $WS2,$ext1, $WS1,$ext1, \
 		mode "default"
 
 	# TODO: DP-1 or HDMI-A-2 should mirror eDP-1
