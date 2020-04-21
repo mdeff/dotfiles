@@ -8,6 +8,7 @@
 	# wait on https://github.com/swaywm/sway/issues/1666
 # security
 # screenshot active window
+# disable pen when lid is closed (EPFL workplace)
 
 #----------------------#
 # X11 only, to replace #
@@ -287,6 +288,9 @@ bindsym $mod+r mode "resize"
 # Pen sometimes clicks when lid is closed. Wacom ISDv4 EC Pen.
 set $pen_on input "1386:236:Wacom_ISDv4_EC_Pen" events enabled
 set $pen_off input "1386:236:Wacom_ISDv4_EC_Pen" events disabled
+# Alternative: assign pen to other seat. Doesn't work either.
+#set $pen_off seat seat1 attach "1386:236:Wacom_ISDv4_EC_Pen"
+#set $pen_on seat seat0 attach "1386:236:Wacom_ISDv4_EC_Pen"
 
 # To set brightness on external monitors through /sys/class/backlight/.
 # Let some time for the monitor to turn on.
