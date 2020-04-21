@@ -106,6 +106,13 @@ export MATLAB_JAVA="/usr/lib/jvm/default/jre"
 export JUPYTERLAB_DIR="$XDG_DATA_HOME"/jupyter/lab
 
 ###############################################################################
+# Python pip
+###############################################################################
+
+# Don't install to ~/.local/ without explicit --user at the CLI.
+export PIP_USER=false
+
+###############################################################################
 # Mozilla Firefox
 ###############################################################################
 
