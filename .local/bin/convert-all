@@ -5,6 +5,9 @@ import subprocess
 import sys
 
 parameters = sys.argv[1:]
+# -density 200
+# -background white
+# -alpha remove
 
 for _, _, files in os.walk("."):
     for name in files:
