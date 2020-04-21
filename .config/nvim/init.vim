@@ -190,10 +190,11 @@ Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': 'pandoc' }
 let g:pandoc#syntax#conceal#use = 0
 
 " Latex helper.
+" Start compilation with ll. Forward search with lv.
 Plug 'lervag/vimtex', { 'for': 'tex' }
 let g:vimtex_view_method = 'zathura'
-"let g:vimtex_compiler_progname = 'latexmk'  " forward search only
-let g:vimtex_compiler_progname = 'nvr'  " forward and backward search, install neovim-remote from AUR
+let g:vimtex_compiler_method = 'latexmk'  " latexmk, arara, tectonic
+let g:vimtex_compiler_progname = 'nvr'  " needed for backward search, install neovim-remote from AUR
 "let g:tex_flavor = 'latex'
 
 " Comment with gc(c).
