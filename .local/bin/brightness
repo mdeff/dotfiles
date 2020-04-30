@@ -12,16 +12,28 @@ for device in os.listdir("/sys/class/backlight/"):
     print(' '.join(cmd))
     subprocess.run(cmd)
 
+# How it works:
+# * /sys/class/backlight/ddcci1 is created when the ddcci_backlight module is loaded.
+# * Same interface as the laptop backlight (/sys/class/backlight/intel_backlight).
+# * The module is loaded by the windows manager when the user switches to a workspace that has an external monitor.
+
+# Manually reload the modules:
+# 1. sudo modprobe -r ddcci_backlight ddcci
+# 2. sudo modprobe ddcci
+# 3. lsmod | grep ddc
+
+# pros and cons of alternatives:
 # * ddcutil: too complicated to compute percent values and increases with exponent
 # * ddcci-driver-linux-dkms: no hotplug detection, module must be reloaded
 
-#command = ["ddcutil", "setvcp", "10"]
-#command.extend(value)
-# faster (measured with --stats) but might fail
-#command += ["--sleep-multiplier", ".2"]
-# much faster to select by bus than display
-#command += ["--bus"]
-#for display in range(1, 4):
-#    cmd = command + [str(display)]
-#    print(' '.join(cmd))
-#    #subprocess.run(cmd)
+# ddcutil alternative:
+# command = ["ddcutil", "setvcp", "10"]
+# command.extend(value)
+#  faster (measured with --stats) but might fail
+# command += ["--sleep-multiplier", ".2"]
+#  much faster to select by bus than display
+# command += ["--bus"]
+# for display in range(1, 4):
+#     cmd = command + [str(display)]
+#     print(' '.join(cmd))
+#     #subprocess.run(cmd)
