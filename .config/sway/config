@@ -80,6 +80,9 @@ set $shell exec urxvt -e fish
 bindsym $mod+Return $shell
 bindsym $mod+Shift+Return exec urxvt -name "floating_urxvt" -e fish
 for_window [class="URxvt" instance="floating_urxvt"] floating toggle, sticky enable
+for_window [class="URxvt" instance="scratchpad_editor"] move scratchpad
+bindsym $mod+minus scratchpad show
+bindsym $mod+Shift+minus move scratchpad
 
 # kill focused window
 bindsym $mod+q kill
@@ -513,6 +516,7 @@ mode "$mode_open" {
 	bindsym Shift+c [title=".*"] kill, mode "default"
 
 	bindsym Shift+i \
+		exec urxvt -name "scratchpad_editor" -e $EDITOR +start ~/scratchpad, \
 		$WS7, exec urxvt -e journalctl -f, \
 		$WS3, exec rambox, exec thunderbird, \
 		$WS2, exec firefox -P browsing, \
