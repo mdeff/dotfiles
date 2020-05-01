@@ -331,7 +331,7 @@ mode "$mode_workplace" {
 		mode "default"
 
 	bindsym h \
-		output eDP-1 enable res 1920x1080 pos 1920 0, \
+		output eDP-1 enable res 1920x1080 pos 0 1080, \
 		output HDMI-A-2 enable res 1920x1080 pos 0 0, \
 		$pen_on, \
 		$dpms_on, \
