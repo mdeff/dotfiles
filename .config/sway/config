@@ -78,6 +78,8 @@ floating_modifier $mod
 #set $shell exec termite -e fish
 set $shell exec urxvt -e fish
 bindsym $mod+Return $shell
+bindsym $mod+Shift+Return exec urxvt -name "floating_urxvt" -e fish
+for_window [class="URxvt" instance="floating_urxvt"] floating toggle, sticky enable
 
 # kill focused window
 bindsym $mod+q kill
