@@ -22,19 +22,23 @@ exec xrdb -load ~/.Xresources
 # Inputs #
 #--------#
 
-# Custom keyboard layout defined in XXX
-	# FR-CH keyboard with [,],{,} defined as US keyboard
-# ESC becomes CAPS LOCK
-# CAPS LOCK is ESC when pressed alone
-# CAPS LOCK is CTRL when key-chording
-	# https://github.com/swaywm/sway/issues/719
-	# https://github.com/alols/xcape/issues/67
-	# https://aur.archlinux.org/packages/interception-caps2esc/
-# In sway (limitation: CAPS LOCK doesn't do ESC).
-	# xkb_options caps:ctrl_modifier,shift:both_capslock
-# Previously for X11 applications:
-	# the same xkb_options in 00-keyboard.conf
-	# exec xcape -e 'Caps_Lock=Escape'
+# FR-CH layout with brackets and braces ([,],{,}) defined as US layout.
+# Defined in ~/.xkb/symbols/custom.
+# Copied to /usr/share/X11/xkb/symbols/custom for X11.
+
+# ESC, CAPS LOCK, and CTRL swapped by caps2esc from interception-tools.
+#	* ESC becomes CAPS LOCK
+# 	* CAPS LOCK is ESC when pressed alone
+# 	* CAPS LOCK is CTRL when key-chording
+# Resources:
+#	* https://github.com/swaywm/sway/issues/719
+#	* https://github.com/alols/xcape/issues/67
+#	* https://aur.archlinux.org/packages/interception-caps2esc/
+# Alternative (limitation: CAPS LOCK doesn't do ESC):
+#	* xkb_options caps:ctrl_modifier,shift:both_capslock
+# Alternative (limitation: xcape doesn't work for wayland):
+#	* same xkb_options
+#	* exec xcape -e 'Caps_Lock=Escape'
 
 # X11: /etc/X11/xorg.conf.d/00-keyboard.conf
 input * {
