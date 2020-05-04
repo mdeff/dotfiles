@@ -9,6 +9,9 @@
 # security
 # screenshot active window
 # disable pen when lid is closed (EPFL workplace)
+# screen recording and sharing
+# remote display (alternative to mirror display?)
+# program launcher
 
 #----------------------#
 # X11 only, to replace #
@@ -75,9 +78,6 @@ mouse_warping none
 #font pango:DejaVu Sans Mono 12
 font pango:Inconsolata 14
 
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
-
 # start a terminal
 #set $shell exec termite -e fish
 set $shell exec urxvt -e fish
@@ -139,6 +139,12 @@ bindsym $mod+space focus mode_toggle
 
 # toggle tiling / floating mode
 bindsym $mod+Shift+space floating toggle
+
+# $mod+MouseLeft to drag floating windows
+# $mod+MouseRight to resize floating windows
+floating_modifier $mod
+
+#floating_maximum_size 800 x 800
 
 #--------#
 # Layout #
