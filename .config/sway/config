@@ -518,7 +518,7 @@ mode "$mode_open" {
 	bindsym s       exec scribus,                                    mode "default"
 	bindsym t       exec thunderbird,                                mode "default"
 	bindsym v       exec urxvt -e $EDITOR,                           mode "default"
-	bindsym Shift+v exec virtualbox,                                 mode "default"
+	bindsym Shift+v exec env QT_QPA_PLATFORM=xcb virtualbox,         mode "default"
 	bindsym x       exec xournalpp,                                  mode "default"
 	bindsym z       exec zoom,                                       mode "default"
 	bindsym Escape                                                   mode "default"
