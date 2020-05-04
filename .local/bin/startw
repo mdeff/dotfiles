@@ -1,0 +1,74 @@
+#!/bin/sh
+
+# Start wayland environment. Similar to startx.
+# Alternative to a display manager.
+# X11 equivalent: .xinitrc
+
+# Environment variables that are to be set irrespective of the graphical environment are specified in .profile.
+# This file is for variables that are specific to sway / wayland.
+# That's because we don't want them for example when starting i3.
+
+# To decide which environment variables to set.
+# * https://wiki.archlinux.org/index.php/Wayland#GUI_libraries
+# * https://github.com/swaywm/sway/wiki/Running-programs-natively-under-Wayland
+
+################   Desktop environment   ################
+
+# Normally set by display/login manager.
+
+export XDG_SESSION_TYPE=wayland
+export XDG_CURRENT_DESKTOP=sway
+
+# DISPLAY and WAYLAND_DISPLAY are set by sway. See sway(1).
+
+# TODO: maybe use a small DM like greetd.
+
+################   Qt5   ################
+
+# Qt5 apps will use wayland if XDG_SESSION_TYPE=wayland.
+# Individual apps can be forced to use X11 with QT_QPA_PLATFORM=xcb.
+
+# State as of 2020-05-04:
+# works with wayland: musescore, meshlab, cloudcompare, octave, scribus, lyx, socnetv, qgis, matplotlib, pyqtgraph.
+# use X11 anyway: krita, paraview.
+# don't work: virtualbox (segfaults, https://bugs.archlinux.org/task/58761), pymol
+# unknown: gnuplot
+
+# export QT_WAYLAND_FORCE_DPI=physical
+# export QT_AUTO_SCREEN_SCALE_FACTOR=1
+
+################   GUI libraries   ################
+
+# GT3 apps will use wayland by default.
+# Individual apps can be forced to use X11 with GDK_BACKEND=x11.
+
+# export SDL_VIDEODRIVER=wayland
+
+# GLFW: installed glfw-wayland instead of glfw-x11.
+
+# GLEW: could install glew-wayland instead of glew. But glew-wayland doesn't provide glew.
+
+# I don't have clutter apps.
+# export CLUTTER_BACKEND=wayland
+
+# I don't have EFL apps.
+# export ECORE_EVAS_ENGINE=wayland_egl
+# export ELM_ENGINE=wayland_egl
+# export ELM_DISPLAY=wl
+# export ELM_ACCEL=opengl
+
+################   Apps   ################
+
+# Force Firefox to use wayland (it would otherwise use XWayland).
+export MOZ_ENABLE_WAYLAND=1
+
+# Some Java AWT applications don't display properly under Xwayland without the following.
+# That is the case of Gephi.
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+# Change default programs from CLI to GUI.
+# export TERMINAL="alacritty"
+# export BROWSER="firefox"
+
+# Start wayland compositor.
+exec sway

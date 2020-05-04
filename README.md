@@ -171,6 +171,7 @@ Supports [SyncTeX] in both directions.
 * [`.local/bin/pactl-move-sink`](.local/bin/pactl-move-sink)
 * [`.local/bin/pdf2cmyk`](.local/bin/pdf2cmyk)
 * [`.local/bin/ssh-add`](.local/bin/ssh-add)
+* [`.local/bin/startw`](.local/bin/startw)
 * [`.local/bin/tunnels`](.local/bin/tunnels)
 * [`.local/bin/vi`](.local/bin/vi)
 * [`.local/bin/vim`](.local/bin/vim)
