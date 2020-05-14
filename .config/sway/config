@@ -82,7 +82,8 @@ font pango:Inconsolata 14
 #set $shell exec termite -e fish
 set $shell exec urxvt -e fish
 bindsym $mod+Return $shell
-bindsym $mod+Shift+Return exec urxvt -name "floating_urxvt" -e fish
+set $urxvt_transparent exec urxvt -depth 32 -bg rgba:0000/2b00/3600/eeee
+bindsym $mod+Shift+Return $urxvt_transparent -name "floating_urxvt" -e fish
 for_window [class="URxvt" instance="floating_urxvt"] floating toggle, sticky enable
 for_window [class="URxvt" instance="scratchpad_editor"] move scratchpad
 bindsym $mod+minus scratchpad show
@@ -526,7 +527,7 @@ mode "$mode_open" {
 	bindsym Shift+c [title=".*"] kill, mode "default"
 
 	bindsym Shift+i \
-		exec urxvt -name "scratchpad_editor" -e $EDITOR +start ~/scratchpad, \
+		$urxvt_transparent -name "scratchpad_editor" -e $EDITOR +start ~/scratchpad, \
 		$WS7, exec urxvt -e journalctl -f, \
 		$WS3, exec rambox, exec thunderbird, \
 		$WS2, exec firefox -P browsing, \

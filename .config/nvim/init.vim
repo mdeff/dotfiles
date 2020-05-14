@@ -274,6 +274,7 @@ syntax on
 set background=dark
 colorscheme solarized
 "colorscheme NeoSolarized
+hi Normal guibg=NONE ctermbg=NONE
 
 " Redo actions with . in visual mode.
 vnoremap . :norm.<CR>
