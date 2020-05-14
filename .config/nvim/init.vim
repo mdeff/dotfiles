@@ -1,3 +1,8 @@
+" TODO:
+" * language support through language server protocol (LSP)
+"	* https://langserver.org
+"	* https://github.com/neoclide/coc.nvim
+
 " This file is found via the VIMINIT env variable:
 " let $VIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $VIMRC
 
@@ -179,6 +184,13 @@ Plug 'fisadev/vim-isort'
 let g:vim_isort_python_version = 'python3'
 let g:vim_isort_map = '<F4>' " <C-i> by default
 noremap <F4> :Isort<CR>
+
+" TODO: Python auto-format.
+"Plug 'psf/black'
+"g:black_fast (defaults to 0)
+"g:black_linelength (defaults to 88)
+"autocmd BufWritePre *.py execute ':Black'
+"nnoremap <F9> :Black<CR>
 
 " Pandoc helper.
 Plug 'vim-pandoc/vim-pandoc', { 'for': 'pandoc' }
