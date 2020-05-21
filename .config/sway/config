@@ -535,7 +535,7 @@ mode "$mode_open" {
 		mode "default"
 }
 
-set $android_control Android control: (p) phone TCP, (t) TV TCP, (u) phone USB
+set $android_control Android control: (t) TV TCP, (p) phone TCP, (P) phone USB
 mode "$android_control" {
 	bindsym t exec android-control tv, mode "default"
 	bindsym p exec android-control phone, mode "default"
