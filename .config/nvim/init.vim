@@ -201,6 +201,12 @@ let g:pandoc#biblio#bibs = "/data/research/bibliography/refs.bib"
 Plug 'vim-pandoc/vim-pandoc-syntax', { 'for': 'pandoc' }
 let g:pandoc#syntax#conceal#use = 0
 
+" TODO: alternative to pandoc for markdown files.
+" Plug 'plasticboy/vim-markdown'
+
+" TODO: navigate between note files.
+" Plug 'vimwiki/vimwiki'
+
 " Latex helper.
 " Start compilation with ll. Forward search with lv.
 Plug 'lervag/vimtex', { 'for': 'tex' }
