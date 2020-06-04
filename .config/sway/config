@@ -153,6 +153,7 @@ floating_modifier $mod
 
 # split in horizontal / vertical orientation
 bindsym $mod+b split v
+#bindsym $mod+Shift+v split v
 bindsym $mod+v split h
 
 # enter fullscreen mode for the focused container
@@ -560,6 +561,26 @@ mode "$mode_music" {
 	bindsym h       $pactl_move_sink alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1, mode "default"
 	bindsym b       $pactl_move_sink bluez_sink.00_18_96_00_FF_A9.a2dp_sink, mode "default"
 	bindsym Escape                 mode "default"
+}
+
+#------------------#
+# Mode: brightness #
+#------------------#
+
+set $mode_brightness Screen brightness: 1-10
+bindsym $mod+Shift+b mode "$mode_brightness"
+mode "$mode_brightness" {
+	bindsym 1 exec brightness 10%, mode "default"
+	bindsym 2 exec brightness 20%, mode "default"
+	bindsym 3 exec brightness 30%, mode "default"
+	bindsym 4 exec brightness 40%, mode "default"
+	bindsym 5 exec brightness 50%, mode "default"
+	bindsym 6 exec brightness 60%, mode "default"
+	bindsym 7 exec brightness 70%, mode "default"
+	bindsym 8 exec brightness 80%, mode "default"
+	bindsym 9 exec brightness 90%, mode "default"
+	bindsym 0 exec brightness 100%, mode "default"
+	bindsym Escape mode "default"
 }
 
 #------------------------#
