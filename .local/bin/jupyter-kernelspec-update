@@ -30,6 +30,7 @@ def add_python(bindir, name=None):
         else:
             raise e
 
+
 def add_octave(bindir, name=None):
     """
     Add Octave from the bindir folder as a jupyter kernel.
@@ -57,6 +58,7 @@ def add_octave(bindir, name=None):
         else:
             raise e
 
+
 def add_r(bindir, name=None):
     """
     Add R from the bindir folder as a jupyter kernel.
@@ -77,6 +79,7 @@ def add_r(bindir, name=None):
             # run conda install r-irkernel
         else:
             raise e
+
 
 def add_julia(bindir, name=None):
     """
@@ -99,6 +102,7 @@ def add_julia(bindir, name=None):
         else:
             raise e
 
+
 def add_all_languages(bindir, name=None):
     print(f'Adding {bindir}')
     add_python(bindir, name)
@@ -106,11 +110,13 @@ def add_all_languages(bindir, name=None):
     add_r(bindir, name)
     add_julia(bindir, name)
 
+
 def add_conda_envs(venvdir):
     for venv in os.listdir(venvdir):
         if venv == '.conda_envs_dir_test':
             continue
         add_all_languages(venvdir / venv / 'bin', venv)
+
 
 def add_python_envs(venvdir):
     for venv in os.listdir(venvdir):
@@ -135,9 +141,12 @@ if __name__ == '__main__':
     shutil.rmtree(KERNEL_DIR, ignore_errors=True)
     KERNEL_DIR.mkdir()
 
-    add_all_languages(pathlib.Path('/usr/bin'))
+    # add_all_languages(pathlib.Path('/usr/bin'))
     # shadows /usr/share/jupyter/kernels/python3/ from python-ipykernel
+    # => issue: jupyter will use system python if installed in an environment
     # shadows /usr/share/jupyter/kernels/octave/ from jupyter-octave_kernel
+    add_r(pathlib.Path('/usr/bin'))
+    add_julia(pathlib.Path('/usr/bin'))
 
     add_conda_envs(pathlib.Path('/home/michael/.conda/envs/'))
     add_python_envs(pathlib.Path('/home/michael/venv/'))
