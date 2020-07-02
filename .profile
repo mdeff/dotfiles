@@ -113,6 +113,14 @@ export JUPYTERLAB_DIR="$XDG_DATA_HOME"/jupyter/lab
 export PIP_USER=false
 
 ###############################################################################
+# Python pyenv
+###############################################################################
+
+# export PATH="$HOME/.pyenv/shims:$PATH"
+# activate python version with `export PYENV_VERSION=3.6.0`
+# alternative in .config/fish/config.fish
+
+###############################################################################
 # Mozilla Firefox
 ###############################################################################
 

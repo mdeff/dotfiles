@@ -59,3 +59,7 @@ function __fish_conda_env_commands
 end
 complete -f -c conda -n '__fish_conda_using_command env' -a '(__fish_conda_env_commands)'
 complete -f -c conda -n '__fish_conda_using_command activate' -a '(__fish_conda_envs)'
+
+# pyenv (alternative in .profile)
+status --is-interactive; and pyenv init - | source
+status --is-interactive; and pyenv virtualenv-init - | source
