@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# Before:
+# 1. cryptsetup open /dev/sdb backup
+# 2. mount /dev/mapper/backup /mnt/backup
+
+# After:
+# 1. umount /mnt/backup
+# 2. cryptsetup close backup
+
+DATE=$(date -I)
+LOG=/mnt/backup/$DATE.log
+
+mkdir /mnt/backup/$DATE
+
+echo "Start: $(date -Iseconds)" >> $LOG
+cp -a /boot /data /etc /home /opt /root /srv /usr /var /mnt/backup/$DATE/ > $LOG
+echo "End: $(date -Iseconds)" >> $LOG
+
+# Ignored root directories:
+# * dynamic: /dev /proc /sys
+# * temporary: /run /tmp
+# * symlinks to /usr/{bin,lib}: /bin /sbin /lib /lib64
+# * /lost+found /mnt

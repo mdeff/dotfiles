@@ -164,6 +164,7 @@ Supports [SyncTeX] in both directions.
 * [`.local/bin/aur`](.local/bin/aur)
 * [`.local/bin/aur-clean`](.local/bin/aur-clean)
 * [`.local/bin/aur-regenerate`](.local/bin/aur-regenerate)
+* [`.local/bin/backup`](.local/bin/backup)
 * [`.local/bin/brightness`](.local/bin/brightness)
 * [`.local/bin/convert-all`](.local/bin/convert-all)
 * [`.local/bin/gvim`](.local/bin/gvim)
