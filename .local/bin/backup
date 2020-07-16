@@ -9,16 +9,22 @@
 # 2. cryptsetup close backup
 
 DATE=$(date -I)
-LOG=/mnt/backup/$DATE.log
+BACKUPDIR=/mnt/backup/${DATE}
+LOGFILE=/mnt/backup/${DATE}.log
 
-mkdir /mnt/backup/$DATE
+mkdir ${BACKUPDIR}
 
-echo "Start: $(date -Iseconds)" >> $LOG
-cp -a /boot /data /etc /home /opt /root /srv /usr /var /mnt/backup/$DATE/ > $LOG
-echo "End: $(date -Iseconds)" >> $LOG
+echo "Start: $(date -Iseconds)" >> ${LOGFILE}
+#cp -a /boot /data /etc /home /opt /root /srv /usr /var /mnt/backup/$DATE/ > ${LOGFILE} 2>&1
+cp -ax / ${BACKUPDIR} > ${LOGFILE} 2>&1
+cp -ax /boot ${BACKUPDIR} > ${LOGFILE} 2>&1
+cp -ax /data ${BACKUPDIR} > ${LOGFILE} 2>&1
+echo "End: $(date -Iseconds)" >> ${LOGFILE}
 
 # Ignored root directories:
 # * dynamic: /dev /proc /sys
 # * temporary: /run /tmp
 # * symlinks to /usr/{bin,lib}: /bin /sbin /lib /lib64
 # * /lost+found /mnt
+
+# Beware filesystems mounted in /var/lib/dhcpcd/{dev,proc,run,sys}.
