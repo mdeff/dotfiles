@@ -169,7 +169,7 @@ Supports [SyncTeX] in both directions.
 * [`.local/bin/convert-all`](.local/bin/convert-all)
 * [`.local/bin/gvim`](.local/bin/gvim)
 * [`.local/bin/jupyter-kernelspec-update`](.local/bin/jupyter-kernelspec-update)
-* [`.local/bin/pactl-move-sink`](.local/bin/pactl-move-sink)
+* [`.local/bin/pactl-move`](.local/bin/pactl-move)
 * [`.local/bin/pdf`](.local/bin/pdf)
 * [`.local/bin/pdf2cmyk`](.local/bin/pdf2cmyk)
 * [`.local/bin/ssh-add`](.local/bin/ssh-add)

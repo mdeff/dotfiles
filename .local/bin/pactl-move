@@ -1,0 +1,39 @@
+#!/usr/bin/sh
+
+# Based on https://unix.stackexchange.com/questions/65246/change-pulseaudio-input-output-from-shell
+
+if [ -z "$1" ]; then
+    echo "Usage:"
+    echo "* pactl-move sink <sink ID/name>"
+    echo "* pactl-move source <source ID/name>"
+    echo "Valid sinks:"
+    pactl list short sinks >&2
+    echo "Valid sources:"
+    pactl list short sources >&2
+    exit 1
+fi
+
+deviceType="$1"
+deviceNew="$2"
+
+if [ $deviceType = "sink" ]; then
+    echo "setting as default sink: $deviceNew"
+    pactl set-default-sink "$deviceNew"
+
+    pactl list short sink-inputs|while read stream; do
+        streamId=$(echo $stream|cut '-d ' -f1)
+        echo "moving stream $streamId"
+        pactl move-sink-input "$streamId" "$deviceNew"
+    done
+fi
+
+if [ $deviceType = "source" ]; then
+    echo "setting as default source: $deviceNew"
+    pactl set-default-source "$deviceNew"
+
+    pactl list short source-outputs|while read stream; do
+        streamId=$(echo $stream|cut '-d ' -f1)
+        echo "moving stream $streamId"
+        pactl move-source-output "$streamId" "$deviceNew"
+    done
+fi

@@ -551,16 +551,25 @@ set $mpc exec mpc -h SECRET
 set $mode_music Music: (p) previous, (n) next, (space) play / pause, (a) analog, (h) HDMI, (b) Bluetooth
 bindsym $mod+m mode "$mode_music"
 
-set $pactl_move_sink exec pactl-move-sink
-
 mode "$mode_music" {
-	bindsym space   $mpc toggle,   mode "default"
-	bindsym n       $mpc next,     mode "default"
-	bindsym p       $mpc prev,     mode "default"
-	bindsym a       $pactl_move_sink alsa_output.pci-0000_00_1b.0.analog-stereo, mode "default"
-	bindsym h       $pactl_move_sink alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1, mode "default"
-	bindsym b       $pactl_move_sink bluez_sink.00_18_96_00_FF_A9.a2dp_sink, mode "default"
-	bindsym Escape                 mode "default"
+	bindsym space $mpc toggle,   mode "default"
+	bindsym n $mpc next,     mode "default"
+	bindsym p $mpc prev,     mode "default"
+	bindsym a exec pactl-move sink alsa_output.pci-0000_00_1b.0.analog-stereo, exec pactl-move source alsa_input.pci-0000_00_1b.0.analog-stereo, mode "default"
+	bindsym h exec pactl-move sink alsa_output.pci-0000_00_03.0.hdmi-stereo-extra1, mode "default"
+	bindsym b mode "$music_bluetooth"
+	bindsym Escape mode "default"
+}
+
+set $btc exec bluetoothctl connect
+set $btd exec bluetoothctl disconnect
+
+set $music_bluetooth Bluetooth devices: (s) speakers iCube 95 BT, (h) headset BT25 II, (c) CD400U (Orsonnens)
+mode "$music_bluetooth" {
+	bindsym s $btc "00:18:96:00:FF:A9", exec pactl-move sink bluez_sink.00_18_96_00_FF_A9.a2dp_sink, mode "default"
+	bindsym c $btc "04:FE:A1:55:A6:7A", exec pactl-move sink bluez_sink.04_FE_A1_55_A6_7A.a2dp_sink, mode "default"
+	bindsym h $btc "09:00:4B:00:12:08", exec pactl-move sink bluez_sink.09_00_4B_00_12_08.headset_head_unit, exec pactl-move source bluez_source.09_00_4B_00_12_08.headset_head_unit, mode "default"
+	bindsym Escape mode "default"
 }
 
 #------------------#
