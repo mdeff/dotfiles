@@ -303,10 +303,12 @@ vnoremap . :norm.<CR>
 "set statusline+=%*
 
 set tabstop=4       " The width of a TAB is set to 4. Still it is a \t. It is
-					" just that Vim will interpret it to be having a width of 4.
+                    " just that Vim will interpret it to be having a width of 4.
 set shiftwidth=4    " Indents will have a width of 4
 set softtabstop=4   " Sets the number of columns for a TAB
-set noexpandtab     " Do not expand TABs to spaces
+"set noexpandtab     " Do not expand TABs to spaces
+set expandtab       " Insert spaces instead of TAB. Real TAB with CTRL-V<Tab>.
+                    " ftplugin (filetype) can override (e.g., TAB for makefiles)
 
 " Tab completion
 " will insert tab at beginning of line,
