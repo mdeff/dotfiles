@@ -1,4 +1,4 @@
-c.NotebookApp.browser = 'firefox -P notebook --new-window -- %s'
+c.NotebookApp.browser = 'firefox -P notebook --new-window %s'
 
 # Old approach:
 # import webbrowser
