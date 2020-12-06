@@ -142,3 +142,24 @@ export MOZ_USE_XINPUT2=1
 # https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Application_support
 # https://wiki.archlinux.org/index.php/GStreamer#Hardware_video_acceleration
 export GST_VAAPI_ALL_DRIVERS=1
+
+###############################################################################
+# Linear algebra (BLAS & LAPACK)
+###############################################################################
+
+# Providers: netlib, OpenBLAS, MKL, BLIS
+# Users: NumPy, SciPy, Julia, R, octave, etc.
+
+# Limit the number of threads to the number of physical cores.
+# May or may not boost performance.
+# OpenBLAS: https://github.com/xianyi/OpenBLAS/blob/f059e614eb612cb2741d682ed5e7f62ddfdada76/Makefile.rule#L82
+# MKL: https://github.com/intel/mkl-dnn/issues/619#issuecomment-570361798
+# If multiple processes are spawned, it could be better to allow no more than 1 thread per process.
+# https://github.com/numpy/numpy/issues/11826
+#export OMP_NUM_THREADS=2
+
+# MKL Fortran interface for scipy: GNU Fortran compiler, 64bits longs and pointers (integers are 32 bits).
+# https://github.com/scipy/scipy/issues/11812
+# https://github.com/scipy/scipy/pull/10591
+export MKL_INTERFACE_LAYER=LP64,GNU
+#export MKL_THREADING_LAYER  # OpenMP?
