@@ -1,11 +1,11 @@
 <configuration version="31">
     <folder id="camera" label="camera" path="/data/inputs/camera" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="DWS5Q7L-AYFWSUY-6FRJEN5-65UZTWB-6LSL6PD-BKNH4C5-YHRUMPV-UWU6UQC" introducedBy=""></device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy=""></device>
+        <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy=""></device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning>
-            <cleanupIntervalS>3600</cleanupIntervalS>
+            <cleanupIntervalS>0</cleanupIntervalS>
         </versioning>
         <copiers>0</copiers>
         <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
@@ -59,11 +59,11 @@
     </folder>
     <folder id="download" label="download" path="/data/inputs/download" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="DWS5Q7L-AYFWSUY-6FRJEN5-65UZTWB-6LSL6PD-BKNH4C5-YHRUMPV-UWU6UQC" introducedBy=""></device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy=""></device>
+        <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy=""></device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning>
-            <cleanupIntervalS>3600</cleanupIntervalS>
+            <cleanupIntervalS>0</cleanupIntervalS>
         </versioning>
         <copiers>0</copiers>
         <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
@@ -119,11 +119,11 @@
     </folder>
     <folder id="music" label="music" path="/data/music" type="sendonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="DWS5Q7L-AYFWSUY-6FRJEN5-65UZTWB-6LSL6PD-BKNH4C5-YHRUMPV-UWU6UQC" introducedBy=""></device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy=""></device>
+        <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy=""></device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning>
-            <cleanupIntervalS>3600</cleanupIntervalS>
+            <cleanupIntervalS>0</cleanupIntervalS>
         </versioning>
         <copiers>0</copiers>
         <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
@@ -147,8 +147,8 @@
     </folder>
     <folder id="notes" label="notes" path="/data/notes" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="DWS5Q7L-AYFWSUY-6FRJEN5-65UZTWB-6LSL6PD-BKNH4C5-YHRUMPV-UWU6UQC" introducedBy=""></device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy=""></device>
+        <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy=""></device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning>
             <cleanupIntervalS>3600</cleanupIntervalS>
@@ -175,8 +175,8 @@
     </folder>
     <folder id="passwords" label="passwords" path="/data/divers/passwords/" type="sendonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="DWS5Q7L-AYFWSUY-6FRJEN5-65UZTWB-6LSL6PD-BKNH4C5-YHRUMPV-UWU6UQC" introducedBy=""></device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy=""></device>
+        <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy=""></device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning>
             <cleanupIntervalS>3600</cleanupIntervalS>
@@ -230,11 +230,11 @@
     </folder>
     <folder id="screenshots" label="screenshots" path="/data/inputs/screenshots" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="DWS5Q7L-AYFWSUY-6FRJEN5-65UZTWB-6LSL6PD-BKNH4C5-YHRUMPV-UWU6UQC" introducedBy=""></device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy=""></device>
+        <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy=""></device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning>
-            <cleanupIntervalS>3600</cleanupIntervalS>
+            <cleanupIntervalS>0</cleanupIntervalS>
         </versioning>
         <copiers>0</copiers>
         <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
@@ -258,7 +258,6 @@
     </folder>
     <folder id="share" label="share-home" path="/data/inputs/share_home" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="DWS5Q7L-AYFWSUY-6FRJEN5-65UZTWB-6LSL6PD-BKNH4C5-YHRUMPV-UWU6UQC" introducedBy=""></device>
         <device id="GLNORYP-5CJLQYX-KRPEPFD-LKJSYN6-P7URCRR-C6HAZCA-LYZXR2X-EMV4VQJ" introducedBy=""></device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy=""></device>
         <device id="SLFTQDN-3UHGSUR-3I6MZ2O-DBAUWPM-M2LOHKK-5Y6U5LJ-ACWICA3-EEO7ZA7" introducedBy=""></device>
@@ -287,13 +286,13 @@
         <blockPullOrder>standard</blockPullOrder>
         <copyRangeMethod>standard</copyRangeMethod>
     </folder>
-    <folder id="whatsapp" label="whatsapp" path="/data/divers/whatsapp" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="whatsapp" label="whatsapp" path="/data/divers/whatsapp" type="receiveonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
-        <device id="DWS5Q7L-AYFWSUY-6FRJEN5-65UZTWB-6LSL6PD-BKNH4C5-YHRUMPV-UWU6UQC" introducedBy=""></device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy=""></device>
+        <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy=""></device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning>
-            <cleanupIntervalS>3600</cleanupIntervalS>
+            <cleanupIntervalS>0</cleanupIntervalS>
         </versioning>
         <copiers>0</copiers>
         <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
@@ -315,14 +314,6 @@
         <blockPullOrder>standard</blockPullOrder>
         <copyRangeMethod>standard</copyRangeMethod>
     </folder>
-    <device id="DWS5Q7L-AYFWSUY-6FRJEN5-65UZTWB-6LSL6PD-BKNH4C5-YHRUMPV-UWU6UQC" name="MICHAEL-PHONE" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
-        <address>dynamic</address>
-        <paused>false</paused>
-        <autoAcceptFolders>false</autoAcceptFolders>
-        <maxSendKbps>0</maxSendKbps>
-        <maxRecvKbps>0</maxRecvKbps>
-        <maxRequestKiB>0</maxRequestKiB>
-    </device>
     <device id="EMDKCAG-66UYQPZ-47TANCH-7PWHE3V-E2PF5GM-4IZH2M5-23RRLIG-IJ5BAQV" name="LTS2-CDK3" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
@@ -348,6 +339,14 @@
         <maxRequestKiB>0</maxRequestKiB>
     </device>
     <device id="IQZW6ZU-UUS7JYB-WEOZ5JM-RS6ZGJG-VD4EWFB-O5G4CNO-57H2GNU-S63NAAN" name="LTS2-CDK4" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+        <address>dynamic</address>
+        <paused>false</paused>
+        <autoAcceptFolders>false</autoAcceptFolders>
+        <maxSendKbps>0</maxSendKbps>
+        <maxRecvKbps>0</maxRecvKbps>
+        <maxRequestKiB>0</maxRequestKiB>
+    </device>
+    <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" name="MICHAEL-PHONE-PIXEL" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
         <autoAcceptFolders>false</autoAcceptFolders>
