@@ -525,7 +525,7 @@ mode "$mode_open" {
 	bindsym Shift+c [title=".*"] kill, mode "default"
 
 	bindsym Shift+i \
-		$urxvt_transparent -name "scratchpad_editor" -e $EDITOR +start ~/scratchpad, \
+		$urxvt_transparent -name "scratchpad_editor" -e $EDITOR +start /data/notes/scratchpad.md, \
 		$WS7, exec urxvt -e journalctl -f, \
 		$WS3, exec rambox, exec thunderbird, \
 		$WS2, exec firefox -P browsing, \
