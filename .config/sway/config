@@ -400,14 +400,14 @@ set $net_stop exec sudo netctl stop
 set $net_stop_all exec sudo netctl stop-all, \
 	exec sudo resolvconf -d '*.*', \
 	exec dbus-send --system --type=method_call \
-	     --dest=org.bluez /org/bluez/hci0/dev_58_2A_F7_9E_54_EE \
+	     --dest=org.bluez /org/bluez/hci0/dev_58_24_29_79_4E_8A \
 		 org.bluez.Network1.Disconnect
 #    exec sudo hciconfig hci0 down
 #   rfkill
 
 # sudo hciconfig hci0 up &&
 set $bluetooth exec dbus-send --system --type=method_call \
-	--dest=org.bluez /org/bluez/hci0/dev_58_2A_F7_9E_54_EE \
+	--dest=org.bluez /org/bluez/hci0/dev_58_24_29_79_4E_8A \
 	org.bluez.Network1.Connect string:'nap' && \
 	sleep 2 && sudo netctl start bphone
 
