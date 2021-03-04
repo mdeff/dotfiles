@@ -286,7 +286,63 @@
         <blockPullOrder>standard</blockPullOrder>
         <copyRangeMethod>standard</copyRangeMethod>
     </folder>
-    <folder id="whatsapp" label="whatsapp" path="/data/divers/whatsapp" type="receiveonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="signal" label="signal" path="/data/backups/signal" type="receiveonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy=""></device>
+        <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy=""></device>
+        <minDiskFree unit="%">1</minDiskFree>
+        <versioning>
+            <cleanupIntervalS>0</cleanupIntervalS>
+        </versioning>
+        <copiers>0</copiers>
+        <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
+        <modTimeWindowS>0</modTimeWindowS>
+        <maxConcurrentWrites>0</maxConcurrentWrites>
+        <disableFsync>false</disableFsync>
+        <blockPullOrder>standard</blockPullOrder>
+        <copyRangeMethod>standard</copyRangeMethod>
+    </folder>
+    <folder id="telegram" label="telegram" path="/data/backups/telegram" type="receiveonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy=""></device>
+        <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy=""></device>
+        <minDiskFree unit="%">1</minDiskFree>
+        <versioning>
+            <cleanupIntervalS>0</cleanupIntervalS>
+        </versioning>
+        <copiers>0</copiers>
+        <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
+        <modTimeWindowS>0</modTimeWindowS>
+        <maxConcurrentWrites>0</maxConcurrentWrites>
+        <disableFsync>false</disableFsync>
+        <blockPullOrder>standard</blockPullOrder>
+        <copyRangeMethod>standard</copyRangeMethod>
+    </folder>
+    <folder id="whatsapp" label="whatsapp" path="/data/backups/whatsapp" type="receiveonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy=""></device>
         <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy=""></device>
