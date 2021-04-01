@@ -1,11 +1,5 @@
 ! Load with xrdb ~/.Xresources
 
-! ----------------------------------------------------------------
-! Fix Xwayland bug, see https://github.com/swaywm/sway/issues/3499
-! ----------------------------------------------------------------
-
-Xft.dpi: 96
-
 ! --------------------------------------------------
 ! Font configuration (URxvt does not use fontconfig)
 ! https://wiki.archlinux.org/index.php/Font_configuration#Applications_without_fontconfig_support
