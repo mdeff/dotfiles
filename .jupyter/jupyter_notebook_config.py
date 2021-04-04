@@ -1,4 +1,5 @@
-c.NotebookApp.browser = 'firefox -P notebook --new-window %s'
+# For `jupyter notebook`.
+c.NotebookApp.browser = '/usr/bin/firefox -P notebook --new-window %s'
 
 # Old approach:
 # import webbrowser
