@@ -103,7 +103,8 @@ export MATLAB_JAVA="/usr/lib/jvm/default/jre"
 ###############################################################################
 
 # Build jlab in a user directory to be able to install extensions.
-export JUPYTERLAB_DIR="$XDG_DATA_HOME"/jupyter/lab
+# jlab 3 now recommends to install extensions as python packages, without requiring a rebuild
+# export JUPYTERLAB_DIR="$XDG_DATA_HOME"/jupyter/lab
 
 ###############################################################################
 # Python pip
