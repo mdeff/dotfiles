@@ -445,8 +445,8 @@ bindsym $mod+Escape mode "$mode_system"
 mode "$mode_system" {
 	bindsym l exec swaylock, mode "default"
 	bindsym e exit
-	bindsym s $net_stop_all, exec swaylock && systemctl suspend, mode "default"
-	bindsym h $net_stop_all, exec swaylock && systemctl hibernate, mode "default"
+	bindsym s exec swaylock && systemctl suspend, mode "default"
+	bindsym h exec swaylock && systemctl hibernate, mode "default"
 	bindsym r exec systemctl reboot
 	bindsym o exec systemctl poweroff
 	bindsym Escape mode "default"
