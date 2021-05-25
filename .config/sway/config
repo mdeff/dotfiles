@@ -169,7 +169,7 @@ bindsym $mod+e layout toggle split
 #------------#
 
 # TERM, CODE, READ, WEB, COM, FILES, MEDIA (audio, video, images), MON, MISC (gimp, inkscpae)
-set $WS1  workspace  1: TERM
+set $WS1  workspace  1: MISC
 set $WS2  workspace  2: WEB
 set $WS3  workspace  3: COM
 set $WS4  workspace  4: MISC
@@ -529,7 +529,6 @@ mode "$mode_open" {
 		$WS7, exec urxvt -e journalctl -f, \
 		$WS3, exec rambox, exec thunderbird, \
 		$WS2, exec firefox -P browsing, \
-		$WS1, $shell, $shell, \
 		mode "default"
 }
 
