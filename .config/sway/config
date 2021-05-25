@@ -84,7 +84,7 @@ set $shell exec urxvt -e fish
 bindsym $mod+Return $shell
 set $urxvt_transparent exec urxvt -depth 32 -bg rgba:0000/2b00/3600/eeee
 bindsym $mod+Shift+Return $urxvt_transparent -name "floating_urxvt" -e fish
-for_window [class="URxvt" instance="floating_urxvt"] floating toggle, sticky enable
+for_window [class="URxvt" instance="floating_urxvt"] floating toggle
 for_window [class="URxvt" instance="scratchpad_editor"] move scratchpad
 bindsym $mod+minus scratchpad show
 bindsym $mod+Shift+minus move scratchpad
