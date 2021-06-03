@@ -251,8 +251,13 @@ Plug 'chrisbra/unicode.vim'
 " map ; <Plug>Sneak_,
 
 " Edit text with vim from Firefox. Open nvim and run :GhostStart to start server.
+" (Run :GhostInstall to rebuild if :GhostStart errors.)
 " CTRL+SHIFT+V in Firefox to edit in vim. Close with ":bd!".
-Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
+" Plug 'raghur/vim-ghost', {'do': ':GhostInstall'}
+
+" Edit text with nvim inside Firefox.
+" Click on a textarea (or CTLR+E) to load nvim. Quit with :wq.
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 " Do not save swaps of encrypted files.
 " TODO: find a better solution.
