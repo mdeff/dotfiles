@@ -53,6 +53,7 @@ export VISUAL="/usr/bin/nvim"
 
 export PAGER="/usr/bin/less"
 
+# Color highlighting.
 export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 
@@ -63,6 +64,12 @@ export LESS=' -R '
 #export LESS_TERMCAP_so=$'\E[38;5;246m'    # begin standout-mode - info box
 #export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 #export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
+
+###############################################################################
+# Color highlight man pages
+###############################################################################
+
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 ###############################################################################
 # Java
