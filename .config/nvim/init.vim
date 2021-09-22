@@ -259,10 +259,6 @@ Plug 'chrisbra/unicode.vim'
 " Click on a textarea (or CTLR+E) to load nvim. Quit with :wq.
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
-" Do not save swaps of encrypted files.
-" TODO: find a better solution.
-Plug 'https://gist.github.com/5890634.git', { 'frozen': 1 }
-
 " Change window with CTRL+{h,l,k,j}.
 noremap <C-l> <C-w>l
 noremap <C-h> <C-w>h
