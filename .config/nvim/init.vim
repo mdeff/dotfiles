@@ -258,6 +258,14 @@ Plug 'chrisbra/unicode.vim'
 " Edit text with nvim inside Firefox.
 " Click on a textarea (or CTLR+E) to load nvim. Quit with :wq.
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+let g:firenvim_config = {
+    \ 'localSettings': {
+        \ 'https?://[^/]+\.facebook\.com/': { 'takeover': 'never' },
+        \ 'https?://twitter\.com/': { 'takeover': 'never' },
+        \ 'https?://[^/]+\.linkedin\..*/': { 'takeover': 'never' },
+        \ 'https?://translate\.google\..*/': { 'takeover': 'never' },
+    \ }
+\ }
 
 " Change window with CTRL+{h,l,k,j}.
 noremap <C-l> <C-w>l
