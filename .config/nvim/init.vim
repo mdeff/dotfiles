@@ -105,11 +105,14 @@ noremap <leader>rd :RangerCD<cr>
 " Interface to grep tools: ag, ack, git grep, ripgrep, pt, sift, findstr, grep.
 " Alternative: fzf.
 Plug 'mhinz/vim-grepper', { 'on': ['Grepper', '<plug>(GrepperOperator)'] }
-"nnoremap <leader>g :Grepper -tool git<cr>
+" Default tool: rg, git, grep. Can be invoked with GrepperRg, GrepperGit,
+" GrepperGrep. Can be changed on the prompt with TAB.
 nnoremap <leader>g :Grepper -tool rg<cr>
-"nnoremap <leader>G :Grepper -tool ag<cr>
-nnoremap gs  <plug>(GrepperOperator)
-"xnoremap gs  <plug>(GrepperOperator)
+" Search from normal and visual mode.
+" Also, empty prompt searches for word under cursor.
+"nmap gs <plug>(GrepperOperator)
+"xmap gs <plug>(GrepperOperator)
+xmap <leader>g <plug>(GrepperOperator)
 
 " Tab for auto-completion.
 Plug 'ervandew/supertab'
