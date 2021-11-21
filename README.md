@@ -83,6 +83,12 @@ Kept around because Sway [cannot duplicate monitors yet](https://github.com/sway
 Great to visualize the PDF while editing the [LaTeX] source with [Neovim].
 Supports [SyncTeX] in both directions.
 
+## [imv], image viewer
+
+[sxiv]: https://github.com/eXeC64/imv
+
+* [`.config/sxiv/exec/key-handler`](.config/img/config)
+
 ## [sxiv], image viewer
 
 [sxiv]: https://github.com/muennich/sxiv
