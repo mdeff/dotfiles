@@ -12,9 +12,6 @@ suppress_default_binds = true
 # alias = command to run
 
 [binds]
-# Define some key bindings
-q = quit
-y = exec echo working!
 
 # Image navigation
 <Left> = prev
@@ -29,6 +26,7 @@ j = pan 0 -50
 k = pan 0 50
 h = pan 50 0
 l = pan -50 0
+#c = center
 
 # Zooming
 <Up> = zoom 1
@@ -37,20 +35,28 @@ i = zoom 1
 <Down> = zoom -1
 <minus> = zoom -1
 o = zoom -1
+s = scaling next
+#a = zoom actual
+#r = reset
 
 # Rotate Clockwise by 90 degrees
-<Ctrl+r> = rotate by 90
+<r> = rotate by 90
+<Ctrl+r> = exec mogrify -rotate 90 "$imv_current_file"; reset
+
+# Close and delete
+x = close
+<Ctrl+x> = exec rm "$imv_current_file"; close
+
+# Interaction with other programs
+# <Ctrl+c> = exec echo -n "$imv_current_file" | xclip -selection clipboard ;;
+<Ctrl+g> = exec gimp "$imv_current_file" &
 
 # Other commands
-x = close
+q = quit
 f = fullscreen
 d = overlay
 p = exec echo $imv_current_file
-c = center
-s = scaling next
-<Shift+S> = upscaling next
-a = zoom actual
-r = reset
+#<Shift+S> = upscaling next
 
 # Gif playback
 <period> = next_frame
