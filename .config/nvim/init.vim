@@ -267,6 +267,7 @@ let g:firenvim_config = {
         \ 'https?://twitter\.com/': { 'takeover': 'never' },
         \ 'https?://[^/]+\.linkedin\..*/': { 'takeover': 'never' },
         \ 'https?://translate\.google\..*/': { 'takeover': 'never' },
+        \ 'https?://[^/]+\.mybinder\.org/': { 'takeover': 'never' },
     \ }
 \ }
 " Automatically sync changes to the page.
