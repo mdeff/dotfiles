@@ -266,7 +266,7 @@ let g:firenvim_config = {
         \ 'https?://[^/]+\.facebook\.com/': { 'takeover': 'never' },
         \ 'https?://twitter\.com/': { 'takeover': 'never' },
         \ 'https?://[^/]+\.linkedin\..*/': { 'takeover': 'never' },
-        \ 'https?://translate\.google\..*/': { 'takeover': 'never' },
+        \ 'https?://(translate|docs)\.google\..*/': { 'takeover': 'never' },
         \ 'https?://[^/]+\.mybinder\.org/': { 'takeover': 'never' },
     \ }
 \ }
