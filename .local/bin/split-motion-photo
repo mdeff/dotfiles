@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# A motion photo is a JPG followed by an MP4: Split it in two.
+# <https://linuxreviews.org/Google_Pixel_%22Motion_Photo%22>
+# <https://medium.com/android-news/working-with-motion-photos-da0aa49b50c>
+
+filename=$1
+
+function find_pattern {
+    # Find where in the file the video part starts, given a pattern that identifies the start of an MP4 file.
+    split=$(grep --byte-offset --only-matching --text -F $pattern $filename | sed 's/^\([0-9]*\).*/\1/')
+    # split=$(grep --binary --byte-offset --only-matching --text -P "\x00\x00\x00\x18\x66\x74\x79\x70\x6d\x70\x34\x32" $1 | sed 's/^\([0-9]*\).*/\1/')
+}
+
+# Newer ftyp (atom/box type, see <https://ftyps.com>) (Android 12?).
+pattern=ftypisom
+find_pattern
+
+# Older ftyp (Android 11?).
+if [[ -z "$split" ]]; then
+    pattern=ftypmp42
+    # \x00\x00\x00\x18 (size) + \x66\x74\x79\x70 (ftyp) + \x6d\x70\x34\x32 (mp42)
+    find_pattern
+fi
+
+if [[ -z "$split" ]]; then
+    echo No MP4 video found.
+    exit 1
+fi
+
+# Split 4 bytes (indicating the size, e.g., \x00\x00\x00\x18) before the ftyp.
+split=$(($split-4))
+# echo $pattern $split
+
+# Split the photo and video parts.
+dd status=none if="$filename" bs=$split count=1 of="$(basename -s .MP.jpg $filename).jpg"
+dd status=none if="$filename" bs=$split skip=1 of="$(basename -s .MP.jpg $filename).mp4"
