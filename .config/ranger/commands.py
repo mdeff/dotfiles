@@ -3,13 +3,11 @@ from ranger.api.commands import *
 class empty(Command):
     """:empty
 
-    Empties the trash directory ~/.trash
+    Empties the trash directories.
     """
 
     def execute(self):
-        self.fm.run("rm -rf ~/.local/share/Trash/files/{*,.[^.]*}")
-        self.fm.run("rm -rf ~/.local/share/Trash/info/{*,.[^.]*}")
-        self.fm.run("rm -rf ~/.local/share/Trash/expunged{*,.[^.]*}")
+        self.fm.run("trash-empty")
 
 class exif(Command):
     """:exif

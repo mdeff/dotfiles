@@ -45,7 +45,7 @@ s = scaling next
 
 # Close and delete
 x = close
-<Ctrl+x> = exec rm "$imv_current_file"; close
+<Ctrl+x> = exec trash-put "$imv_current_file"; close
 
 # Interaction with other programs
 # <Ctrl+c> = exec echo -n "$imv_current_file" | xclip -selection clipboard ;;
