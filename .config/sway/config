@@ -9,7 +9,6 @@
 # security
 # screenshot active window
 # disable pen when lid is closed (EPFL workplace)
-# screen recording and sharing
 # remote display (alternative to mirror display?)
 # program launcher
 
@@ -636,3 +635,13 @@ set $filename /data/inputs/screenshots/$(date +'%Y%m%d_%H%M%S.png')
 bindsym Print exec grim $filename
 #bindsym Shift+Print exec scrot -u $filename
 bindsym Control+Print exec grim -g "$(slurp)" $filename
+
+#----------------------------------#
+# Screen casting/recording/sharing #
+#----------------------------------#
+
+# Under Wayland, the screen is captured through Pipewire.
+
+# Make environment variables available to xdg-desktop-portal.
+# https://github.com/emersion/xdg-desktop-portal-wlr
+exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
