@@ -48,6 +48,7 @@ input * {
 	xkb_model pc104
 	xkb_variant basic
 	xkb_numlock enabled
+	natural_scroll enabled
 }
 
 # X11: /etc/X11/xorg.conf.d/30-touchpad.conf
