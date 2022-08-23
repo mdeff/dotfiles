@@ -55,7 +55,11 @@ input * {
 input "1739:0:Synaptics_TM3075-002" {
 	scroll_method edge
 	tap enabled
-	pointer_accel 0.6
+	pointer_accel 0.8
+}
+
+input "1133:4122:Logitech_Performance_MX" {
+	pointer_accel 0.8
 }
 
 input "1386:236:Wacom_ISDv4_EC_Pen" map_to_output eDP-1
