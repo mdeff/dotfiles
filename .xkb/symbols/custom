@@ -1,6 +1,111 @@
+// Full-fledged custom keyboard. Features:
+// * Switched level 1 and 2 from English (US).
+//   * Colon and semicolon: Using the colon more, both in text and code.
+//   * Underscore and minus? Consistent when zooming with CTRL+Shift. But much minuses in text.
+// * French on top of ASCII:
+//   1. Accents (acute, grave, circumflex, diaeresis/umlaut) with Unicode combining characters. See us(intl-unicode). No more dead keys!
+//      TODO: either all accents on <LSGT>, or only through AltGr.
+//   2. Other characters: ç and œ.
+// * Typography: em and en dashes.
+// * Unicode math: greek letters (removed omicron, moved ψ and ω) and symbols.
+
 default partial alphanumeric_keys
-xkb_symbols "basic" {
+xkb_symbols "symbolic" {
+
+    name[Group1]= "Custom English (US, Symbolic)";
+
+    key <TLDE> { [ grave, asciitilde, U0300, U0303 ] };                     // ` ~ grave tilde
+    key <AE01> { [ 1, exclam, U222B, onesuperior ] };                       // 1 ! ∫ ¹
+    key <AE02> { [ 2, at, U2200, twosuperior ] };                           // 2 @ ∀ ²
+    key <AE03> { [ 3, numbersign, U2203, threesuperior ] };                 // 3 # ∃ ³
+    key <AE04> { [ 4, dollar, EuroSign, foursuperior ] };                   // 4 $ € ⁴
+    key <AE05> { [ 5, percent, U2030, fivesuperior ] };                     // 5 % ‰ ⁵
+    key <AE06> { [ 6, asciicircum, U0302, sixsuperior ] };                  // 6 ^ circumflex ⁶
+    key <AE07> { [ 7, ampersand, section, sevensuperior ] };                // 7 & § ⁷
+    key <AE08> { [ 8, asterisk, infinity, eightsuperior ] };                // 8 * ∞ ⁸
+    key <AE09> { [ 9, parenleft, squareroot, ninesuperior ] };              // 9 ( √ ⁹
+    key <AE10> { [ 0, parenright, degree, zerosuperior ] };                 // 0 ) ° ⁰
+    key <AE11> { [ minus, underscore, U2014, U2013 ] };                     // - _ — –
+    key <AE12> { [ equal, plus, notequal, NoSymbol ] };                     // = + ≠
+
+    key <AD01> { [ q, Q, Greek_psi, Greek_PSI ] };                          // q Q ψ Ψ
+    key <AD02> { [ w, W, Greek_omega, Greek_OMEGA ] };                      // w W ω Ω
+    key <AD03> { [ e, E, Greek_epsilon, Greek_EPSILON ] };                  // e E ε Ε
+    key <AD04> { [ r, R, Greek_rho, Greek_RHO ] };                          // p P ρ Ρ
+    key <AD05> { [ t, T, Greek_tau, Greek_TAU ] };                          // t T τ Τ
+    key <AD06> { [ y, Y, Greek_upsilon, Greek_UPSILON ] };                  // y Y υ Υ
+    key <AD07> { [ u, U, Greek_theta, Greek_THETA ] };                      // u U θ Θ
+    key <AD08> { [ i, I, Greek_iota, Greek_IOTA ] };                        // i I ι Ι
+    key <AD09> { [ o, O, oe, OE ] };                                        // o O œ Œ
+    key <AD10> { [ p, P, Greek_pi, Greek_PI ] };                            // p P π Π
+    key <AD11> { [ bracketleft, braceleft, includedin, union ] };           // [ { ⊂ ∪
+    key <AD12> { [ bracketright, braceright, includes, intersection ] };    // ] } ⊃ ∩
+
+    key <AC01> { [ a, A, Greek_alpha, Greek_ALPHA ] };                      // a A α Α
+    key <AC02> { [ s, S, Greek_sigma, Greek_SIGMA ] };                      // s S σ Σ
+    key <AC03> { [ d, D, Greek_delta, Greek_DELTA ] };                      // d D δ Δ
+    key <AC04> { [ f, F, Greek_phi, Greek_PHI ] };                          // f F φ Φ
+    key <AC05> { [ g, G, Greek_gamma, Greek_GAMMA ] };                      // g G γ Γ
+    key <AC06> { [ h, H, Greek_eta, Greek_ETA ] };                          // h H η Η
+    key <AC07> { [ j, J, Greek_xi, Greek_XI ] };                            // j J ξ Ξ
+    key <AC08> { [ k, K, Greek_kappa, Greek_KAPPA ] };                      // k K κ Κ
+    key <AC09> { [ l, L, Greek_lamda, Greek_LAMDA ] };                      // l L λ Λ
+    key <AC10> { [ colon, semicolon, elementof, notelementof ] };           // : ; ∈ ∉
+    key <AC11> { [ apostrophe, quotedbl, U0301, U0308 ] };                  // ' " acute diaeresis/umlaut
+    key <BKSL> { [ backslash, bar, NoSymbol, NoSymbol ] };                  // \ |
+
+    key <LSGT> { [ U0301, U0300, U0308 ] };                                 // acute grave diaeresis/umlaut
+    key <AB01> { [ z, Z, Greek_zeta, Greek_ZETA ] };                        // z Z ζ Ζ
+    key <AB02> { [ x, X, Greek_chi, Greek_CHI ] };                          // x X χ Χ
+    key <AB03> { [ c, C, ccedilla, Ccedilla ] };                            // c C ç Ç
+    key <AB04> { [ v, V, NoSymbol, NoSymbol ] };                            // v V
+    key <AB05> { [ b, B, Greek_beta, Greek_BETA ] };                        // b B β Β
+    key <AB06> { [ n, N, Greek_nu, Greek_NU ] };                            // n N ν Ν
+    key <AB07> { [ m, M, Greek_mu, Greek_MU ] };                            // m M μ Μ
+    key <AB08> { [ comma, less, leftarrow, lessthanequal ] };               // , < ← ≤
+    key <AB09> { [ period, greater, rightarrow, greaterthanequal ] };       // . > → ≥
+    key <AB10> { [ slash, question, NoSymbol, NoSymbol ] };                 // / ?
+
+    include "level3(ralt_switch)"
+};
+
+
+// Simple English (US) with support for French.
+
+partial alphanumeric_keys
+xkb_symbols "us" {
+    include "us(basic)"
+    name[Group1]= "Custom English (US)";
+
+    // Switch colon and semicolon: Using the colon more, both in text and code.
+    override key <AC10>	{ [ colon, semicolon ] };
+
+    // French on top of ASCII:
+    // 1. Accents (acute, grave, circumflex, diaeresis/umlaut) with Unicode combining characters. See us(intl-unicode).
+    override key <TLDE> { [ grave, asciitilde, U0300, U0303 ] }; // grave, tilde
+    override key <AE06> { [ 6, asciicircum, U0302 ] }; // circumflex
+    override key <AC11> { [ apostrophe, quotedbl, U0301, U0308 ] }; // acute, diaeresis
+    override key <LSGT> { [ U0301, U0300, U0308 ] }; // acute, grave, diaeresis/umlaut
+    // 2. Other characters.
+    override key <AB03> { [ c, C, ccedilla, Ccedilla ] };
+    override key <AD09> { [ o, O, oe, OE ] };
+    include "eurosign(e)"
+
+    // Typography.
+    override key <AE11> { [ minus, underscore, U2014, U2013 ] };  // em dash, en dash
+
+    // TODO Greek letters for Unicode math.
+
+    include "level3(ralt_switch)"
+};
+
+
+// French (Switzerland) tweaked to better support programming.
+
+partial alphanumeric_keys
+xkb_symbols "ch" {
     include "ch(basic)"
+    name[Group1]= "Custom French (Switzerland)";
     override key <AD11> { [ bracketleft, braceleft ] };
     override key <AD12> { [ bracketright, braceright ] };
     override key <AC10> { [ eacute, egrave ] };

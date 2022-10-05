@@ -24,9 +24,8 @@ exec xrdb -load ~/.Xresources
 # Inputs #
 #--------#
 
-# FR-CH layout with brackets and braces ([,],{,}) defined as US layout.
-# Defined in ~/.xkb/symbols/custom.
-# Copied to /usr/share/X11/xkb/symbols/custom for X11.
+# Custom layout defined in ~/.xkb/symbols/custom.
+# Symlinked to /usr/share/X11/xkb/symbols/custom for X11.
 
 # ESC, CAPS LOCK, and CTRL swapped by caps2esc from interception-tools.
 #	* ESC becomes CAPS LOCK
@@ -43,10 +42,11 @@ exec xrdb -load ~/.Xresources
 #	* exec xcape -e 'Caps_Lock=Escape'
 
 # X11: /etc/X11/xorg.conf.d/00-keyboard.conf
+# virtual console: /etc/vconsole.conf
 input * {
-	xkb_layout custom
 	xkb_model pc104
-	xkb_variant basic
+	xkb_layout custom
+	xkb_variant symbolic
 	xkb_numlock enabled
 	natural_scroll enabled
 }
