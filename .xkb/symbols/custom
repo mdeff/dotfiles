@@ -4,8 +4,8 @@
 //   * Underscore and minus? Consistent when zooming with CTRL+Shift. But much minuses in text.
 // * French on top of ASCII:
 //   1. Accents (acute, grave, circumflex, diaeresis/umlaut) with Unicode combining characters. See us(intl-unicode). No more dead keys!
-//      TODO: either all accents on <LSGT>, or only through AltGr.
-//   2. Other characters: ç and œ.
+//   2. Most frequent accentuated characters (é, è, à) accessible without combination.
+//   3. Other characters: ç and œ.
 // * Typography: em and en dashes.
 // * Unicode math: greek letters (removed omicron, moved ψ and ω) and symbols.
 
@@ -51,10 +51,10 @@ xkb_symbols "symbolic" {
     key <AC08> { [ k, K, Greek_kappa, Greek_KAPPA ] };                      // k K κ Κ
     key <AC09> { [ l, L, Greek_lamda, Greek_LAMDA ] };                      // l L λ Λ
     key <AC10> { [ colon, semicolon, elementof, notelementof ] };           // : ; ∈ ∉
-    key <AC11> { [ apostrophe, quotedbl, U0301, U0308 ] };                  // ' " acute diaeresis/umlaut
+    key <AC11> { [ apostrophe, quotedbl, U0308, U0301 ] };                  // ' " diaeresis/umlaut acute
     key <BKSL> { [ backslash, bar, NoSymbol, NoSymbol ] };                  // \ |
 
-    key <LSGT> { [ U0301, U0300, U0308 ] };                                 // acute grave diaeresis/umlaut
+    key <LSGT> { [ eacute, egrave, agrave, U00EB ] };                       // é è à ë
     key <AB01> { [ z, Z, Greek_zeta, Greek_ZETA ] };                        // z Z ζ Ζ
     key <AB02> { [ x, X, Greek_chi, Greek_CHI ] };                          // x X χ Χ
     key <AB03> { [ c, C, ccedilla, Ccedilla ] };                            // c C ç Ç
