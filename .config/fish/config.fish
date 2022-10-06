@@ -1,5 +1,3 @@
-fish_vi_key_bindings
-
 function rcd
     set tmpfile "/tmp/pwd-from-ranger"
     ranger --choosedir=$tmpfile $argv
