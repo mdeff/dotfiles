@@ -184,6 +184,11 @@ Supports [SyncTeX] in both directions.
 * [`.local/bin/vi`](.local/bin/vi)
 * [`.local/bin/vim`](.local/bin/vim)
 
+## Keyboard
+
+* [`.xkb/symbols/custom`](.xkb/symbols/custom), custom keyboard layout
+* [`.config/karabiner/karabiner.json`](.config/karabiner/karabiner.json), keyboard customization for macOS
+
 ## Miscellaneous
 
 [urxvt]: http://software.schmorp.de/pkg/rxvt-unicode.html
@@ -191,8 +196,6 @@ Supports [SyncTeX] in both directions.
 * [`.Xresources`](.Xresources), picked up by [urxvt] and [sxiv]
 * [`.profile`](.profile), environment variables
 * [`.config/user-dirs.dirs`](.config/user-dirs.dirs), XDG default directories
-* [`.xkb/symbols/custom`](.xkb/symbols/custom), custom keyboard layout
-  (copy left in `/usr/share/X11/xkb/symbols/custom` for xorg)
 * [`.latexmkrc`](.latexmkrc)
 * [`.mozilla/firefox/profiles.ini`](.mozilla/firefox/profiles.ini)
 * [`.thunderbird/profiles.ini`](.mozilla/firefox/profiles.ini)
