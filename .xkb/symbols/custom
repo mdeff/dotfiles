@@ -25,7 +25,7 @@ xkb_symbols "symbolic" {
     key <AE08> { [ 8, asterisk, infinity, eightsuperior ] };                // 8 * ∞ ⁸
     key <AE09> { [ 9, parenleft, squareroot, ninesuperior ] };              // 9 ( √ ⁹
     key <AE10> { [ 0, parenright, degree, zerosuperior ] };                 // 0 ) ° ⁰
-    key <AE11> { [ minus, underscore, U2014, U2013 ] };                     // - _ — –
+    key <AE11> { [ minus, underscore, U2013, U2014 ] };                     // - _ – —
     key <AE12> { [ equal, plus, notequal, NoSymbol ] };                     // = + ≠
 
     key <AD01> { [ q, Q, Greek_psi, Greek_PSI ] };                          // q Q ψ Ψ
