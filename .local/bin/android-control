@@ -1,13 +1,17 @@
 #!/usr/bin/sh
 
-# setup:
-# * adb debugging must be activated in device preferences (for USB and TCP)
-# * computer must be authorized (Android device should ask on first connection)
-# * TCP access must be enabled
-#	* check with `adb shell getprop service.adb.tcp.port`
-#	* set with `adb shell setprop service.adb.tcp.port 5555` (or `adb tcpip 5555`?)
-#	* set on device with termux with `su` then `setprop service.adb.tcp.port 5555`
+# USB setup:
+# * enable Developer options: Settings → About phone → tab Build number 7 times
+# * enable USB debugging in Settings → Developer options
+# * test with `adb devices` and `adb shell`
+# * computer must be authorized (Android device should ask on first connection, and periodically if timeout isn't disabled)
 
+# TCP setup:
+# * enable Wireless debugging in Settings → Developer options (or temporarily with `adb tcpip 5555`)
+# * click on Wireless debugging to check paired devices (can be done with `adb pair ipaddr:port`)
+# * (set on device with termux with `su` then `setprop service.adb.tcp.port 5555`)
+# * check with `adb shell getprop service.adb.tcp.port`
+# * test with `adb connect ipaddr:5555`, `adb devices`, and `adb shell`
 
 # restart server: adb kill-server
 
@@ -19,13 +23,14 @@ case "$1" in
 
 	phone-usb)
 		# scrcpy --serial "S7M0215425009907"  # Huawei Ascend P8
-		scrcpy --serial "0B051JECB14301"  # Google Pixel 4a
+		# scrcpy --serial "0B051JECB14301"  # Google Pixel 4a
+        scrcpy --serial "26141JEGR01921"  # Google Pixel 6a
 		;;
 
 	phone)
-		DEVICE="192.168.0.12:5555"
+		DEVICE="192.168.0.17:5555"
 		adb connect "$DEVICE"
-		scrcpy --bit-rate 2M --max-size 800 --serial "$DEVICE"
+		scrcpy --serial "$DEVICE"
 		adb disconnect "$DEVICE"  # let somebody else connect
 		;;
 
