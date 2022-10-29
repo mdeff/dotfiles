@@ -16,33 +16,33 @@
 # restart server: adb kill-server
 
 if [[ $# -eq 0 ]] ; then
-	adb devices -l  # show connected devices
+    adb devices -l  # show connected devices
 fi
 
 case "$1" in
 
-	phone-usb)
-		# scrcpy --serial "S7M0215425009907"  # Huawei Ascend P8
-		# scrcpy --serial "0B051JECB14301"  # Google Pixel 4a
+    phone-usb)
+        # scrcpy --serial "S7M0215425009907"  # Huawei Ascend P8
+        # scrcpy --serial "0B051JECB14301"  # Google Pixel 4a
         scrcpy --serial "26141JEGR01921"  # Google Pixel 6a
-		;;
+        ;;
 
-	phone)
-		DEVICE="192.168.0.17:5555"
-		adb connect "$DEVICE"
-		scrcpy --serial "$DEVICE"
-		adb disconnect "$DEVICE"  # let somebody else connect
-		;;
+    phone)
+        DEVICE="192.168.0.17:5555"
+        adb connect "$DEVICE"
+        scrcpy --serial "$DEVICE"
+        adb disconnect "$DEVICE"  # let somebody else connect
+        ;;
 
-	tv)
-		DEVICE="192.168.0.14:5555"
-		adb connect "$DEVICE"
-		scrcpy --serial "$DEVICE"
-		adb disconnect "$DEVICE"  # let somebody else connect
-		;;
+    tv)
+        DEVICE="192.168.0.14:5555"
+        adb connect "$DEVICE"
+        scrcpy --serial "$DEVICE"
+        adb disconnect "$DEVICE"  # let somebody else connect
+        ;;
 
-	*)
-		echo "Unknown device: $1"
-		exit 1
+    *)
+        echo "Unknown device: $1"
+        exit 1
 
 esac
