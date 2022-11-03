@@ -363,6 +363,12 @@ set colorcolumn=81
 filetype plugin indent on
 set encoding=utf-8
 
+" Highlight what we are copying.
+augroup highlight_yank
+    autocmd!
+    au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=200}
+augroup END
+
 " Mappings.
 "inoremap <Tab> <C-P>
 noremap <F5> :w <CR> :!make -j 4 <CR> <CR>
