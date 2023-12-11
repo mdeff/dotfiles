@@ -2,45 +2,45 @@
 
 import sys
 from os import path
-from PyPDF2 import PdfFileReader, PdfFileWriter
+from pypdf import PdfReader, PdfWriter
 
 
 def print_info(pdf):
-    pdf = PdfFileReader(pdf)
-    info = pdf.getDocumentInfo()
+    pdf = PdfReader(pdf)
+    info = pdf.metadata
     print(f'Author: {info.author}\n'
           f'Creator: {info.creator}\n'
           f'Producer: {info.producer}\n'
           f'Subject: {info.subject}\n'
           f'Title: {info.title}\n'
-          f'Number of pages: {pdf.getNumPages()}')
+          f'Number of pages: {len(pdf.pages)}')
 
 
 def rotate(angle, pdfin, pdfout):
-    reader = PdfFileReader(pdfin)
-    writer = PdfFileWriter()
+    reader = PdfReader(pdfin)
+    writer = PdfWriter()
     for page in reader.pages:
-        writer.addPage(page.rotateClockwise(angle))
+        writer.add_page(page.rotate(angle))
     with open(pdfout, 'wb') as f:
         writer.write(f)
 
 
 def split(pdfin, pdfout):
-    reader = PdfFileReader(pdfin)
+    reader = PdfReader(pdfin)
     name, ext = path.splitext(pdfout)
     for i, page in enumerate(reader.pages):
-        writer = PdfFileWriter()
-        writer.addPage(page)
+        writer = PdfWriter()
+        writer.add_page(page)
         with open(f'{name}-{i}{ext}', 'wb') as f:
             writer.write(f)
 
 
 def merge(pdfin, pdfout):
-    writer = PdfFileWriter()
+    writer = PdfWriter()
     for pdf in pdfin:
-        reader = PdfFileReader(pdf)
+        reader = PdfReader(pdf)
         for page in reader.pages:
-            writer.addPage(page)
+            writer.add_page(page)
     with open(pdfout, 'wb') as f:
         writer.write(f)
 
