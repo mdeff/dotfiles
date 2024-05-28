@@ -364,6 +364,10 @@ set colorcolumn=81
 filetype plugin indent on
 set encoding=utf-8
 
+" Copy/yank/paste from system clipboard by default.
+set clipboard=unnamed
+"set clipboard=unnamedplus
+
 " Highlight what we are copying.
 augroup highlight_yank
     autocmd!
