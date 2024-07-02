@@ -24,3 +24,5 @@
     log = delta
     reflog = delta
     show = delta
+[init]
+	defaultBranch = main
