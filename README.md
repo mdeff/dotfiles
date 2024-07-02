@@ -215,6 +215,7 @@ Moving to Wayland:
 ```
 git clone git@github.com:mdeff/dotfiles.git
 git config --local include.path ../.gitconfig_dotfiles
+chmod g-rw .ssh/config  # might be needed
 ```
 
 Set `mpd` password in mpd, ncmpcpp, sway, and i3.
