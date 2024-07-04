@@ -8,31 +8,31 @@ function rcd
 end
 
 function venv
-	. ~/venv/$argv/bin/activate.fish
+    . ~/venv/$argv/bin/activate.fish
 end
 
 function ll
-	ls -latrh
+    ls -latrh
 end
 
 function su
-	sudo -Es
+    sudo -Es
 end
 
 function cat
-	bat $argv
+    type bat >/dev/null 2>&1 && bat $argv || command cat $argv
 end
 
 function grep
-	rg $argv
+    type rg >/dev/null 2>&1 && rg $argv || command grep $argv
 end
 
 function ping
-	mtr $argv
+    type mtr >/dev/null 2>&1 && mtr $argv || command ping $argv
 end
 
 function traceroute
-	mtr $argv
+    type mtr >/dev/null 2>&1 && mtr $argv || command traceroute $argv
 end
 
 # Auto-completion for ssh-add.
