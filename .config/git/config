@@ -19,10 +19,7 @@
 	insteadOf = "aur:"
 [url "ssh://aur@aur.archlinux.org/"]
 	pushInsteadOf = "aur:"
-[pager]
-    diff = delta
-    log = delta
-    reflog = delta
-    show = delta
+[core]
+    pager = "type delta >/dev/null 2>&1 && exec delta || exec less --tabs=4 -RFX"
 [init]
 	defaultBranch = main
