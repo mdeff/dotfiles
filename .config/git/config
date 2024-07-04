@@ -23,3 +23,5 @@
     pager = "type delta >/dev/null 2>&1 && exec delta || exec less --tabs=4 -RFX"
 [init]
 	defaultBranch = main
+[credential]
+	helper = store
