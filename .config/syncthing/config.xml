@@ -7,9 +7,6 @@
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
-        <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning>
             <cleanupIntervalS>3600</cleanupIntervalS>
@@ -102,9 +99,6 @@
             <encryptionPassword></encryptionPassword>
         </device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
-        <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
         <minDiskFree unit="%">1</minDiskFree>
@@ -304,9 +298,6 @@
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
-        <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning>
             <cleanupIntervalS>3600</cleanupIntervalS>
@@ -351,9 +342,6 @@
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
-        <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning>
             <cleanupIntervalS>3600</cleanupIntervalS>
@@ -396,9 +384,6 @@
             <encryptionPassword></encryptionPassword>
         </device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
-        <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
         <minDiskFree unit="%">1</minDiskFree>
@@ -484,9 +469,6 @@
             <encryptionPassword></encryptionPassword>
         </device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
-        <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
         <minDiskFree unit="%">1</minDiskFree>
@@ -583,9 +565,6 @@
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
-        <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
         <minDiskFree unit="%">1</minDiskFree>
         <versioning>
             <cleanupIntervalS>3600</cleanupIntervalS>
@@ -625,9 +604,6 @@
     <folder id="telegram" label="telegram" path="/data/backups/telegram" type="receiveonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
-        <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
         <minDiskFree unit="%">1</minDiskFree>
@@ -716,9 +692,6 @@
             <encryptionPassword></encryptionPassword>
         </device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
-        <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
         <minDiskFree unit="%">1</minDiskFree>
@@ -835,17 +808,6 @@
         <numConnections>0</numConnections>
     </device>
     <device id="KAOBQA5-6ZFUZ5V-X7KLL3W-ALBSTCK-4A6UWNF-PIKWH4O-ZEDW352-NX24YAM" name="JEAN-LAPTOP-WORK" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
-        <address>dynamic</address>
-        <paused>false</paused>
-        <autoAcceptFolders>false</autoAcceptFolders>
-        <maxSendKbps>0</maxSendKbps>
-        <maxRecvKbps>0</maxRecvKbps>
-        <maxRequestKiB>0</maxRequestKiB>
-        <untrusted>false</untrusted>
-        <remoteGUIPort>0</remoteGUIPort>
-        <numConnections>0</numConnections>
-    </device>
-    <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" name="MICHAEL-PHONE-PIXEL" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
         <autoAcceptFolders>false</autoAcceptFolders>
