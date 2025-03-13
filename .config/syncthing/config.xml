@@ -326,7 +326,7 @@
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
     </folder>
-    <folder id="passwords" label="passwords" path="/data/divers/passwords/" type="sendonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="passwords" label="passwords" path="/data/divers/passwords" type="sendonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" introducedBy="">
             <encryptionPassword></encryptionPassword>
@@ -365,7 +365,7 @@
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
     </folder>
-    <folder id="photos" label="photos" path="/data/photos/" type="sendonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="photos" label="photos" path="/data/photos" type="sendonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
             <encryptionPassword></encryptionPassword>
