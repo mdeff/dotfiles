@@ -409,9 +409,6 @@
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
-        <device id="SLFTQDN-3UHGSUR-3I6MZ2O-DBAUWPM-M2LOHKK-5Y6U5LJ-ACWICA3-EEO7ZA7" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
         <device id="YA2745T-JPQJOJV-PMDRWD3-QQX3KQ5-UZBZNZ4-3AWX2FU-JSKOIJH-GPPNEQN" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
@@ -702,17 +699,6 @@
         <numConnections>0</numConnections>
     </device>
     <device id="SCAT5LY-K6IAJ5H-G5ONSD6-727CKFO-RDCLF3L-NWCMKBV-MBK7GIQ-XS7TZA5" name="ALICIA-LAPTOP" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
-        <address>dynamic</address>
-        <paused>false</paused>
-        <autoAcceptFolders>false</autoAcceptFolders>
-        <maxSendKbps>0</maxSendKbps>
-        <maxRecvKbps>0</maxRecvKbps>
-        <maxRequestKiB>0</maxRequestKiB>
-        <untrusted>false</untrusted>
-        <remoteGUIPort>0</remoteGUIPort>
-        <numConnections>0</numConnections>
-    </device>
-    <device id="SLFTQDN-3UHGSUR-3I6MZ2O-DBAUWPM-M2LOHKK-5Y6U5LJ-ACWICA3-EEO7ZA7" name="HOME-KBOX" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
         <autoAcceptFolders>false</autoAcceptFolders>
