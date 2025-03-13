@@ -1,6 +1,9 @@
 <configuration version="36">
     <folder id="camera" label="camera" path="/data/inputs/camera" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
+        <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
@@ -79,6 +82,9 @@
     </folder>
     <folder id="download" label="download" path="/data/inputs/download" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
+        <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
@@ -235,6 +241,9 @@
     </folder>
     <folder id="notes" label="notes" path="/data/notes" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
+        <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
@@ -271,6 +280,9 @@
     </folder>
     <folder id="passwords" label="passwords" path="/data/divers/passwords/" type="sendonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
+        <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
@@ -340,6 +352,9 @@
     </folder>
     <folder id="screenshots" label="screenshots" path="/data/inputs/screenshots" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
+        <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
@@ -418,6 +433,9 @@
     </folder>
     <folder id="signal" label="signal" path="/data/backups/signal" type="receiveonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
+        <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
@@ -526,6 +544,9 @@
     </folder>
     <folder id="whatsapp" label="whatsapp" path="/data/backups/whatsapp" type="receiveonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
+        <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
             <encryptionPassword></encryptionPassword>
         </device>
@@ -561,6 +582,16 @@
         <junctionsAsDirs>false</junctionsAsDirs>
     </folder>
     <device id="EMDKCAG-66UYQPZ-47TANCH-7PWHE3V-E2PF5GM-4IZH2M5-23RRLIG-IJ5BAQV" name="LTS2-CDK3" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+        <address>dynamic</address>
+        <paused>false</paused>
+        <autoAcceptFolders>false</autoAcceptFolders>
+        <maxSendKbps>0</maxSendKbps>
+        <maxRecvKbps>0</maxRecvKbps>
+        <maxRequestKiB>0</maxRequestKiB>
+        <untrusted>false</untrusted>
+        <remoteGUIPort>0</remoteGUIPort>
+    </device>
+    <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" name="MDEFF-PIXEL6A" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
         <autoAcceptFolders>false</autoAcceptFolders>
