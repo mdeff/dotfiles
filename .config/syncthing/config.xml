@@ -1,4 +1,4 @@
-<configuration version="36">
+<configuration version="37">
     <folder id="camera" label="camera" path="/data/inputs/camera" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" introducedBy="">
@@ -37,6 +37,14 @@
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
+        <syncOwnership>false</syncOwnership>
+        <sendOwnership>false</sendOwnership>
+        <syncXattrs>false</syncXattrs>
+        <sendXattrs>false</sendXattrs>
+        <xattrFilter>
+            <maxSingleEntrySize>0</maxSingleEntrySize>
+            <maxTotalSize>0</maxTotalSize>
+        </xattrFilter>
     </folder>
     <folder id="cxfsc-thkng" label="share-michael-nati" path="/data/inputs/share_michaël_nathanaël" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -79,6 +87,14 @@
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
+        <syncOwnership>false</syncOwnership>
+        <sendOwnership>false</sendOwnership>
+        <syncXattrs>false</syncXattrs>
+        <sendXattrs>false</sendXattrs>
+        <xattrFilter>
+            <maxSingleEntrySize>0</maxSingleEntrySize>
+            <maxTotalSize>0</maxTotalSize>
+        </xattrFilter>
     </folder>
     <folder id="download" label="download" path="/data/inputs/download" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -118,6 +134,14 @@
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
+        <syncOwnership>false</syncOwnership>
+        <sendOwnership>false</sendOwnership>
+        <syncXattrs>false</syncXattrs>
+        <sendXattrs>false</sendXattrs>
+        <xattrFilter>
+            <maxSingleEntrySize>0</maxSingleEntrySize>
+            <maxTotalSize>0</maxTotalSize>
+        </xattrFilter>
     </folder>
     <folder id="eidwc-sbcma" label="share-lts2" path="/data/inputs/share_lts2" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -166,6 +190,14 @@
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
+        <syncOwnership>false</syncOwnership>
+        <sendOwnership>false</sendOwnership>
+        <syncXattrs>false</syncXattrs>
+        <sendXattrs>false</sendXattrs>
+        <xattrFilter>
+            <maxSingleEntrySize>0</maxSingleEntrySize>
+            <maxTotalSize>0</maxTotalSize>
+        </xattrFilter>
     </folder>
     <folder id="fanfare-orsonnens-comité" label="fanfare-orsonnens-comité" path="/data/inputs/fanfare_orsonnens_comité" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -214,6 +246,14 @@
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
+        <syncOwnership>false</syncOwnership>
+        <sendOwnership>false</sendOwnership>
+        <syncXattrs>false</syncXattrs>
+        <sendXattrs>false</sendXattrs>
+        <xattrFilter>
+            <maxSingleEntrySize>0</maxSingleEntrySize>
+            <maxTotalSize>0</maxTotalSize>
+        </xattrFilter>
     </folder>
     <folder id="gttt6-haqdt" label="share-jessica" path="/data/inputs/share_jessica" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -250,6 +290,14 @@
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
+        <syncOwnership>false</syncOwnership>
+        <sendOwnership>false</sendOwnership>
+        <syncXattrs>false</syncXattrs>
+        <sendXattrs>false</sendXattrs>
+        <xattrFilter>
+            <maxSingleEntrySize>0</maxSingleEntrySize>
+            <maxTotalSize>0</maxTotalSize>
+        </xattrFilter>
     </folder>
     <folder id="music" label="music" path="/data/music" type="sendonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -286,6 +334,14 @@
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
+        <syncOwnership>false</syncOwnership>
+        <sendOwnership>false</sendOwnership>
+        <syncXattrs>false</syncXattrs>
+        <sendXattrs>false</sendXattrs>
+        <xattrFilter>
+            <maxSingleEntrySize>0</maxSingleEntrySize>
+            <maxTotalSize>0</maxTotalSize>
+        </xattrFilter>
     </folder>
     <folder id="notes" label="notes" path="/data/notes" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -325,6 +381,14 @@
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
+        <syncOwnership>false</syncOwnership>
+        <sendOwnership>false</sendOwnership>
+        <syncXattrs>false</syncXattrs>
+        <sendXattrs>false</sendXattrs>
+        <xattrFilter>
+            <maxSingleEntrySize>0</maxSingleEntrySize>
+            <maxTotalSize>0</maxTotalSize>
+        </xattrFilter>
     </folder>
     <folder id="passwords" label="passwords" path="/data/divers/passwords" type="sendonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -364,6 +428,14 @@
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
+        <syncOwnership>false</syncOwnership>
+        <sendOwnership>false</sendOwnership>
+        <syncXattrs>false</syncXattrs>
+        <sendXattrs>false</sendXattrs>
+        <xattrFilter>
+            <maxSingleEntrySize>0</maxSingleEntrySize>
+            <maxTotalSize>0</maxTotalSize>
+        </xattrFilter>
     </folder>
     <folder id="photos" label="photos" path="/data/photos" type="sendonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -397,6 +469,14 @@
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
+        <syncOwnership>false</syncOwnership>
+        <sendOwnership>false</sendOwnership>
+        <syncXattrs>false</syncXattrs>
+        <sendXattrs>false</sendXattrs>
+        <xattrFilter>
+            <maxSingleEntrySize>0</maxSingleEntrySize>
+            <maxTotalSize>0</maxTotalSize>
+        </xattrFilter>
     </folder>
     <folder id="screenshots" label="screenshots" path="/data/inputs/screenshots" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -436,6 +516,14 @@
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
+        <syncOwnership>false</syncOwnership>
+        <sendOwnership>false</sendOwnership>
+        <syncXattrs>false</syncXattrs>
+        <sendXattrs>false</sendXattrs>
+        <xattrFilter>
+            <maxSingleEntrySize>0</maxSingleEntrySize>
+            <maxTotalSize>0</maxTotalSize>
+        </xattrFilter>
     </folder>
     <folder id="share" label="share-home" path="/data/inputs/share_home" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -478,6 +566,14 @@
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
+        <syncOwnership>false</syncOwnership>
+        <sendOwnership>false</sendOwnership>
+        <syncXattrs>false</syncXattrs>
+        <sendXattrs>false</sendXattrs>
+        <xattrFilter>
+            <maxSingleEntrySize>0</maxSingleEntrySize>
+            <maxTotalSize>0</maxTotalSize>
+        </xattrFilter>
     </folder>
     <folder id="signal" label="signal" path="/data/backups/signal" type="receiveonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -517,6 +613,14 @@
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
+        <syncOwnership>false</syncOwnership>
+        <sendOwnership>false</sendOwnership>
+        <syncXattrs>false</syncXattrs>
+        <sendXattrs>false</sendXattrs>
+        <xattrFilter>
+            <maxSingleEntrySize>0</maxSingleEntrySize>
+            <maxTotalSize>0</maxTotalSize>
+        </xattrFilter>
     </folder>
     <folder id="telegram" label="telegram" path="/data/backups/telegram" type="receiveonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -553,6 +657,14 @@
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
+        <syncOwnership>false</syncOwnership>
+        <sendOwnership>false</sendOwnership>
+        <syncXattrs>false</syncXattrs>
+        <sendXattrs>false</sendXattrs>
+        <xattrFilter>
+            <maxSingleEntrySize>0</maxSingleEntrySize>
+            <maxTotalSize>0</maxTotalSize>
+        </xattrFilter>
     </folder>
     <folder id="ttnt3-cz9gs" label="share-work" path="/data/inputs/share_work" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -589,6 +701,14 @@
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
+        <syncOwnership>false</syncOwnership>
+        <sendOwnership>false</sendOwnership>
+        <syncXattrs>false</syncXattrs>
+        <sendXattrs>false</sendXattrs>
+        <xattrFilter>
+            <maxSingleEntrySize>0</maxSingleEntrySize>
+            <maxTotalSize>0</maxTotalSize>
+        </xattrFilter>
     </folder>
     <folder id="whatsapp" label="whatsapp" path="/data/backups/whatsapp" type="receiveonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
@@ -628,6 +748,14 @@
         <copyRangeMethod>standard</copyRangeMethod>
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
+        <syncOwnership>false</syncOwnership>
+        <sendOwnership>false</sendOwnership>
+        <syncXattrs>false</syncXattrs>
+        <sendXattrs>false</sendXattrs>
+        <xattrFilter>
+            <maxSingleEntrySize>0</maxSingleEntrySize>
+            <maxTotalSize>0</maxTotalSize>
+        </xattrFilter>
     </folder>
     <device id="DCTQS3V-VMOAWGB-A5BMJJA-LUTR5HN-T7STW5T-NZXJK3X-COULHQN-VE3DSQF" name="ALICIA-PHONE" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -638,6 +766,7 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
     <device id="EMDKCAG-66UYQPZ-47TANCH-7PWHE3V-E2PF5GM-4IZH2M5-23RRLIG-IJ5BAQV" name="LTS2-CDK3" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -648,6 +777,7 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
     <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" name="MDEFF-PIXEL6A" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -658,6 +788,7 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
     <device id="GLNORYP-5CJLQYX-KRPEPFD-LKJSYN6-P7URCRR-C6HAZCA-LYZXR2X-EMV4VQJ" name="MICHAEL-PC-SPARE" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -668,6 +799,7 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
     <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" name="MICHAEL-LAPTOP" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -678,6 +810,7 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
     <device id="IQZW6ZU-UUS7JYB-WEOZ5JM-RS6ZGJG-VD4EWFB-O5G4CNO-57H2GNU-S63NAAN" name="LTS2-CDK4" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -688,6 +821,7 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
     <device id="JHNPHBU-OTQHTVO-NIH5GKM-DEOJMJL-DA6LV3C-LQQNUHX-FNFL6ON-H25TTAC" name="MDEFFERR-mac" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -698,6 +832,7 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
     <device id="KAOBQA5-6ZFUZ5V-X7KLL3W-ALBSTCK-4A6UWNF-PIKWH4O-ZEDW352-NX24YAM" name="JEAN-LAPTOP-WORK" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -708,6 +843,7 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
     <device id="OOFKY6M-3H44P7M-JC6B6T6-AZORJ44-6E25VQ6-EIWU5H6-MCBG5L4-V36DLQI" name="MICHAEL-PHONE-PIXEL" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -718,6 +854,7 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
     <device id="PL5AYRP-DLX2SQF-LJYQBQS-TIL7GDD-WKY3VZE-6KWHPCA-JHJXMFJ-SA5GOQA" name="LTS2-CDK2" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -728,6 +865,7 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
     <device id="RHHFP2K-PA4FURM-V6MKA2A-U3IHD7Z-RV7FBFP-V7ROUQN-CFDWWRN-P5PP5A3" name="CYNTHIA-LAPTOP" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -738,6 +876,7 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
     <device id="SCAT5LY-K6IAJ5H-G5ONSD6-727CKFO-RDCLF3L-NWCMKBV-MBK7GIQ-XS7TZA5" name="ALICIA-LAPTOP" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -748,6 +887,7 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
     <device id="SLFTQDN-3UHGSUR-3I6MZ2O-DBAUWPM-M2LOHKK-5Y6U5LJ-ACWICA3-EEO7ZA7" name="HOME-KBOX" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -758,6 +898,7 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
     <device id="SQCIRE2-6LJV5JV-E4JQHS2-MJK3V35-5Q4AMJR-RBAMU3D-IRK6GLH-CT4SYQI" name="LTS2-GDK0" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -768,6 +909,7 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
     <device id="T52NM6T-7LQNFMU-U7SNGM6-C5VNKLN-G6EE7LJ-TTHJPDB-HDE3KSL-HWZL4AD" name="NATHANAEL-PC" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="Y6BQV7P-K3CJ6HG-J5EN3JP-PPD6UCG-W3VXWZZ-NO32SXY-FA2MPTI-ZU7IVAS">
         <address>dynamic</address>
@@ -778,6 +920,7 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
     <device id="UWLWUCL-JPCLZSP-XNPQCU7-OZGQ36P-KYECLHD-SUCQ6KN-UZPL2CH-L4J3IAA" name="NATHANAEL-LAPTOP" compression="metadata" introducer="true" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -788,6 +931,7 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
     <device id="YA2745T-JPQJOJV-PMDRWD3-QQX3KQ5-UZBZNZ4-3AWX2FU-JSKOIJH-GPPNEQN" name="JESSICA-LAPTOP" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -798,6 +942,7 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
     <device id="2D5DP2I-ZUWRATZ-OSYRCAG-3WWGAXT-YTNYCNI-SFTO7LW-NTGR7QI-WSXSFQB" name="LTS2-CDK1" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -808,6 +953,7 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
     <device id="7PEJMXP-GQVS7LA-IKCNWNC-RUZ24UF-WQRJLWY-VZ4SGZC-UQLVYTD-OQ56NAU" name="MARION-LAPTOP" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
@@ -818,8 +964,9 @@
         <maxRequestKiB>0</maxRequestKiB>
         <untrusted>false</untrusted>
         <remoteGUIPort>0</remoteGUIPort>
+        <numConnections>0</numConnections>
     </device>
-    <gui enabled="true" tls="false" debugging="false">
+    <gui enabled="true" tls="false" debugging="false" sendBasicAuthPrompt="false">
         <address>127.0.0.1:8384</address>
         <apikey>TYJCFova9RiZMXes7r7Eu79dfY47Rzrg</apikey>
         <theme>default</theme>
@@ -848,7 +995,6 @@
         <urURL>https://data.syncthing.net/newdata</urURL>
         <urPostInsecurely>false</urPostInsecurely>
         <urInitialDelayS>1800</urInitialDelayS>
-        <restartOnWakeup>true</restartOnWakeup>
         <autoUpgradeIntervalH>12</autoUpgradeIntervalH>
         <upgradeToPreReleases>true</upgradeToPreReleases>
         <keepTemporariesH>24</keepTemporariesH>
@@ -874,6 +1020,12 @@
         <connectionLimitEnough>0</connectionLimitEnough>
         <connectionLimitMax>0</connectionLimitMax>
         <insecureAllowOldTLSVersions>false</insecureAllowOldTLSVersions>
+        <connectionPriorityTcpLan>10</connectionPriorityTcpLan>
+        <connectionPriorityQuicLan>20</connectionPriorityQuicLan>
+        <connectionPriorityTcpWan>30</connectionPriorityTcpWan>
+        <connectionPriorityQuicWan>40</connectionPriorityQuicWan>
+        <connectionPriorityRelay>50</connectionPriorityRelay>
+        <connectionPriorityUpgradeThreshold>0</connectionPriorityUpgradeThreshold>
     </options>
     <defaults>
         <folder id="" label="" path="~" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
@@ -908,6 +1060,14 @@
             <copyRangeMethod>standard</copyRangeMethod>
             <caseSensitiveFS>false</caseSensitiveFS>
             <junctionsAsDirs>false</junctionsAsDirs>
+            <syncOwnership>false</syncOwnership>
+            <sendOwnership>false</sendOwnership>
+            <syncXattrs>false</syncXattrs>
+            <sendXattrs>false</sendXattrs>
+            <xattrFilter>
+                <maxSingleEntrySize>1024</maxSingleEntrySize>
+                <maxTotalSize>4096</maxTotalSize>
+            </xattrFilter>
         </folder>
         <device id="" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
             <address>dynamic</address>
@@ -918,6 +1078,7 @@
             <maxRequestKiB>0</maxRequestKiB>
             <untrusted>false</untrusted>
             <remoteGUIPort>0</remoteGUIPort>
+            <numConnections>0</numConnections>
         </device>
         <ignores></ignores>
     </defaults>
