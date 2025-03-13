@@ -43,56 +43,6 @@
             <maxTotalSize>0</maxTotalSize>
         </xattrFilter>
     </folder>
-    <folder id="cxfsc-thkng" label="share-michael-nati" path="/data/inputs/share_michaël_nathanaël" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
-        <filesystemType>basic</filesystemType>
-        <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
-        <device id="SQCIRE2-6LJV5JV-E4JQHS2-MJK3V35-5Q4AMJR-RBAMU3D-IRK6GLH-CT4SYQI" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
-        <device id="T52NM6T-7LQNFMU-U7SNGM6-C5VNKLN-G6EE7LJ-TTHJPDB-HDE3KSL-HWZL4AD" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
-        <device id="UWLWUCL-JPCLZSP-XNPQCU7-OZGQ36P-KYECLHD-SUCQ6KN-UZPL2CH-L4J3IAA" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
-        <minDiskFree unit="%">1</minDiskFree>
-        <versioning>
-            <cleanupIntervalS>3600</cleanupIntervalS>
-            <fsPath></fsPath>
-            <fsType>basic</fsType>
-        </versioning>
-        <copiers>0</copiers>
-        <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
-        <hashers>0</hashers>
-        <order>random</order>
-        <ignoreDelete>false</ignoreDelete>
-        <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerPauseS>0</pullerPauseS>
-        <maxConflicts>10</maxConflicts>
-        <disableSparseFiles>false</disableSparseFiles>
-        <disableTempIndexes>false</disableTempIndexes>
-        <paused>false</paused>
-        <weakHashThresholdPct>25</weakHashThresholdPct>
-        <markerName>.stfolder</markerName>
-        <copyOwnershipFromParent>false</copyOwnershipFromParent>
-        <modTimeWindowS>0</modTimeWindowS>
-        <maxConcurrentWrites>2</maxConcurrentWrites>
-        <disableFsync>false</disableFsync>
-        <blockPullOrder>standard</blockPullOrder>
-        <copyRangeMethod>standard</copyRangeMethod>
-        <caseSensitiveFS>false</caseSensitiveFS>
-        <junctionsAsDirs>false</junctionsAsDirs>
-        <syncOwnership>false</syncOwnership>
-        <sendOwnership>false</sendOwnership>
-        <syncXattrs>false</syncXattrs>
-        <sendXattrs>false</sendXattrs>
-        <xattrFilter>
-            <maxSingleEntrySize>0</maxSingleEntrySize>
-            <maxTotalSize>0</maxTotalSize>
-        </xattrFilter>
-    </folder>
     <folder id="download" label="download" path="/data/inputs/download" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" introducedBy="">
@@ -863,28 +813,6 @@
         <numConnections>0</numConnections>
     </device>
     <device id="SQCIRE2-6LJV5JV-E4JQHS2-MJK3V35-5Q4AMJR-RBAMU3D-IRK6GLH-CT4SYQI" name="LTS2-GDK0" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
-        <address>dynamic</address>
-        <paused>false</paused>
-        <autoAcceptFolders>false</autoAcceptFolders>
-        <maxSendKbps>0</maxSendKbps>
-        <maxRecvKbps>0</maxRecvKbps>
-        <maxRequestKiB>0</maxRequestKiB>
-        <untrusted>false</untrusted>
-        <remoteGUIPort>0</remoteGUIPort>
-        <numConnections>0</numConnections>
-    </device>
-    <device id="T52NM6T-7LQNFMU-U7SNGM6-C5VNKLN-G6EE7LJ-TTHJPDB-HDE3KSL-HWZL4AD" name="NATHANAEL-PC" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="Y6BQV7P-K3CJ6HG-J5EN3JP-PPD6UCG-W3VXWZZ-NO32SXY-FA2MPTI-ZU7IVAS">
-        <address>dynamic</address>
-        <paused>false</paused>
-        <autoAcceptFolders>false</autoAcceptFolders>
-        <maxSendKbps>0</maxSendKbps>
-        <maxRecvKbps>0</maxRecvKbps>
-        <maxRequestKiB>0</maxRequestKiB>
-        <untrusted>false</untrusted>
-        <remoteGUIPort>0</remoteGUIPort>
-        <numConnections>0</numConnections>
-    </device>
-    <device id="UWLWUCL-JPCLZSP-XNPQCU7-OZGQ36P-KYECLHD-SUCQ6KN-UZPL2CH-L4J3IAA" name="NATHANAEL-LAPTOP" compression="metadata" introducer="true" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
         <autoAcceptFolders>false</autoAcceptFolders>
