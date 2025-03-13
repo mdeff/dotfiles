@@ -87,7 +87,7 @@
             <maxTotalSize>0</maxTotalSize>
         </xattrFilter>
     </folder>
-    <folder id="fanfare-orsonnens-comité" label="fanfare-orsonnens-comité" path="/data/inputs/fanfare_orsonnens_comité" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="fanfare-orsonnens-comité" label="share-fanfare-comité" path="/data/inputs/share_fanfare_comité" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="DCTQS3V-VMOAWGB-A5BMJJA-LUTR5HN-T7STW5T-NZXJK3X-COULHQN-VE3DSQF" introducedBy="">
             <encryptionPassword></encryptionPassword>
