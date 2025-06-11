@@ -1,5 +1,5 @@
 <configuration version="37">
-    <folder id="camera" label="camera" path="/data/inputs/camera" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="camera" label="camera" path="/data/inputs/camera" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" fsWatcherTimeoutS="0" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" introducedBy="">
             <encryptionPassword></encryptionPassword>
@@ -43,7 +43,7 @@
             <maxTotalSize>0</maxTotalSize>
         </xattrFilter>
     </folder>
-    <folder id="download" label="download" path="/data/inputs/download" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="download" label="download" path="/data/inputs/download" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" fsWatcherTimeoutS="0" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" introducedBy="">
             <encryptionPassword></encryptionPassword>
@@ -87,7 +87,7 @@
             <maxTotalSize>0</maxTotalSize>
         </xattrFilter>
     </folder>
-    <folder id="fanfare-orsonnens-comité" label="share-fanfare-comité" path="/data/inputs/share_fanfare_comité" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="fanfare-orsonnens-comité" label="share-fanfare-comité" path="/data/inputs/share_fanfare_comité" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" fsWatcherTimeoutS="0" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="DCTQS3V-VMOAWGB-A5BMJJA-LUTR5HN-T7STW5T-NZXJK3X-COULHQN-VE3DSQF" introducedBy="">
             <encryptionPassword></encryptionPassword>
@@ -143,7 +143,7 @@
             <maxTotalSize>0</maxTotalSize>
         </xattrFilter>
     </folder>
-    <folder id="gttt6-haqdt" label="share-jessica" path="/data/inputs/share_jessica" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="gttt6-haqdt" label="share-jessica" path="/data/inputs/share_jessica" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" fsWatcherTimeoutS="0" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
             <encryptionPassword></encryptionPassword>
@@ -187,7 +187,7 @@
             <maxTotalSize>0</maxTotalSize>
         </xattrFilter>
     </folder>
-    <folder id="music" label="music" path="/data/music" type="sendonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="music" label="music" path="/data/music" type="sendonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" fsWatcherTimeoutS="0" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
             <encryptionPassword></encryptionPassword>
@@ -228,51 +228,7 @@
             <maxTotalSize>0</maxTotalSize>
         </xattrFilter>
     </folder>
-    <folder id="notes" label="notes" path="/data/notes" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
-        <filesystemType>basic</filesystemType>
-        <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
-        <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
-        <minDiskFree unit="%">1</minDiskFree>
-        <versioning>
-            <cleanupIntervalS>3600</cleanupIntervalS>
-            <fsPath></fsPath>
-            <fsType>basic</fsType>
-        </versioning>
-        <copiers>0</copiers>
-        <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
-        <hashers>0</hashers>
-        <order>random</order>
-        <ignoreDelete>false</ignoreDelete>
-        <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerPauseS>0</pullerPauseS>
-        <maxConflicts>10</maxConflicts>
-        <disableSparseFiles>false</disableSparseFiles>
-        <disableTempIndexes>false</disableTempIndexes>
-        <paused>false</paused>
-        <weakHashThresholdPct>25</weakHashThresholdPct>
-        <markerName>.stfolder</markerName>
-        <copyOwnershipFromParent>false</copyOwnershipFromParent>
-        <modTimeWindowS>0</modTimeWindowS>
-        <maxConcurrentWrites>2</maxConcurrentWrites>
-        <disableFsync>false</disableFsync>
-        <blockPullOrder>standard</blockPullOrder>
-        <copyRangeMethod>standard</copyRangeMethod>
-        <caseSensitiveFS>false</caseSensitiveFS>
-        <junctionsAsDirs>false</junctionsAsDirs>
-        <syncOwnership>false</syncOwnership>
-        <sendOwnership>false</sendOwnership>
-        <syncXattrs>false</syncXattrs>
-        <sendXattrs>false</sendXattrs>
-        <xattrFilter>
-            <maxSingleEntrySize>0</maxSingleEntrySize>
-            <maxTotalSize>0</maxTotalSize>
-        </xattrFilter>
-    </folder>
-    <folder id="passwords" label="passwords" path="/data/divers/passwords" type="sendonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="notes" label="notes" path="/data/notes" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" fsWatcherTimeoutS="0" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" introducedBy="">
             <encryptionPassword></encryptionPassword>
@@ -316,48 +272,7 @@
             <maxTotalSize>0</maxTotalSize>
         </xattrFilter>
     </folder>
-    <folder id="photos" label="photos" path="/data/photos" type="sendonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
-        <filesystemType>basic</filesystemType>
-        <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
-            <encryptionPassword></encryptionPassword>
-        </device>
-        <minDiskFree unit="%">1</minDiskFree>
-        <versioning>
-            <cleanupIntervalS>3600</cleanupIntervalS>
-            <fsPath></fsPath>
-            <fsType>basic</fsType>
-        </versioning>
-        <copiers>0</copiers>
-        <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
-        <hashers>0</hashers>
-        <order>random</order>
-        <ignoreDelete>false</ignoreDelete>
-        <scanProgressIntervalS>0</scanProgressIntervalS>
-        <pullerPauseS>0</pullerPauseS>
-        <maxConflicts>10</maxConflicts>
-        <disableSparseFiles>false</disableSparseFiles>
-        <disableTempIndexes>false</disableTempIndexes>
-        <paused>false</paused>
-        <weakHashThresholdPct>25</weakHashThresholdPct>
-        <markerName>.stfolder</markerName>
-        <copyOwnershipFromParent>false</copyOwnershipFromParent>
-        <modTimeWindowS>0</modTimeWindowS>
-        <maxConcurrentWrites>2</maxConcurrentWrites>
-        <disableFsync>false</disableFsync>
-        <blockPullOrder>standard</blockPullOrder>
-        <copyRangeMethod>standard</copyRangeMethod>
-        <caseSensitiveFS>false</caseSensitiveFS>
-        <junctionsAsDirs>false</junctionsAsDirs>
-        <syncOwnership>false</syncOwnership>
-        <sendOwnership>false</sendOwnership>
-        <syncXattrs>false</syncXattrs>
-        <sendXattrs>false</sendXattrs>
-        <xattrFilter>
-            <maxSingleEntrySize>0</maxSingleEntrySize>
-            <maxTotalSize>0</maxTotalSize>
-        </xattrFilter>
-    </folder>
-    <folder id="screenshots" label="screenshots" path="/data/inputs/screenshots" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="passwords" label="passwords" path="/data/divers/passwords" type="sendonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" fsWatcherTimeoutS="0" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" introducedBy="">
             <encryptionPassword></encryptionPassword>
@@ -401,7 +316,92 @@
             <maxTotalSize>0</maxTotalSize>
         </xattrFilter>
     </folder>
-    <folder id="share" label="share-home" path="/data/inputs/share_home" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="photos" label="photos" path="/data/photos" type="sendonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" fsWatcherTimeoutS="0" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
+        <minDiskFree unit="%">1</minDiskFree>
+        <versioning>
+            <cleanupIntervalS>3600</cleanupIntervalS>
+            <fsPath></fsPath>
+            <fsType>basic</fsType>
+        </versioning>
+        <copiers>0</copiers>
+        <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
+        <modTimeWindowS>0</modTimeWindowS>
+        <maxConcurrentWrites>2</maxConcurrentWrites>
+        <disableFsync>false</disableFsync>
+        <blockPullOrder>standard</blockPullOrder>
+        <copyRangeMethod>standard</copyRangeMethod>
+        <caseSensitiveFS>false</caseSensitiveFS>
+        <junctionsAsDirs>false</junctionsAsDirs>
+        <syncOwnership>false</syncOwnership>
+        <sendOwnership>false</sendOwnership>
+        <syncXattrs>false</syncXattrs>
+        <sendXattrs>false</sendXattrs>
+        <xattrFilter>
+            <maxSingleEntrySize>0</maxSingleEntrySize>
+            <maxTotalSize>0</maxTotalSize>
+        </xattrFilter>
+    </folder>
+    <folder id="screenshots" label="screenshots" path="/data/inputs/screenshots" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" fsWatcherTimeoutS="0" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
+        <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
+            <encryptionPassword></encryptionPassword>
+        </device>
+        <minDiskFree unit="%">1</minDiskFree>
+        <versioning>
+            <cleanupIntervalS>3600</cleanupIntervalS>
+            <fsPath></fsPath>
+            <fsType>basic</fsType>
+        </versioning>
+        <copiers>0</copiers>
+        <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>10</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
+        <modTimeWindowS>0</modTimeWindowS>
+        <maxConcurrentWrites>2</maxConcurrentWrites>
+        <disableFsync>false</disableFsync>
+        <blockPullOrder>standard</blockPullOrder>
+        <copyRangeMethod>standard</copyRangeMethod>
+        <caseSensitiveFS>false</caseSensitiveFS>
+        <junctionsAsDirs>false</junctionsAsDirs>
+        <syncOwnership>false</syncOwnership>
+        <sendOwnership>false</sendOwnership>
+        <syncXattrs>false</syncXattrs>
+        <sendXattrs>false</sendXattrs>
+        <xattrFilter>
+            <maxSingleEntrySize>0</maxSingleEntrySize>
+            <maxTotalSize>0</maxTotalSize>
+        </xattrFilter>
+    </folder>
+    <folder id="share" label="share-home" path="/data/inputs/share_home" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" fsWatcherTimeoutS="0" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="GLNORYP-5CJLQYX-KRPEPFD-LKJSYN6-P7URCRR-C6HAZCA-LYZXR2X-EMV4VQJ" introducedBy="">
             <encryptionPassword></encryptionPassword>
@@ -448,7 +448,7 @@
             <maxTotalSize>0</maxTotalSize>
         </xattrFilter>
     </folder>
-    <folder id="signal" label="signal" path="/data/backups/signal" type="receiveonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="signal" label="signal" path="/data/backups/signal" type="receiveonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" fsWatcherTimeoutS="0" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" introducedBy="">
             <encryptionPassword></encryptionPassword>
@@ -492,7 +492,7 @@
             <maxTotalSize>0</maxTotalSize>
         </xattrFilter>
     </folder>
-    <folder id="telegram" label="telegram" path="/data/backups/telegram" type="receiveonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="telegram" label="telegram" path="/data/backups/telegram" type="receiveonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" fsWatcherTimeoutS="0" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
             <encryptionPassword></encryptionPassword>
@@ -533,7 +533,7 @@
             <maxTotalSize>0</maxTotalSize>
         </xattrFilter>
     </folder>
-    <folder id="ttnt3-cz9gs" label="share-work" path="/data/inputs/share_work" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="ttnt3-cz9gs" label="share-work" path="/data/inputs/share_work" type="sendreceive" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" fsWatcherTimeoutS="0" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
             <encryptionPassword></encryptionPassword>
@@ -577,7 +577,7 @@
             <maxTotalSize>0</maxTotalSize>
         </xattrFilter>
     </folder>
-    <folder id="whatsapp" label="whatsapp" path="/data/backups/whatsapp" type="receiveonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+    <folder id="whatsapp" label="whatsapp" path="/data/backups/whatsapp" type="receiveonly" rescanIntervalS="86400" fsWatcherEnabled="true" fsWatcherDelayS="10" fsWatcherTimeoutS="0" ignorePerms="false" autoNormalize="true">
         <filesystemType>basic</filesystemType>
         <device id="FPEGFYL-F3XH4PJ-YSH3YTI-E3E3GEI-7L3HGVC-7UETRZF-WQOX6TY-2XD5EQI" introducedBy="">
             <encryptionPassword></encryptionPassword>
@@ -793,7 +793,7 @@
         <connectionPriorityUpgradeThreshold>0</connectionPriorityUpgradeThreshold>
     </options>
     <defaults>
-        <folder id="" label="" path="~" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <folder id="" label="" path="~" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" fsWatcherTimeoutS="0" ignorePerms="false" autoNormalize="true">
             <filesystemType>basic</filesystemType>
             <device id="GQK5T3A-3VTZAWI-LQWAJES-HEMOGCV-YOKZP3W-E7TOXPZ-AWNZFBI-D5H3FAO" introducedBy="">
                 <encryptionPassword></encryptionPassword>
