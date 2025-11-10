@@ -24,7 +24,8 @@ case "$1" in
     phone-usb)
         # scrcpy --serial "S7M0215425009907"  # Huawei Ascend P8
         # scrcpy --serial "0B051JECB14301"  # Google Pixel 4a
-        scrcpy --serial "26141JEGR01921"  # Google Pixel 6a
+        # scrcpy --serial "26141JEGR01921"  # Google Pixel 6a
+        scrcpy --serial "4C101JEKB02213"  # Google Pixel 8a
         ;;
 
     phone)
