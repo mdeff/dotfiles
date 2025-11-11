@@ -60,7 +60,8 @@ export XDG_CURRENT_DESKTOP=sway
 ################   Apps   ################
 
 # Force Firefox to use wayland (it would otherwise use XWayland).
-export MOZ_ENABLE_WAYLAND=1
+# 2025-11-11: Firefox now uses wayland by default
+# export MOZ_ENABLE_WAYLAND=1
 
 # Some Java AWT applications don't display properly under Xwayland without the following.
 # That is the case of Gephi.
