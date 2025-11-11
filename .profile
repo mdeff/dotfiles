@@ -76,7 +76,8 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # Java
 ###############################################################################
 
-export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp -Dsun.java2d.opengl=true'
+# 2025-11-11 FriTax: fonts are broken without awt.useSystemAAFontSettings=gasp (or =on)
+export JDK_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp -Dsun.java2d.opengl=true'
 
 # Anti-aliased fonts for Java applications. Same results with gasp, lcd, on.
 # https://wiki.archlinux.org/index.php/Java_Runtime_Environment_fonts
@@ -91,6 +92,7 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp -Dsun.java2d.opengl=tru
 # Better 2D performance.
 # https://wiki.archlinux.org/index.php/java
 # sun.java2d.opengl=true
+# 2025-11-11: maybe better to follow defaults and not unknowingly break apps than gain some performance? Tough Gephi seems notably faster.
 
 # Options to force GTK look&fell (may break some applications) (the default Java cross-platform look&feel is metal):
 # swing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel

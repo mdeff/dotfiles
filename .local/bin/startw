@@ -64,7 +64,7 @@ export XDG_CURRENT_DESKTOP=sway
 # export MOZ_ENABLE_WAYLAND=1
 
 # Some Java AWT applications don't display properly under Xwayland without the following.
-# That is the case of Gephi.
+# That is the case of Gephi. 2025-11-11: still the case.
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Change default programs from CLI to GUI.
