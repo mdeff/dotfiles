@@ -66,9 +66,10 @@ export LESS=' -R '
 #export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 
 ###############################################################################
-# Color highlight man pages
+# man: color highlighting
 ###############################################################################
 
+export MANROFFOPT='-c'
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 ###############################################################################
