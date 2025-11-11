@@ -71,5 +71,9 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # export TERMINAL="alacritty"
 # export BROWSER="firefox"
 
+# Color theme for urxvt. TODO replace with a wayland terminal emulator.
+# Urxvt can read ~/.Xdefaults, but without a pre-processor.
+exec xrdb -load ~/.Xresources
+
 # Start wayland compositor.
 exec sway
