@@ -38,7 +38,7 @@ case "$1" in
     tv)
         DEVICE="192.168.0.14:5555"
         adb connect "$DEVICE"
-        scrcpy --serial "$DEVICE"
+        scrcpy --bit-rate 2M --max-size 960 --serial "$DEVICE"
         adb disconnect "$DEVICE"  # let somebody else connect
         ;;
 
