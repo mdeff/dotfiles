@@ -2,7 +2,14 @@
 # TODO #
 #------#
 
-# wayland-native terminal emulator
+# try another compositor (e.g., hyprland, from omacom/omarchy)
+# swaybg: install & configure
+# waybar instead of swaybar
+# application launcher: wmenu?
+# notifications: mako?
+# xdg-desktop-portal-gtk?
+# wayland-native terminal emulator (e.g., alacritty, foot)
+# DPMS: error about $dpms_on not found → investigate
 # switch to using termite + base16-manager
 # idle inhibition: https://github.com/swaywm/sway/pull/3962
 # mirror display (e.g., for live programming session in beamer mode, to have the laptop screen in EPFL mode)
