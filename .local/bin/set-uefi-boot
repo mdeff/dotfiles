@@ -6,6 +6,12 @@
 
 # Enable boot order modification in UEFI for changes to survive reboot.
 
+# TODO unified kernel image (UKI): packs kernel + microcode + initramfs + boot options, e.g. with systemd-ukify (through mkinitcpio or dracut)
+# TODO sign UKI for SecureBoot (should be easier nowadays)
+# TODO check systemd-stub as an EFI boot stub
+# TODO consider GRUB or systemd-boot as an alternative bootloader to the firmware one
+# TODO fallbacks: Arch ISO, UEFI shell
+
 # Remove existing boot entries.
 #efibootmgr -b 0x13 -B
 #efibootmgr -b 0x14 -B
