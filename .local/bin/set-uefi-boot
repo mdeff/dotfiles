@@ -27,7 +27,9 @@ efibootmgr -b 0x15 -B
 #efibootmgr -b 0x16 -c -d /dev/sda -p 1 -L "Arch Linux (EFI stub, signed)" -l vmlinuz-signed -u "root=/dev/mapper/vg-root rw initrd=initramfs-linux.img"
 
 # Append two initrd for Intel microcode update: initrd=/intel-ucode.img initrd=/initramfs-linux.img
-efibootmgr -b 0x15 -c -d /dev/sda -p 1 -L "Arch Linux (EFI stub)"         -l vmlinuz-linux -u "cryptdevice=/dev/disk/by-partuuid/6fb98d48-5c27-4ab8-acf4-6a497c4a2f30:vg:allow-discards root=/dev/vg/root rw initrd=intel-ucode.img initrd=initramfs-linux.img resume=/dev/vg/swap"
+#efibootmgr -b 0x15 -c -d /dev/sda -p 1 -L "Arch Linux (EFI stub)"         -l vmlinuz-linux -u "cryptdevice=/dev/disk/by-partuuid/6fb98d48-5c27-4ab8-acf4-6a497c4a2f30:vg:allow-discards root=/dev/vg/root rw initrd=intel-ucode.img initrd=initramfs-linux.img resume=/dev/vg/swap"
+# 2025-11: mkinitcpio with the microcode hook prepends the relevant ucode to the initramfs-linux.img (UKI style)
+efibootmgr -b 0x15 -c -d /dev/sda -p 1 -L "Arch Linux (EFI stub)"         -l vmlinuz-linux -u "cryptdevice=/dev/disk/by-partuuid/6fb98d48-5c27-4ab8-acf4-6a497c4a2f30:vg:allow-discards root=/dev/vg/root rw initrd=initramfs-linux.img resume=/dev/vg/swap"
 
 # Disable throttling to build ATLAS.
 #efibootmgr -b 0x15 -c -d /dev/sda -p 1 -L "Arch Linux (EFI stub)"         -l vmlinuz-linux -u "cryptdevice=/dev/disk/by-partuuid/6fb98d48-5c27-4ab8-acf4-6a497c4a2f30:vg:allow-discards root=/dev/mapper/vg-root rw initrd=initramfs-linux.img intel_pstate=disable"
