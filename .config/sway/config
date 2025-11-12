@@ -12,6 +12,14 @@
 # remote display (alternative to mirror display?)
 # program launcher
 
+#----------------------#
+# X11 only, to replace #
+#----------------------#
+
+# Color theme for urxvt.
+# Urxvt can read ~/.Xdefaults, but without a pre-processor.
+exec xrdb -load ~/.Xresources
+
 #--------#
 # Inputs #
 #--------#
