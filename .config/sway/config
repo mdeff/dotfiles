@@ -2,6 +2,7 @@
 # TODO #
 #------#
 
+# wayland-native terminal emulator
 # switch to using termite + base16-manager
 # idle inhibition: https://github.com/swaywm/sway/pull/3962
 # mirror display (e.g., for live programming session in beamer mode, to have the laptop screen in EPFL mode)
@@ -19,6 +20,7 @@
 # Color theme for urxvt.
 # Urxvt can read ~/.Xdefaults, but without a pre-processor.
 exec xrdb -load ~/.Xresources
+# TODO yields xkbcomp warnings in virtual terminal (seen when exiting from sway, also with startx for i3wm)
 
 #--------#
 # Inputs #
