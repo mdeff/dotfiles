@@ -1,0 +1,34 @@
+#!/usr/bin/env sh
+
+# EFI executables should be copied to the /boot ESP (EFI System Partition).
+# UEFI shell from /usr/share/uefi-shell/ (package uefi-shell-svn from AUR)
+# KeyTool from /usr/share/efitools/efi (package efitools-git from AUR)
+
+# Enable boot order modification in UEFI for changes to survive reboot.
+
+# Remove existing boot entries.
+#efibootmgr -b 0x13 -B
+#efibootmgr -b 0x14 -B
+efibootmgr -b 0x15 -B
+#efibootmgr -b 0x16 -B
+
+# Create boot entries.
+#efibootmgr -b 0x13 -c -d /dev/sda -p 1 -L "KeyTool (Secure Boot keys)"    -l KeyTool.efi
+#efibootmgr -b 0x14 -c -d /dev/sda -p 1 -L "UEFI shell (Tianocore)"        -l shellx64_v2.efi
+#efibootmgr -b 0x15 -c -d /dev/sda -p 1 -L "Arch Linux (EFI stub)"         -l vmlinuz-linux -u "root=/dev/mapper/vg-root rw initrd=initramfs-linux.img"
+#efibootmgr -b 0x15 -c -d /dev/sda -p 1 -L "Arch Linux (EFI stub)"         -l vmlinuz-linux -u "cryptdevice=/dev/disk/by-partuuid/6fb98d48-5c27-4ab8-acf4-6a497c4a2f30:vg:allow-discards root=/dev/mapper/vg-root rw initrd=initramfs-linux.img"
+#efibootmgr -b 0x15 -c -d /dev/sda -p 1 -L "Arch Linux (EFI stub)"         -l vmlinuz-linux -u "cryptdevice=/dev/disk/by-partuuid/6fb98d48-5c27-4ab8-acf4-6a497c4a2f30:vg:allow-discards root=/dev/vg/root rw initrd=initramfs-linux.img resume=/dev/vg/swap"
+#efibootmgr -b 0x16 -c -d /dev/sda -p 1 -L "Arch Linux (EFI stub, signed)" -l vmlinuz-signed -u "root=/dev/mapper/vg-root rw initrd=initramfs-linux.img"
+
+# Append two initrd for Intel microcode update: initrd=/intel-ucode.img initrd=/initramfs-linux.img
+efibootmgr -b 0x15 -c -d /dev/sda -p 1 -L "Arch Linux (EFI stub)"         -l vmlinuz-linux -u "cryptdevice=/dev/disk/by-partuuid/6fb98d48-5c27-4ab8-acf4-6a497c4a2f30:vg:allow-discards root=/dev/vg/root rw initrd=intel-ucode.img initrd=initramfs-linux.img resume=/dev/vg/swap"
+
+# Disable throttling to build ATLAS.
+#efibootmgr -b 0x15 -c -d /dev/sda -p 1 -L "Arch Linux (EFI stub)"         -l vmlinuz-linux -u "cryptdevice=/dev/disk/by-partuuid/6fb98d48-5c27-4ab8-acf4-6a497c4a2f30:vg:allow-discards root=/dev/mapper/vg-root rw initrd=initramfs-linux.img intel_pstate=disable"
+
+# Define boot order.
+efibootmgr -o 0x15
+
+# Print UEFI boot manager entries.
+echo ----  EFI boot manager configuration  ----
+efibootmgr -v
