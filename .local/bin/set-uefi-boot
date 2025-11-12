@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/sh
 
 # EFI executables should be copied to the /boot ESP (EFI System Partition).
 # UEFI shell from /usr/share/uefi-shell/ (package uefi-shell-svn from AUR)
@@ -31,4 +31,4 @@ efibootmgr -o 0x15
 
 # Print UEFI boot manager entries.
 echo ----  EFI boot manager configuration  ----
-efibootmgr -v
+efibootmgr
