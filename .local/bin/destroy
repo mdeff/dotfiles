@@ -1,0 +1,8 @@
+#!/bin/env sh
+
+for f in *; do
+	if [ -f "$f" ] && [ "$f" != ${0##*/} ]; then
+        rm "$f"
+	    touch "$f"
+	fi
+done
