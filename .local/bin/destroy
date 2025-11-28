@@ -1,8 +1,11 @@
-#!/bin/env sh
+#!/bin/sh
+set -eu
+
+dry=0
+[ "${1:-}" = "--dry-run" ] && dry=1
 
 for f in *; do
-	if [ -f "$f" ] && [ "$f" != ${0##*/} ]; then
-        rm "$f"
-	    touch "$f"
-	fi
+    [ -f "$f" ] || continue
+    printf '%s\n' "$f"
+    [ "$dry" -eq 0 ] && truncate -s 0 "$f"
 done
