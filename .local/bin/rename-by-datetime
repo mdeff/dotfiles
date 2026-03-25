@@ -98,8 +98,10 @@ def get_datetime_exiftool(path):
 
 
 def add_offset(dt, offset=0):
-    hour = (int(dt[9:11]) + offset) % 24
-    return dt[:9] + f"{hour:02d}" + dt[11:]
+    hour = int(dt[9:11]) + offset
+    day = int(dt[6:8]) + hour // 24
+    hour = hour % 24
+    return dt[:6] + f"{day:02d}_{hour:02d}" + dt[11:]
 
 
 if __name__ == '__main__':
