@@ -1,3 +1,5 @@
+set --global fish_key_bindings fish_vi_key_bindings
+
 function rcd
     set tmpfile "/tmp/pwd-from-ranger"
     ranger --choosedir=$tmpfile $argv
@@ -48,15 +50,15 @@ function __fish_venv_envs
 end
 complete -f -c venv -a '(__fish_venv_envs)'
 
-# Auto-completion for conda environments.
-function __fish_conda_envs
-  basename -a ~/.conda/envs/*/
-end
-function __fish_conda_env_commands
-  string replace -r '.*_([a-z]+)\.py$' '$1' /lib/python*/site-packages/conda_env/cli/main_*.py
-end
-complete -f -c conda -n '__fish_conda_using_command env' -a '(__fish_conda_env_commands)'
-complete -f -c conda -n '__fish_conda_using_command activate' -a '(__fish_conda_envs)'
+## Auto-completion for conda environments.
+#function __fish_conda_envs
+#  basename -a ~/.conda/envs/*/
+#end
+#function __fish_conda_env_commands
+#  string replace -r '.*_([a-z]+)\.py$' '$1' /lib/python*/site-packages/conda_env/cli/main_*.py
+#end
+#complete -f -c conda -n '__fish_conda_using_command env' -a '(__fish_conda_env_commands)'
+#complete -f -c conda -n '__fish_conda_using_command activate' -a '(__fish_conda_envs)'
 
 # pyenv (alternative in .profile)
 status --is-interactive; and pyenv init - | source
