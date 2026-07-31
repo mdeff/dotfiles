@@ -1,0 +1,8 @@
+model = "gpt-5.6-sol"
+model_reasoning_effort = "low"
+approvals_reviewer = "user"
+[projects."/data/sociétés/jeunesse/202707_giron_jeunesses_chavannes/website"]
+trust_level = "trusted"
+
+[tui.model_availability_nux]
+"gpt-5.6-sol" = 2
