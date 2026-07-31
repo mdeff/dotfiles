@@ -9,3 +9,7 @@ trust_level = "trusted"
 
 [tui]
 vim_mode_default = true
+session_picker_view = "dense"
+
+[analytics]
+enabled = false
